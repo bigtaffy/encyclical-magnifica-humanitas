@@ -12,20 +12,25 @@ events.mai-li.app/encyclical/magnifica-humanitas
 
 ```
 encyclical/magnifica-humanitas/
-├── index.html            專題網站（沉浸式捲動專題）
-├── og-image.png          社群分享主視覺圖（1200×630）
-└── full-text/
-    └── index.html        通諭中文全文（245 段，含 224 條註釋）
-README.md                 本說明
+├── index.html                  專題網站（沉浸式捲動專題）
+├── og-image.png                社群分享主視覺圖（1200×630）
+├── 偉大的人類-通諭全文.pdf      通諭全文 PDF（A4 · 93 頁 · 現代簡約風排版）
+├── full-text/
+│   └── index.html              通諭中文全文（245 段，含 224 條註釋）
+└── pdf/
+    ├── index.html              PDF 下載頁（含線上閱讀）
+    └── cover-thumb.png         PDF 封面預覽圖
+README.md                       本說明
 ```
 
 整個網站是純靜態 HTML，唯一外部資源是 Google Fonts（思源宋體／黑體），不需任何建置流程。
 
-## 兩個頁面
+## 三個頁面
 
 - 專題頁：`events.mai-li.app/encyclical/magnifica-humanitas/`
 - 全文頁：`events.mai-li.app/encyclical/magnifica-humanitas/full-text/`
-  （專題頁的導覽列、章節區與頁尾皆有連結指向全文頁）
+- PDF 頁：`events.mai-li.app/encyclical/magnifica-humanitas/pdf/`
+  （專題頁的導覽列、章節結尾與頁尾皆有連結指向全文頁與 PDF 頁）
 
 ## 部署到 Cloudflare Pages
 
