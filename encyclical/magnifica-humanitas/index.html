@@ -806,7 +806,11 @@ cx.innerHTML=`<div class="tl-dot"></div>${tlCardHTML(climax,true)}`;
 tlList.appendChild(cx);
 
 document.querySelectorAll('.tl-card').forEach(c=>{
-  c.addEventListener('click',()=>c.classList.toggle('open'));
+  const det=c.querySelector('.tl-detail');
+  c.addEventListener('click',()=>{
+    const open=c.classList.toggle('open');
+    if(det) det.style.maxHeight=open?det.scrollHeight+'px':'';
+  });
 });
 const tlIO=new IntersectionObserver(es=>{
   es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('lit');});
@@ -865,15 +869,21 @@ chapters.forEach(c=>{
     </div></div>`;
   const head=d.querySelector('.ch-head'),body=d.querySelector('.ch-body');
   const kpBtn=d.querySelector('.kp-toggle'),kp=d.querySelector('.keypoints');
-  function fit(){body.style.maxHeight=d.classList.contains('open')
-    ? body.firstElementChild.scrollHeight+40+'px' : '0';}
+  function fit(){
+    if(kp.classList.contains('show')) kp.style.maxHeight=kp.scrollHeight+'px';
+    else kp.style.maxHeight='';
+    body.style.maxHeight=d.classList.contains('open')
+      ? body.firstElementChild.scrollHeight+40+'px' : '0';
+  }
   head.onclick=()=>{d.classList.toggle('open');fit();};
   kpBtn.onclick=e=>{
     e.stopPropagation();
     const show=kp.classList.toggle('show');
     kpBtn.textContent=show?'收合關鍵重點 ▴':'顯示關鍵重點 ▾';
-    setTimeout(fit,10);
+    fit();
   };
+  /* recompute on resize / orientation change */
+  addEventListener('resize',()=>{if(d.classList.contains('open'))fit();},{passive:true});
   cl.appendChild(d);
 });
 
@@ -930,7 +940,11 @@ const cg=document.getElementById('conceptGrid');
 concepts.forEach(c=>{
   const d=document.createElement('div');d.className='concept reveal';
   d.innerHTML=`<div class="cn">${c.n}</div><div class="cl">${c.l}</div><div class="cd">${c.d}</div>`;
-  d.onclick=()=>d.classList.toggle('open');
+  const cd=d.querySelector('.cd');
+  d.onclick=()=>{
+    const open=d.classList.toggle('open');
+    cd.style.maxHeight=open?cd.scrollHeight+'px':'';
+  };
   cg.appendChild(d);
 });
 
