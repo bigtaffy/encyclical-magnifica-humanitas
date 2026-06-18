@@ -872,8 +872,8 @@ chapters.forEach(c=>{
   function fit(){
     if(kp.classList.contains('show')) kp.style.maxHeight=kp.scrollHeight+'px';
     else kp.style.maxHeight='';
-    body.style.maxHeight=d.classList.contains('open')
-      ? body.scrollHeight+'px' : '0';
+    if(d.classList.contains('open')){body.style.maxHeight='none';body.style.maxHeight=body.scrollHeight+'px';}
+    else{body.style.maxHeight='0';}
   }
   head.onclick=()=>{d.classList.toggle('open');fit();};
   kpBtn.onclick=e=>{
