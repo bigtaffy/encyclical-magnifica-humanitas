@@ -873,7 +873,7 @@ chapters.forEach(c=>{
     if(kp.classList.contains('show')) kp.style.maxHeight=kp.scrollHeight+'px';
     else kp.style.maxHeight='';
     body.style.maxHeight=d.classList.contains('open')
-      ? body.firstElementChild.scrollHeight+40+'px' : '0';
+      ? body.scrollHeight+'px' : '0';
   }
   head.onclick=()=>{d.classList.toggle('open');fit();};
   kpBtn.onclick=e=>{
