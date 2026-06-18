@@ -872,8 +872,18 @@ chapters.forEach(c=>{
   function fit(){
     if(kp.classList.contains('show')) kp.style.maxHeight=kp.scrollHeight+'px';
     else kp.style.maxHeight='';
-    if(d.classList.contains('open')){body.style.maxHeight='none';body.style.maxHeight=body.scrollHeight+'px';}
-    else{body.style.maxHeight='0';}
+    if(d.classList.contains('open')){
+      /* 累加各 children 高度避免 CSS transition 時序問題 */
+      const inner=body.firstElementChild;
+      let total=0;
+      for(const c of inner.children){
+        if(c===kp){if(kp.classList.contains('show')) total+=kp.scrollHeight+16;}
+        else total+=c.offsetHeight;
+      }
+      body.style.maxHeight=(total+40)+'px';
+    } else {
+      body.style.maxHeight='0';
+    }
   }
   head.onclick=()=>{d.classList.toggle('open');fit();};
   kpBtn.onclick=e=>{
