@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>同一片草地 — 裂教、絕罰與SSPX</title>
+<meta name="description" content="2026年7月1日，SSPX在厄科納未經教宗任命祝聖四位主教，聖座翌日宣告裂教。三十八年前，同一片草地上發生過同一件事。本專題從現場出發，帶教友看懂絕罰、裂教與這六十年的來龍去脈。">
+<meta name="theme-color" content="#3d1017">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:title" content="同一片草地 — 裂教、絕罰與SSPX">
+<meta property="og:description" content="三十八年，四位教宗，兩次未經任命的祝聖。從厄科納的草地出發，看懂教會最大的共融危機。">
+<meta property="og:url" content="https://events.mai-li.app/sspx/">
+<style>
+  :root{
+    --ink:#2b2620;
+    --ink-soft:#5c544a;
+    --paper:#faf7f2;
+    --card:#ffffff;
+    --accent:#7a1f2b;
+    --accent-deep:#3d1017;
+    --gold:#b08d3e;
+    --gold-soft:#e0c88a;
+    --line:#e5ddd0;
+    --note-bg:#f4ede1;
+    --ok:#3e6b4f;
+    --bad:#8c2f39;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Noto Serif TC","PMingLiU",Georgia,serif;background:var(--paper);color:var(--ink);line-height:1.95;font-size:17px}
+
+  /* ---------- 捲動漸現 ---------- */
+  .rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+  .rv.vis{opacity:1;transform:none}
+  @media (prefers-reduced-motion: reduce){.rv{opacity:1;transform:none;transition:none}}
+
+  /* ---------- HERO ---------- */
+  header.hero{position:relative;background:linear-gradient(168deg,#24080c 0%,var(--accent-deep) 40%,var(--accent) 85%);color:#f5efe6;padding:96px 24px 88px;text-align:center;overflow:hidden}
+  header.hero svg.bg{position:absolute;left:0;right:0;bottom:0;width:100%;height:44%;opacity:.3;pointer-events:none}
+  header.hero .inner{position:relative;z-index:2;max-width:700px;margin:0 auto}
+  .kicker{font-family:"Noto Sans TC",sans-serif;letter-spacing:.4em;font-size:12.5px;color:var(--gold-soft);margin-bottom:26px}
+  header.hero h1{font-size:clamp(30px,5.4vw,52px);font-weight:700;letter-spacing:.1em;margin-bottom:10px;text-shadow:0 2px 14px rgba(0,0,0,.35)}
+  header.hero .subtitle{font-size:clamp(16px,2.2vw,20px);color:var(--gold-soft);letter-spacing:.14em;margin-bottom:34px}
+  header.hero p.sub{font-size:16.5px;color:#eadbc8;line-height:2.1;text-align:center}
+  header.hero p.sub b{color:#fff;font-weight:700}
+  .scrollcue{margin-top:48px;font-family:"Noto Sans TC",sans-serif;font-size:13px;color:#c9a877;animation:bob 2.6s ease-in-out infinite}
+  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+  header.hero .date{margin-top:10px;font-size:12px;color:#a58a68;font-family:"Noto Sans TC",sans-serif;letter-spacing:.1em}
+
+  /* ---------- NAV ---------- */
+  nav{position:sticky;top:0;background:rgba(250,247,242,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);z-index:50}
+  nav ul{display:flex;flex-wrap:wrap;justify-content:center;gap:2px;list-style:none;padding:8px 12px;font-family:"Noto Sans TC",sans-serif;font-size:14px}
+  nav a{display:block;padding:8px 13px;color:var(--ink-soft);text-decoration:none;border-radius:6px}
+  nav a:hover{background:var(--note-bg);color:var(--accent)}
+
+  main{max-width:820px;margin:0 auto;padding:24px 20px 80px}
+  section{margin-top:88px}
+  .sec-head{margin-bottom:34px}
+  .sec-num{font-family:"Noto Sans TC",sans-serif;color:var(--gold);font-size:13px;letter-spacing:.4em;margin-bottom:10px}
+  h2{font-size:clamp(25px,3.6vw,34px);color:var(--accent);letter-spacing:.06em}
+  .lede{color:var(--ink-soft);font-size:16px;margin-top:14px;max-width:600px}
+  h3{font-size:20px;margin:40px 0 14px;color:var(--ink)}
+  p{margin-bottom:17px}
+  .divider{text-align:center;color:var(--gold);margin:52px 0;font-size:15px;letter-spacing:1em;text-indent:1em}
+
+  /* ---------- 引文 ---------- */
+  blockquote.pull{margin:44px auto;max-width:640px;text-align:center;position:relative;padding:0 20px}
+  blockquote.pull::before{content:"「";display:block;font-size:52px;color:var(--gold);line-height:1;margin-bottom:2px;font-family:Georgia,serif}
+  blockquote.pull .q{font-size:clamp(19px,2.8vw,24px);line-height:1.85;color:var(--accent-deep);font-weight:600}
+  blockquote.pull .who{margin-top:16px;font-family:"Noto Sans TC",sans-serif;font-size:13px;color:var(--ink-soft);letter-spacing:.08em}
+
+  /* ---------- 照片 ---------- */
+  figure.photo{margin:36px 0;border-radius:6px;overflow:hidden;background:linear-gradient(150deg,var(--accent-deep),var(--accent))}
+  figure.photo img{display:block;width:100%;mix-blend-mode:luminosity;filter:grayscale(1) contrast(1.06);opacity:.9}
+  figure.photo figcaption{background:var(--accent-deep);color:#d9c6ab;font-family:"Noto Sans TC",sans-serif;font-size:13px;padding:12px 18px;line-height:1.8;mix-blend-mode:normal}
+  figure.photo figcaption .cr{display:block;font-size:11.5px;color:#a58a68}
+  figure.photo figcaption .cr a{color:#a58a68}
+
+  .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:26px 30px;margin:22px 0;box-shadow:0 1px 4px rgba(60,40,20,.05)}
+  .note{background:var(--note-bg);border-radius:10px;padding:20px 24px;margin:22px 0;font-size:15.5px}
+  .note b{color:var(--accent)}
+  .canon{background:#fdfbf7;border:1px solid var(--line);border-left:4px solid var(--gold);padding:18px 22px;margin:22px 0;font-size:15.5px;border-radius:0 8px 8px 0}
+  .canon .ref{display:block;margin-top:8px;font-family:"Noto Sans TC",sans-serif;font-size:13px;color:var(--ink-soft)}
+  sup.src{font-family:"Noto Sans TC",sans-serif;font-size:11px;line-height:0}
+  sup.src a{color:var(--gold);text-decoration:none;padding:0 2px}
+  sup.src a:hover{color:var(--accent);text-decoration:underline}
+
+  /* ---------- 三日紀事 ---------- */
+  .days{margin:30px 0;border-top:1px solid var(--line)}
+  .day{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:22px 6px;border-bottom:1px solid var(--line);font-size:15.5px}
+  .day .d{font-family:"Noto Sans TC",sans-serif;color:var(--accent);font-weight:700;font-size:15px;line-height:1.7}
+  .day .d small{display:block;color:var(--gold);font-weight:400;font-size:12px;letter-spacing:.08em}
+  .day p{margin:0;color:var(--ink-soft)}
+  @media(max-width:560px){.day{grid-template-columns:1fr;gap:4px}}
+
+  /* ---------- 名單 ---------- */
+  .roster{margin:24px 0;font-family:"Noto Sans TC",sans-serif;font-size:15px;border-top:2px solid var(--accent)}
+  .roster .row{display:grid;grid-template-columns:1fr 90px 130px;gap:10px;padding:11px 8px;border-bottom:1px solid var(--line);align-items:baseline}
+  .roster .row.hd{font-size:12.5px;color:var(--ink-soft);letter-spacing:.1em;border-bottom:1px solid var(--gold)}
+  .roster .nm{font-weight:700;color:var(--ink)}
+  .roster .role-c{color:var(--accent);font-size:13.5px}
+  .roster .role-n{color:var(--gold);font-size:13.5px}
+  @media(max-width:480px){.roster .row{grid-template-columns:1fr 70px 100px;font-size:13.5px}}
+
+  /* ---------- 時間線 ---------- */
+  .timeline{position:relative;margin:30px 0;padding-left:30px}
+  .timeline::before{content:"";position:absolute;left:8px;top:4px;bottom:4px;width:1px;background:var(--line)}
+  .tl-item{position:relative;margin-bottom:28px}
+  .tl-item::before{content:"";position:absolute;left:-26px;top:11px;width:8px;height:8px;border-radius:50%;background:var(--gold)}
+  .tl-item.major::before{background:var(--accent);width:12px;height:12px;left:-28px;top:9px}
+  .tl-year{font-family:"Noto Sans TC",sans-serif;font-weight:700;color:var(--accent);font-size:16px}
+  .tl-item p{margin:4px 0 0;font-size:15.5px;color:var(--ink-soft)}
+  .tl-item.major p{color:var(--ink)}
+
+  /* ---------- 表格 ---------- */
+  table{width:100%;border-collapse:collapse;margin:22px 0;font-size:15px;font-family:"Noto Sans TC",sans-serif;background:var(--card)}
+  th{background:var(--accent);color:#f5efe6;padding:10px 14px;text-align:left;font-weight:500}
+  td{padding:11px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+  tr:last-child td{border-bottom:none}
+
+  /* ---------- 圖解 ---------- */
+  figure.diagram{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:24px 18px 12px;margin:28px 0;text-align:center}
+  figure.diagram svg{width:100%;height:auto;max-width:660px}
+  figure.diagram figcaption{font-family:"Noto Sans TC",sans-serif;font-size:13px;color:var(--ink-soft);padding:10px 8px 6px;line-height:1.8;text-align:left}
+
+  /* ---------- 象限 ---------- */
+  .quad{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:24px 0;font-family:"Noto Sans TC",sans-serif}
+  .q{border-radius:8px;padding:18px 20px;border:1px solid var(--line)}
+  .q .tag{font-size:12.5px;letter-spacing:.08em;font-weight:700}
+  .q h4{font-size:16.5px;margin:6px 0 6px;font-weight:700}
+  .q p{font-size:13.5px;line-height:1.8;margin:0;color:var(--ink-soft)}
+  .q.ok{background:#f2f6f0}.q.ok .tag{color:var(--ok)}
+  .q.warn{background:#fbf4e8}.q.warn .tag{color:var(--gold)}
+  .q.bad{background:#faf0ef}.q.bad .tag{color:var(--bad)}
+  @media(max-width:560px){.quad{grid-template-columns:1fr}}
+
+  /* ---------- FAQ ---------- */
+  details{background:var(--card);border:1px solid var(--line);border-radius:8px;margin:10px 0;overflow:hidden}
+  summary{cursor:pointer;padding:16px 20px;font-weight:700;font-size:16px;color:var(--accent);list-style:none;position:relative;padding-right:44px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"＋";position:absolute;right:18px;top:50%;transform:translateY(-50%);color:var(--gold);font-size:18px}
+  details[open] summary::after{content:"－"}
+  details .body{padding:0 20px 18px;font-size:15.5px}
+
+  /* ---------- 測驗 ---------- */
+  .quiz{counter-reset:qn}
+  .qq{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:22px 24px;margin:16px 0}
+  .qq .qt{font-weight:700;font-size:16.5px;margin-bottom:14px;color:var(--ink)}
+  .qq .qt::before{counter-increment:qn;content:counter(qn) " ／ ";color:var(--gold);font-family:"Noto Sans TC",sans-serif;font-size:14px}
+  .qq .opts{display:grid;gap:8px;font-family:"Noto Sans TC",sans-serif}
+  .qq button{display:block;width:100%;text-align:left;padding:11px 16px;font-size:14.5px;background:var(--paper);border:1px solid var(--line);border-radius:8px;cursor:pointer;color:var(--ink);font-family:inherit;transition:border-color .2s}
+  .qq button:hover{border-color:var(--gold)}
+  .qq.done button{cursor:default;opacity:.65}
+  .qq button.right{background:#f2f6f0;border-color:var(--ok);color:var(--ok);font-weight:700;opacity:1}
+  .qq button.wrong{background:#faf0ef;border-color:var(--bad);color:var(--bad);opacity:1}
+  .qq .exp{display:none;margin-top:14px;font-size:14px;color:var(--ink-soft);background:var(--note-bg);border-radius:8px;padding:12px 16px;line-height:1.85}
+  .qq.done .exp{display:block}
+
+  dl{margin:16px 0}
+  dt{font-weight:700;color:var(--accent);margin-top:18px;font-size:16.5px}
+  dt .latin{font-weight:400;font-style:italic;color:var(--ink-soft);font-size:14px;margin-left:8px}
+  dd{margin-left:0;font-size:15.5px;color:var(--ink-soft)}
+
+  .sources ol{padding-left:22px;font-size:14.5px;font-family:"Noto Sans TC",sans-serif}
+  .sources li{margin-bottom:10px}
+  .sources li:target{background:var(--note-bg);border-radius:6px;padding:6px 8px}
+  .sources a{color:var(--accent);word-break:break-all}
+
+  footer{background:var(--accent-deep);color:#d9c6ab;margin-top:90px;padding:48px 20px;text-align:center;font-size:13.5px;font-family:"Noto Sans TC",sans-serif}
+  footer .cross{color:var(--gold-soft);font-size:18px;margin-bottom:16px;letter-spacing:.5em;text-indent:.5em}
+  .disclaim{max-width:620px;margin:0 auto 12px;line-height:2}
+  footer .fine{color:#a58a68;font-size:12.5px;line-height:2}
+</style>
+</head>
+<body>
+
+<header class="hero" id="top">
+  <svg class="bg" viewBox="0 0 1200 300" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <polygon points="0,300 120,150 240,240 360,110 500,250 640,90 780,230 900,140 1050,260 1200,120 1200,300" fill="#1f070b"/>
+    <polygon points="0,300 90,210 220,280 380,180 520,290 700,160 860,280 1000,200 1200,290 1200,300" fill="#150408"/>
+    <g fill="#0e0305">
+      <rect x="585" y="180" width="30" height="120"/>
+      <polygon points="583,180 617,180 600,140"/>
+      <rect x="597" y="118" width="6" height="24"/>
+      <rect x="589" y="126" width="22" height="5"/>
+    </g>
+  </svg>
+  <div class="inner">
+    <div class="kicker">裂教 · 絕罰 · 聖庇護十世司鐸兄弟會</div>
+    <h1>同一片草地</h1>
+    <div class="subtitle">三十八年，四位教宗，兩次未經任命的祝聖</div>
+    <p class="sub">1988年6月30日，費萊在瑞士厄科納的草地上跪下，從勒菲弗總主教手中領受主教祝聖——那場祝聖讓六個人被絕罰。<br><br>2026年7月1日，快七十歲的費萊站在同一片草地上，看著四位新主教在一萬七千人面前跪下。<b>這一次，被宣告脫離教會的，是整個兄弟會。</b><br><br>這中間隔著三十八年、四位教宗、和無數次伸出又收回的手。本專題陪你把這段路走一遍。</p>
+    <div class="scrollcue">向下捲動 ⌄</div>
+    <div class="date">最後更新 2026.07.05</div>
+  </div>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#event">七十二小時</a></li>
+    <li><a href="#excomm">一記警鐘</a></li>
+    <li><a href="#schism">無縫的長衣</a></li>
+    <li><a href="#history">六十年長路</a></li>
+    <li><a href="#dispute">冰山之下</a></li>
+    <li><a href="#faq">牧靈手冊</a></li>
+    <li><a href="#quiz">隨堂測驗</a></li>
+    <li><a href="#sources">來源</a></li>
+  </ul>
+</nav>
+
+<main>
+
+<!-- ============ 第一幕 ============ -->
+<section id="event">
+  <div class="sec-head">
+    <div class="sec-num">第一幕 · 事件</div>
+    <h2>七十二小時</h2>
+    <p class="lede">一場祝聖、一道法令、一份修和程序。事件本身三天就講完了——難的是後面六十年。</p>
+  </div>
+
+  <p>7月1日上午九點，瓦萊州的太陽照在厄科納修院前的空地上。約一萬七千人從七十個國家趕來，彌撒進行了五個多小時。<sup class="src"><a href="#src2">〔2〕</a></sup>主禮的德加拉雷塔與襄禮的費萊，正是1988年在這裡受祝聖的那批主教中，僅存仍在職的兩位。四位新主教一一上前：兩位法國人，一位美國人，一位瑞士人。<sup class="src"><a href="#src3">〔3〕</a></sup>沒有教宗的任命。教宗的信兩天前才送到——良十四世6月29日親筆致函總會長帕利亞拉尼，作最後的呼籲。<sup class="src"><a href="#src2">〔2〕</a></sup></p>
+
+  <blockquote class="pull">
+    <div class="q">這是一個虛假的兩難。</div>
+    <div class="who">—— 帕利亞拉尼在祝聖彌撒講道中，回應教宗的最後呼籲<sup class="src"><a href="#src2">〔2〕</a></sup></div>
+  </blockquote>
+
+  <figure class="photo">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Econe_Seminary.jpg" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:FilePath/Econe%20Seminary.jpg'" alt="厄科納的聖庇護十世國際修院" loading="lazy">
+    <figcaption>厄科納的聖庇護十世國際修院。1988與2026，兩次未經任命的祝聖都在這裡舉行。
+    <span class="cr">照片：<a href="https://commons.wikimedia.org/wiki/File:Econe_Seminary.jpg">Wikimedia Commons</a> · CC BY-SA 4.0</span></figcaption>
+  </figure>
+
+  <h3>三天紀事</h3>
+  <div class="days">
+    <div class="day"><div class="d">7月1日<small>瑞士 · 厄科納</small></div><p>SSPX未經教宗任命祝聖四位主教。依教會法，六位涉事主教在祝聖完成的當下已自動受絕罰。<sup class="src"><a href="#src2">〔2〕</a><a href="#src3">〔3〕</a></sup></p></div>
+    <div class="day"><div class="d">7月2日<small>梵蒂岡 · 教義部</small></div><p>聖座頒布法令：宣告此為裂教行為，六位主教依法典第1387條及第1364條受自科絕罰；SSPX全體約750位司鐸為裂教者；其告解與婚配聖事無效；並警告正式附和裂教的神職人員與信友同受絕罰。<sup class="src"><a href="#src3">〔3〕</a><a href="#src4">〔4〕</a><a href="#src5">〔5〕</a></sup></p></div>
+    <div class="day"><div class="d">同日<small>梵蒂岡</small></div><p>聖座頒布《聖庇護十世司鐸兄弟會司鐸修和程序》，為願意回歸的司鐸與信友開路。文件並指明：偶爾參與SSPX禮儀而無裂教意圖的平信友，不算正式附和裂教。<sup class="src"><a href="#src4">〔4〕</a><a href="#src6">〔6〕</a></sup></p></div>
+    <div class="day"><div class="d">7月3日<small>SSPX總會</small></div><p>總會長致函教宗，回應教義部法令。SSPX不接受裂教的定性，堅稱自己忠於教會與教宗。<sup class="src"><a href="#src11">〔11〕</a></sup></p></div>
+  </div>
+
+  <h3>另一邊的聲音</h3>
+  <p>同一天，厄科納也發出了自己的聲明。SSPX總會在祝聖當日的公告中表示，四位新主教是該會的「輔理主教，<b>不具治理權</b>」；該會「誠摯地遺憾」祝聖「由於特殊情況，不得不在未獲聖父批准下舉行」，也遺憾總會長始終未獲親自面見教宗良十四世、當面陳明理由的機會。但聲明同時稱這次祝聖是「對兄弟會本身、對整個教會而言，一項極大的恩寵」。<sup class="src"><a href="#src11">〔11〕</a></sup></p>
+  <blockquote class="pull">
+    <div class="q">為保存聖傳的神聖遺產取得必要的方法——這四位新主教是天主極大的恩賜。</div>
+    <div class="who">—— SSPX總會聲明，2026年7月1日，厄科納（大意譯）<sup class="src"><a href="#src11">〔11〕</a></sup></div>
+  </blockquote>
+  <p>換句話說：羅馬視7月1日為決裂，厄科納視7月1日為自保。要理解這兩種讀法為何差這麼遠，得先弄清楚兩個詞——絕罰，和裂教。</p>
+
+  <h3>六個名字</h3>
+  <div class="roster">
+    <div class="row hd"><span>姓名</span><span>國籍</span><span>角色</span></div>
+    <div class="row"><span class="nm">德加拉雷塔 Alfonso de Galarreta</span><span>西／阿根廷</span><span class="role-c">主禮 · 1988年受祝聖</span></div>
+    <div class="row"><span class="nm">費萊 Bernard Fellay</span><span>瑞士</span><span class="role-c">襄禮 · 1988年受祝聖</span></div>
+    <div class="row"><span class="nm">阿納皮耶 Marc Hanappier</span><span>法國</span><span class="role-n">新受祝聖</span></div>
+    <div class="row"><span class="nm">普安西內·德西弗里 M. Poinsinet de Sivry</span><span>法國</span><span class="role-n">新受祝聖</span></div>
+    <div class="row"><span class="nm">戈爾達德 Michael Goldade</span><span>美國</span><span class="role-n">新受祝聖</span></div>
+    <div class="row"><span class="nm">施賴伯 Pascal Schreiber</span><span>瑞士</span><span class="role-n">新受祝聖</span></div>
+  </div>
+  <p style="font-size:14px;color:var(--ink-soft);font-family:'Noto Sans TC',sans-serif">六位均受保留於宗座的自科絕罰。<sup class="src"><a href="#src3">〔3〕</a><a href="#src5">〔5〕</a></sup></p>
+
+  <h3>破裂不是一夜之間</h3>
+  <div class="timeline">
+    <div class="tl-item"><span class="tl-year">2026.02.02</span><p>總會長帕利亞拉尼宣布將於7月1日祝聖新主教，理由是「確保主教職務延續性的特殊必要性」——該會只剩兩位年近七旬的主教。<sup class="src"><a href="#src1">〔1〕</a><a href="#src2">〔2〕</a></sup></p></div>
+    <div class="tl-item"><span class="tl-year">2026.02.12</span><p>教義部部長費爾南德斯樞機在教宗批准下與帕利亞拉尼會晤，提議展開神學對話，條件是停止祝聖計劃——並警告此舉「將意味著教會共融的決定性破裂（裂教）」。<sup class="src"><a href="#src1">〔1〕</a></sup></p></div>
+    <div class="tl-item"><span class="tl-year">2026.02.18</span><p>SSPX拒絕。理由仍是那個用了三十八年的詞：「客觀重大必要狀態」。<sup class="src"><a href="#src8">〔8〕</a></sup></p></div>
+    <div class="tl-item"><span class="tl-year">2026.06.29</span><p>聖伯多祿聖保祿瞻禮。教宗良十四世親自致函帕利亞拉尼，作最後呼籲。<sup class="src"><a href="#src2">〔2〕</a></sup></p></div>
+    <div class="tl-item major"><span class="tl-year">2026.07.01–02</span><p>祝聖如期舉行。聖座宣告裂教。<sup class="src"><a href="#src3">〔3〕</a><a href="#src5">〔5〕</a></sup></p></div>
+  </div>
+</section>
+
+<div class="divider">✠</div>
+
+<!-- ============ 第二幕 ============ -->
+<section id="excomm">
+  <div class="sec-head">
+    <div class="sec-num">第二幕 · 概念</div>
+    <h2>一記警鐘：絕罰</h2>
+    <p class="lede">這大概是天主教詞彙裡最常被誤解的一個詞。它不是逐出、不是詛咒，而是教會手中最重的一記警鐘。</p>
+  </div>
+
+  <p>絕罰（excommunicatio）在教會法上屬於「懲戒罰」（censura）。法典給它的定位是<b>醫治性的處罰</b>：針對明知故犯且頑抗不改的重大罪行，目的在於促使當事人認清行為的嚴重性、悔改回歸——而一旦當事人真心悔改，教會有義務解除它。換句話說，絕罰存在的理由，是為了有一天能被解除。</p>
+
+  <div class="canon">
+    受絕罰者禁止：一、在感恩祭或其他任何敬禮儀式中，擔任任何職務；二、舉行聖事或聖儀，以及領受聖事；三、行使任何教會職務、職權或擔任任何行政工作。
+    <span class="ref">《天主教法典》第1331條第1項（大意）<sup class="src"><a href="#src9">〔9〕</a></sup></span>
+  </div>
+
+  <p>所以，受絕罰的人仍是領過洗的天主教徒——聖洗的神印不可磨滅，教會從不「開除」任何人的洗禮。教會也沒有宣判任何人下地獄：她無權、也從不判定人的永遠命運。絕罰是今世的、法律層面的措施，恰恰是為了避免當事人在錯誤的路上走到底。至於「不可挽回」？最有力的反例就寫在SSPX自己的歷史裡：1988年被絕罰的四位主教，2009年獲本篤十六世解除絕罰。<sup class="src"><a href="#src8">〔8〕</a></sup>這一次，聖座也在宣告絕罰的同一天頒布了修和程序。<sup class="src"><a href="#src4">〔4〕</a></sup></p>
+
+  <h3>為什麼7月1日當下就已生效</h3>
+  <p>細心的讀者會注意到：祝聖在7月1日，法令在7月2日——那絕罰是哪一天生效的？答案是7月1日，祝聖完成的那一刻。這叫<b>自科絕罰</b>（latae sententiae）：法律明文規定的某些重大行為，一經完成便自動觸犯絕罰，不需審判、不需宣告。與之相對的「判處絕罰」（ferendae sententiae）才需要教會權威審理判處。7月2日的法令，是在「宣告」一個前一天已然發生的事實。<sup class="src"><a href="#src4">〔4〕</a><a href="#src9">〔9〕</a></sup></p>
+
+  <figure class="diagram">
+    <svg viewBox="0 0 680 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="自科絕罰與判處絕罰流程比較圖">
+      <defs>
+        <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#b08d3e"/></marker>
+      </defs>
+      <text x="20" y="34" font-family="Noto Sans TC,sans-serif" font-size="16" font-weight="700" fill="#7a1f2b">自科絕罰 latae sententiae</text>
+      <rect x="20" y="50" width="180" height="54" rx="8" fill="#fdf6f4" stroke="#e5ddd0"/>
+      <text x="110" y="73" text-anchor="middle" font-family="Noto Sans TC,sans-serif" font-size="14" fill="#2b2620">重大行為完成</text>
+      <text x="110" y="93" text-anchor="middle" font-family="Noto Sans TC,sans-serif" font-size="12" fill="#5c544a">（如：未經任命祝聖主教）</text>
+      <line x1="200" y1="77" x2="260" y2="77" stroke="#b08d3e" stroke-width="2" marker-end="url(#ar)"/>
+      <text x="230" y="66" text-anchor="middle" font-family="Noto Sans TC,sans-serif" font-size="11" fill="#b08d3e">當下</text>
+      <rect x="262" y="50" width="150" height="54" rx="8" fill="#7a1f2b"/>
+      <text x="337" y="83" text-anchor="middle" font-family="Noto Sans TC,sans-serif" font-size="15" font-weight="700" fill="#f5efe6">絕罰自動生效</text>
+      <line x1="412" y1="77" x2="472" y2="77" stroke="#b08d3e" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#ar)"/>
+      <text x="442" y="66" text-anchor="middle" font-family="Noto Sans TC,sans-serif" font-size="11" fill="#b08d3e">其後</text>
+      <rect x="474" y="50" width="186" height="54" rx="8" fill="#ffffff" stroke="#e5ddd0"/>
+      <text x="567" y="73" text-anchor="middle" font-family="Noto Sans TC,sans-serif" font-size="14" fill="#2b2620">官方「宣告」</text>
+      <text x="567" y="93" text-anchor="middle" font-family="Noto Sans TC,sans-serif" font-size="12" fill="#5c544a">確認並公告既成事實</text>
+      <text x="20" y="158" font-family="Noto Sans TC,sans-serif" font-size="16" font-weight="700" fill="#5c544a">判處絕罰 ferendae sententiae</text>
+      <rect x="20" y="172" width="180" height="50" rx="8" fill="#ffffff" stroke="#e5ddd0"/>
+      <text x="110" y="202" text-anchor="middle" font-family="Noto Sans TC,sans-serif" font-size="14" fill="#2b2620">行為發生</text>
+      <line x1="200" y1="197" x2="260" y2="197" stroke="#a8a093" stroke-width="2" marker-end="url(#ar)"/>
+      <rect x="262" y="172" width="150" height="50" rx="8" fill="#ffffff" stroke="#e5ddd0"/>
+      <text x="337" y="202" text-anchor="middle" font-family="Noto Sans TC,sans-serif" font-size="14" fill="#2b2620">教會權威審理</text>
+      <line x1="412" y1="197" x2="472" y2="197" stroke="#a8a093" stroke-width="2" marker-end="url(#ar)"/>
+      <rect x="474" y="172" width="186" height="50" rx="8" fill="#f4ede1" stroke="#e5ddd0"/>
+      <text x="567" y="202" text-anchor="middle" font-family="Noto Sans TC,sans-serif" font-size="14" fill="#2b2620">正式判處後才生效</text>
+    </svg>
+  </figure>
+
+  <div class="canon">
+    主教無宗座之任命而祝聖他人為主教，及接受其祝聖者，處保留於宗座的自科絕罰。
+    <span class="ref">《天主教法典》第1387條（2021年修訂第六卷；即原第1382條）<sup class="src"><a href="#src9">〔9〕</a></sup></span>
+  </div>
+</section>
+
+<div class="divider">✠</div>
+
+<!-- ============ 第三幕 ============ -->
+<section id="schism">
+  <div class="sec-head">
+    <div class="sec-num">第三幕 · 概念</div>
+    <h2>無縫的長衣：裂教</h2>
+    <p class="lede">士兵們沒有撕開耶穌那件無縫的長衣（若19:23-24）。傳統上，教會一直用這件長衣比喻她的合一——裂教撕開的正是它。</p>
+  </div>
+
+  <div class="canon">
+    裂教是不願服從教宗，或不願與隸屬教宗的教會成員共融。
+    <span class="ref">《天主教法典》第751條（大意）<sup class="src"><a href="#src9">〔9〕</a></sup></span>
+  </div>
+
+  <p>教會法把離開的方式分得很清楚。<b>背教</b>（apostasia）拋棄的是整個基督信仰；<b>異端</b>（haeresis）否認的是某端當信的教義；<b>裂教</b>（schisma）否定的則不是教義，而是共融——拒絕服從教宗、拒絕與隸屬教宗的教會成員合一。SSPX屬於第三種。爭議的焦點從來不是天主聖三或基督的天主性，而是一個更樸素的問題：要不要服從教宗？接不接受梵二？</p>
+
+  <h3>一場祝聖，為何等於決裂</h3>
+  <p>在天主教的結構裡，主教是宗徒的繼承人，而主教團必須與伯多祿的繼承人共融合一，才成其為主教團。未經教宗任命祝聖主教，等於延續一條獨立的聖統血脈——在教會之旁，另建一個能自我延續的教階體制。這就是為什麼在諸多違法行為中，唯獨這一項被視為裂教性質的決裂。</p>
+
+  <figure class="diagram">
+    <svg viewBox="0 0 680 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="教會共融結構圖：主教團與教宗共融，未經任命的祝聖形成脫離的聖統">
+      <g stroke="#b08d3e" stroke-width="2">
+        <line x1="240" y1="150" x2="120" y2="60"/>
+        <line x1="240" y1="150" x2="120" y2="150"/>
+        <line x1="240" y1="150" x2="120" y2="240"/>
+        <line x1="240" y1="150" x2="330" y2="60"/>
+        <line x1="240" y1="150" x2="330" y2="240"/>
+      </g>
+      <circle cx="240" cy="150" r="46" fill="#7a1f2b"/>
+      <text x="240" y="145" text-anchor="middle" font-family="Noto Sans TC,sans-serif" font-size="15" font-weight="700" fill="#f5efe6">教宗</text>
+      <text x="240" y="165" text-anchor="middle" font-family="Noto Sans TC,sans-serif" font-size="11" fill="#e0c88a">伯多祿繼承人</text>
+      <g>
+        <circle cx="120" cy="60" r="30" fill="#faf7f2" stroke="#b08d3e" stroke-width="2"/>
+        <text x="120" y="65" text-anchor="middle" font-family="Noto Sans TC,sans-serif" font-size="12" fill="#2b2620">主教</text>
+        <circle cx="120" cy="150" r="30" fill="#faf7f2" stroke="#b08d3e" stroke-width="2"/>
+        <text x="120" y="155" text-anchor="middle" font-family="Noto Sans TC,sans-serif" font-size="12" fill="#2b2620">主教</text>
+        <circle cx="120" cy="240" r="30" fill="#faf7f2" stroke="#b08d3e" stroke-width="2"/>
+        <text x="120" y="245" text-anchor="middle" font-family="Noto Sans TC,sans-serif" font-size="12" fill="#2b2620">主教</text>
+        <circle cx="330" cy="60" r="30" fill="#faf7f2" stroke="#b08d3e" stroke-width="2"/>
+        <text x="330" y="65" text-anchor="middle" font-family="Noto Sans TC,sans-serif" font-size="12" fill="#2b2620">主教</text>
+        <circle cx="330" cy="240" r="30" fill="#faf7f2" stroke="#b08d3e" stroke-width="2"/>
+        <text x="330" y="245" text-anchor="middle" font-family="Noto Sans TC,sans-serif" font-size="12" fill="#2b2620">主教</text>
+      </g>
+      <text x="225" y="292" text-anchor="middle" font-family="Noto Sans TC,sans-serif" font-size="12.5" fill="#3e6b4f" font-weight="700">與伯多祿共融的主教團</text>
+      <line x1="286" y1="150" x2="440" y2="150" stroke="#8c2f39" stroke-width="2" stroke-dasharray="7 6"/>
+      <g>
+        <circle cx="510" cy="150" r="38" fill="#faf0ef" stroke="#8c2f39" stroke-width="2" stroke-dasharray="4 3"/>
+        <text x="510" y="147" text-anchor="middle" font-family="Noto Sans TC,sans-serif" font-size="12.5" fill="#8c2f39" font-weight="700">未經任命</text>
+        <text x="510" y="163" text-anchor="middle" font-family="Noto Sans TC,sans-serif" font-size="12.5" fill="#8c2f39" font-weight="700">的祝聖</text>
+        <g stroke="#8c2f39" stroke-width="1.6" stroke-dasharray="4 3">
+          <line x1="540" y1="122" x2="610" y2="70"/>
+          <line x1="548" y1="150" x2="622" y2="150"/>
+          <line x1="540" y1="178" x2="610" y2="230"/>
+        </g>
+        <circle cx="628" cy="62" r="24" fill="#ffffff" stroke="#8c2f39" stroke-width="1.6" stroke-dasharray="4 3"/>
+        <text x="628" y="67" text-anchor="middle" font-family="Noto Sans TC,sans-serif" font-size="11" fill="#8c2f39">主教</text>
+        <circle cx="640" cy="150" r="24" fill="#ffffff" stroke="#8c2f39" stroke-width="1.6" stroke-dasharray="4 3"/>
+        <text x="640" y="155" text-anchor="middle" font-family="Noto Sans TC,sans-serif" font-size="11" fill="#8c2f39">主教</text>
+        <circle cx="628" cy="238" r="24" fill="#ffffff" stroke="#8c2f39" stroke-width="1.6" stroke-dasharray="4 3"/>
+        <text x="628" y="243" text-anchor="middle" font-family="Noto Sans TC,sans-serif" font-size="11" fill="#8c2f39">主教</text>
+      </g>
+      <text x="565" y="292" text-anchor="middle" font-family="Noto Sans TC,sans-serif" font-size="12.5" fill="#8c2f39" font-weight="700">自我延續的獨立聖統</text>
+    </svg>
+    <figcaption>主教團必須與伯多祿的繼承人共融，才成其為主教團。未經任命的祝聖（右）等於在教會之旁另建一個自我延續的體制——這正是裂教。</figcaption>
+  </figure>
+
+  <blockquote class="pull">
+    <div class="q">未經聖父教宗任命的主教祝聖，將意味著教會共融的決定性破裂，對整個兄弟會帶來嚴重的後果。</div>
+    <div class="who">—— 聖座教義部公告，2026年2月12日；引若望保祿二世《天主的教會》牧函<sup class="src"><a href="#src1">〔1〕</a><a href="#src10">〔10〕</a></sup></div>
+  </blockquote>
+
+  <h3>SSPX的抗辯：「這不是裂教」</h3>
+  <p>公平地說，SSPX從不接受「裂教」的定性，而且他們的抗辯有一套完整論證。其核心是<b>聖秩權與治理權的區分</b>：他們主張，未經聖座批准的主教祝聖只是違法地傳遞了聖秩，只要不伴隨裂教的意圖、也不授予治理權（管轄教區與信友的權力），就不構成共融的斷裂。<sup class="src"><a href="#src11">〔11〕</a></sup>所以他們刻意聲明新主教是「不具治理權的輔理主教」——不是要另立平行教會，只是要確保能繼續晉鐸、施放堅振。他們也一再強調自己承認教宗的權威、在彌撒大典中為教宗祈禱、明確拒絕「宗座出缺論」（認為教宗席位無人的極端立場）。</p>
+  <p>教會方面不接受這套論證：1988年《天主的教會》牧函與2026年的法令都認定，問題不在有沒有授予治理權，而在<b>不服從本身</b>——明知教宗明令禁止仍執意祝聖，這個行為就是對伯多祿職務的實質拒絕；一個能自行決定何時服從、何時不服從教宗的團體，無論如何自我描述，都已在共融之外。<sup class="src"><a href="#src4">〔4〕</a><a href="#src10">〔10〕</a></sup>兩套論證，讀者可以並列衡量——但教會法上有權作出定性的，是聖座。</p>
+
+  <div class="note"><b>1988與2026，差在哪裡？</b>1988年，若望保祿二世絕罰了六位主教、稱那是「裂教行為」，但此後多年，聖座刻意避免正式宣告SSPX整體「處於裂教」——為對話留門。2026年，聖座首次正式宣告該會處於裂教狀態，絕罰的範圍也從六位主教延伸到全體司鐸。三十八年來，立場第一次收緊到底。<sup class="src"><a href="#src5">〔5〕</a><a href="#src8">〔8〕</a></sup></div>
+</section>
+
+<div class="divider">✠</div>
+
+<!-- ============ 第四幕 ============ -->
+<section id="history">
+  <div class="sec-head">
+    <div class="sec-num">第四幕 · 歷史</div>
+    <h2>六十年長路</h2>
+    <p class="lede">要理解2026年7月1日，得回到1970年——甚至回到梵二的會議廳。</p>
+  </div>
+
+  <figure class="photo">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Portrait_of_Archbishop_Marcel_Lefebvre_%E2%80%93_edited.jpg" onerror="this.onerror=null;this.src='https://upload.wikimedia.org/wikipedia/commons/8/8d/Archbishop_Marcel_Lefebvre.jpg'" alt="勒菲弗總主教肖像" loading="lazy">
+    <figcaption>勒菲弗總主教（Marcel Lefebvre，1905–1991）。曾任達喀爾總主教、聖神會總會長，是梵二會議中保守派的代表人物；1991年逝世，至死未與教會修和。
+    <span class="cr">照片：<a href="https://commons.wikimedia.org/wiki/File:Portrait_of_Archbishop_Marcel_Lefebvre_%E2%80%93_edited.jpg">Wikimedia Commons</a> · CC BY 2.0</span></figcaption>
+  </figure>
+
+  <h3>SSPX是誰</h3>
+  <p>在進入年表之前，先認識這個團體本身。聖庇護十世司鐸兄弟會以教宗聖庇護十世（1903–1914年在位）命名，承接他的格言「在基督內重整一切」（Instaurare omnia in Christo）。按其會章，兄弟會的宗旨只有一句話：<b>「司鐸職，以及與司鐸職相關的一切」</b>——培育司鐸、支持司鐸的聖德、圍繞祭台上的彌撒聖祭建立整個團體的生活。<sup class="src"><a href="#src11">〔11〕</a></sup>1970年，它在瑞士弗里堡教區主教沙里耶（François Charrière）的正式批准下合法成立，最初就是一間培育傳統司鐸的修院。</p>
+  <p>六十年後的今天，SSPX是一個全球性組織：約750位司鐸，四座大修院（瑞士厄科納、美國迪爾溫、阿根廷拉雷哈、德國蔡茨科芬），會區遍及各大洲，並辦有學校、避靜院、修士會、修女會與在俗第三會。<sup class="src"><a href="#src5">〔5〕</a><a href="#src11">〔11〕</a></sup>不能把它想成一小撮邊緣分子——對許多信友家庭來說，SSPX的小堂是他們幾代人的信仰生活所在。這也正是這次裂教宣告牧靈上如此沉重的原因。</p>
+  <p>他們憂慮的事，寫在其官網的「主要關切」裡：現代主義、宗教自由、大公運動、主教團制、禮儀改革。<sup class="src"><a href="#src11">〔11〕</a></sup>用他們自己的話說，他們不是要離開教會，而是要在他們認為的教會危機中「保存聖傳」。用羅馬的話說，保存聖傳不需要、也不能以不服從伯多祿為代價。這條張力線，貫穿以下六十年。</p>
+
+  <div class="timeline">
+    <div class="tl-item"><span class="tl-year">1962–1965</span><p>梵蒂岡第二屆大公會議。勒菲弗反對大會在宗教自由、大公運動與禮儀改革上的方向。</p></div>
+    <div class="tl-item"><span class="tl-year">1970</span><p>勒菲弗在瑞士弗里堡教區主教批准下創立聖庇護十世司鐸兄弟會，於厄科納設立修院。<sup class="src"><a href="#src8">〔8〕</a></sup></p></div>
+    <div class="tl-item"><span class="tl-year">1975</span><p>教會撤銷批准；勒菲弗拒絕解散。<sup class="src"><a href="#src8">〔8〕</a></sup></p></div>
+    <div class="tl-item"><span class="tl-year">1976</span><p>未經准許擅自晉鐸修生，被保祿六世處以停職（suspensio a divinis）。<sup class="src"><a href="#src8">〔8〕</a></sup></p></div>
+    <div class="tl-item major"><span class="tl-year">1988.06.30</span><p>勒菲弗不顧若望保祿二世的警告，在厄科納祝聖四位主教。六人受自科絕罰；教宗頒布《天主的教會》牧函，稱此為「裂教行為」。不願跟隨的司鐸離開，創立了完全共融於教宗的聖伯多祿司鐸兄弟會（FSSP）——同樣的禮儀，不同的路。<sup class="src"><a href="#src8">〔8〕</a><a href="#src10">〔10〕</a></sup></p></div>
+    <div class="tl-item"><span class="tl-year">1991</span><p>勒菲弗逝世。</p></div>
+    <div class="tl-item"><span class="tl-year">2007</span><p>本篤十六世頒布《歷任教宗》自動詔書，大幅放寬傳統拉丁彌撒——伸向傳統派的橄欖枝。<sup class="src"><a href="#src8">〔8〕</a></sup></p></div>
+    <div class="tl-item"><span class="tl-year">2009</span><p>本篤十六世解除四位主教的絕罰，展開教義對談（2009–2012），未能達成協議。同期威廉森因否認納粹大屠殺言論掀起軒然大波，2012年被SSPX開除。<sup class="src"><a href="#src8">〔8〕</a></sup></p></div>
+    <div class="tl-item"><span class="tl-year">2015–2017</span><p>方濟各授予SSPX司鐸有效聽告解的權限，並為其婚配聖事作出安排——雙方最接近修和的時刻。<sup class="src"><a href="#src8">〔8〕</a></sup></p></div>
+    <div class="tl-item"><span class="tl-year">2021</span><p>《傳統的守護者》自動詔書收緊傳統拉丁彌撒，張力再起。<sup class="src"><a href="#src8">〔8〕</a></sup></p></div>
+    <div class="tl-item"><span class="tl-year">2024</span><p>蒂西耶·德馬萊雷主教逝世。SSPX只剩兩位年近七旬的主教。</p></div>
+    <div class="tl-item major"><span class="tl-year">2026</span><p>2月宣布祝聖、拒絕斡旋；6月29日教宗親函；7月1日祝聖；7月2日宣告裂教。<sup class="src"><a href="#src1">〔1〕</a><a href="#src2">〔2〕</a><a href="#src3">〔3〕</a></sup></p></div>
+  </div>
+</section>
+
+<div class="divider">✠</div>
+
+<!-- ============ 第五幕 ============ -->
+<section id="dispute">
+  <div class="sec-head">
+    <div class="sec-num">第五幕 · 爭議</div>
+    <h2>冰山之下</h2>
+    <p class="lede">把這場爭議理解成「喜不喜歡拉丁文」，就像把冰山理解成水面上那一角。禮儀之下，是對梵二本身的接受問題。</p>
+  </div>
+
+  <p>SSPX不接受的，是梵二的幾份核心文獻：《信仰自由宣言》（Dignitatis Humanae）主張人人享有宗教自由的權利，他們認為這與先前的教會訓導矛盾；《大公主義法令》（Unitatis Redintegratio）與其他基督宗派修好的路線，他們認為模糊了「唯一真教會」的立場；《教會對非基督宗教態度宣言》（Nostra Aetate）開啟的跨宗教對話，他們同樣反對。禮儀上，他們不接受保祿六世彌撒的正當性地位，堅持1962年版《羅馬彌撒經書》。</p>
+  <p>教會的立場則始終如一：梵二是合法的大公會議，其訓導要求信友以「理智與意志的敬重服從」接受。對文獻的詮釋可以深化、可以討論——2026年2月聖座正是提議就此展開神學對話——但「拒絕會議」不能作為立場。<sup class="src"><a href="#src1">〔1〕</a></sup></p>
+
+  <h3>那個用了三十八年的詞</h3>
+  <p>1988年與2026年，SSPX為兩次祝聖給出的是同一個理由：「重大必要狀態」。他們2026年的具體論據是：全球擴展下，兩位年近七旬的主教已無力應付各地信友與修生的需要；四座修院裡數以百計的修生等著晉鐸，各地信友等著堅振；而與羅馬在梵二上的分歧數十年未解，「為了人靈的益處」，良心不容再等。帕利亞拉尼在2月受訪時說，他願意面見教宗，也願意承受任何制裁。<sup class="src"><a href="#src11">〔11〕</a></sup>美國會區長更直言：這是回應人靈的重大需要，「不是裂教行為」。<sup class="src"><a href="#src11">〔11〕</a></sup></p>
+  <p>教會的回應也是同一句話：共融沒有例外狀態——沒有任何必要性，可以正當化在伯多祿之外另立聖統；何況聖座已在2月提出神學對話的途徑，被拒絕的不是對話，而是「先停手」這個條件。1988年若望保祿二世對勒菲弗、2026年良十四世對帕利亞拉尼，先後親自作出最後呼籲；兩次，都被以「必要狀態」之名拒絕。<sup class="src"><a href="#src1">〔1〕</a><a href="#src2">〔2〕</a><a href="#src8">〔8〕</a></sup></p>
+
+  <h3>愛傳統禮儀，不等於跟隨SSPX</h3>
+  <p>這是整個專題最想說清楚的一件事。教會內有多個完全合法、與教宗圓滿共融的傳統禮儀團體：1988年由離開勒菲弗的司鐸創立的聖伯多祿司鐸兄弟會（FSSP）、基督君王至高司祭會（ICKSP）等。它們同樣以1962年禮書舉行彌撒，差別只在兩件事：接受梵二，服從教宗。7月2日之後，這條界線比任何時候都清楚。</p>
+</section>
+
+<div class="divider">✠</div>
+
+<!-- ============ 第六幕 ============ -->
+<section id="faq">
+  <div class="sec-head">
+    <div class="sec-num">第六幕 · 牧靈手冊</div>
+    <h2>教友最關心的問題</h2>
+    <p class="lede">依聖座7月2日法令、修和程序文件及教會法一般原則整理。具體個案——尤其婚姻——請務必諮詢堂區司鐸或教區法庭。</p>
+  </div>
+
+  <h3>先分清楚：「有效」與「合法」是兩回事</h3>
+  <p>「有效」指聖事真實成立；「合法」指依教會法規範舉行。一件聖事可以有效而不合法——這組區分是理解以下所有問答的鑰匙。</p>
+  <div class="quad">
+    <div class="q ok"><div class="tag">有效 · 合法</div><h4>教區及合法團體的聖事</h4><p>堂區彌撒、FSSP／ICKSP的傳統拉丁彌撒。安心參與。</p></div>
+    <div class="q warn"><div class="tag">有效 · 不合法</div><h4>SSPX的彌撒</h4><p>司鐸聖秩有效，感恩祭真實成立；但在裂教狀態下舉行，教會警告信友不要參與。</p></div>
+    <div class="q bad"><div class="tag">無效</div><h4>SSPX的告解</h4><p>赦罪需要教會授予的治理權限，該權限已被撤銷。例外：死亡危險中，任何司鐸赦罪皆有效。<sup class="src"><a href="#src5">〔5〕</a></sup></p></div>
+    <div class="q bad"><div class="tag">無效</div><h4>SSPX的婚配</h4><p>7月2日後在SSPX結婚無效；先前結婚或有疑問者，請諮詢教區了解補正途徑。<sup class="src"><a href="#src5">〔5〕</a></sup></p></div>
+  </div>
+
+  <details><summary>我以前去過SSPX的彌撒，我被絕罰了嗎？</summary><div class="body"><p>幾乎可以肯定：沒有。聖座的修和文件明確指出，偶爾參加SSPX的禮儀或活動、而沒有認同其裂教立場的人，「不足以構成對該運動的正式附和」。<sup class="src"><a href="#src4">〔4〕</a></sup>觸犯絕罰需要的是正式附和裂教——明知而自願地認同其脫離教宗的立場。單純被傳統禮儀之美吸引、不明就裡去參加過的教友無須恐慌；有疑慮，找神師或堂區司鐸談談。</p></div></details>
+
+  <details><summary>主日參加SSPX彌撒，算滿全主日本分嗎？</summary><div class="body"><p>聖座正式宣告裂教之後，教會的勸諭很明確：不要參加SSPX的禮儀。教友應在與教會共融的堂區或團體滿全主日本分。若所在地區難以參加傳統拉丁彌撒，可尋找FSSP、ICKSP等合法傳統團體，或與教區聯繫。</p></div></details>
+
+  <details><summary>被絕罰的人還是天主教徒嗎？</summary><div class="body"><p>是。絕罰不消除洗禮，也不是「開除教籍」，而是禁止領受聖事與行使職務的醫治性懲戒——目的是喚回，不是驅逐。教會為他們的回歸祈禱，而且已備妥修和的程序。</p></div></details>
+
+  <details><summary>這次絕罰有可能解除嗎？</summary><div class="body"><p>完全可能，而且有先例：1988年被絕罰的四位主教，2009年獲本篤十六世解除絕罰。<sup class="src"><a href="#src8">〔8〕</a></sup>聖座這次在宣告絕罰的同一天就頒布了修和程序。願意離開SSPX的司鐸須表明接受梵二及新禮彌撒的正當性（仍可依戀傳統禮儀），尋得願意接納他的教區主教或修會上司，並致函教宗請求赦免懲戒。<sup class="src"><a href="#src4">〔4〕</a><a href="#src6">〔6〕</a></sup></p></div></details>
+
+  <details><summary>我有親友深深投入SSPX，我該怎麼辦？</summary><div class="body"><p>先理解，再對話。許多SSPX信友是出於對信仰的熱忱與對神聖禮儀的渴望走進去的，指責很少能帶人回來。能做的：持續為他們祈禱；保持關係、不切斷往來；在適當時機介紹留在共融內的傳統選項（FSSP、ICKSP）；提醒他們修和之門始終敞開。對平信友而言，回歸的路通常很簡單——透過堂區辦妥當告解、重新在共融內領聖事即可（正式附和裂教者需先解除懲戒，由教區處理）。</p></div></details>
+
+  <details><summary>SSPX自己怎麼看這件事？</summary><div class="body"><p>他們不接受裂教的定性。SSPX主張：新主教是「不具治理權的輔理主教」，祝聖只是在「重大必要狀態」下違法而不得已地傳遞聖秩，不構成共融的斷裂；他們強調自己承認教宗、為教宗祈禱、拒絕宗座出缺論，並在祝聖翌日後致函教宗申明立場。<sup class="src"><a href="#src11">〔11〕</a></sup>教會則認定問題在於不服從本身，並已作出裂教的正式定性。本專題把兩邊的論證都陳列在第三幕與第五幕，供讀者自行衡量——但在教會法上，定性的權柄屬於聖座。</p></div></details>
+
+  <details><summary>怎麼分辨一台拉丁彌撒「合不合法」？</summary><div class="body"><p>FSSP、ICKSP等團體與SSPX同樣使用1962年禮書，但完全服從教宗、接受梵二，教會法地位完全正常。分辨方法：查看該彌撒地點是否列於教區官方名錄、該團體是否表明與教區及聖座的共融關係；有疑問，直接詢問教區秘書處。</p></div></details>
+
+  <details><summary>1988年也絕罰過，後來又解除了。這次有什麼不一樣？</summary><div class="body"><p>三點：1988年只絕罰六位主教，這次連同全體約750位司鐸一併宣告為裂教者；1988年聖座避免正式定性SSPX「處於裂教」，這次明確宣告了；1988年後告解婚配權限長期模糊、2015年後曾獲正式授權，這次被明確撤銷並宣告無效。<sup class="src"><a href="#src5">〔5〕</a><a href="#src8">〔8〕</a></sup>定性更全面、更正式——但修和機制也比當年清楚。</p></div></details>
+</section>
+
+<div class="divider">✠</div>
+
+<!-- ============ 測驗 ============ -->
+<section id="quiz">
+  <div class="sec-head">
+    <div class="sec-num">隨堂測驗</div>
+    <h2>你讀懂了嗎？</h2>
+    <p class="lede">五道小題。答錯也沒關係——每題都有解說。</p>
+  </div>
+
+  <div class="quiz">
+    <div class="qq"><div class="qt">受絕罰的人還是天主教徒嗎？</div>
+      <div class="opts">
+        <button data-c="0">已被開除教籍，不再是天主教徒</button>
+        <button data-c="1">仍是天主教徒，但被禁止領受聖事、行使職務</button>
+        <button data-c="0">要看教宗個案決定</button>
+      </div>
+      <div class="exp">聖洗的神印不可磨滅。絕罰是醫治性懲戒，目的是喚回——悔改後可獲解除，1988年的絕罰就在2009年被解除過。</div>
+    </div>
+    <div class="qq"><div class="qt">SSPX司鐸舉行的彌撒——</div>
+      <div class="opts">
+        <button data-c="0">無效，餅酒沒有被祝聖</button>
+        <button data-c="1">有效但不合法，教會警告信友不要參與</button>
+        <button data-c="0">完全有效也完全合法</button>
+      </div>
+      <div class="exp">SSPX司鐸的聖秩有效，感恩祭真實成立（有效）；但在裂教狀態下、違反教會法舉行（不合法）。「有效」不等於「可以參加」。</div>
+    </div>
+    <div class="qq"><div class="qt">六位主教的絕罰，是哪一天生效的？</div>
+      <div class="opts">
+        <button data-c="1">7月1日——祝聖完成的當下自動生效</button>
+        <button data-c="0">7月2日——教義部頒布法令那天</button>
+        <button data-c="0">要等教宗簽署後才生效</button>
+      </div>
+      <div class="exp">這是「自科絕罰」（latae sententiae）：法典1387條規定的行為一經完成便自動觸犯絕罰。7月2日的法令是宣告一個已然發生的事實。</div>
+    </div>
+    <div class="qq"><div class="qt">裂教與異端的分別是——</div>
+      <div class="opts">
+        <button data-c="0">是同一回事的兩種說法</button>
+        <button data-c="0">裂教否認教義，異端拒絕服從教宗</button>
+        <button data-c="1">異端否認教義，裂教拒絕的是與教宗的共融</button>
+      </div>
+      <div class="exp">法典751條：異端是固執否認當信的教義；裂教是不願服從教宗、不願與教會成員共融。SSPX之爭從來不是天主聖三或基督天主性，而是服從與共融。</div>
+    </div>
+    <div class="qq"><div class="qt">曾偶爾參加過SSPX彌撒的平信友——</div>
+      <div class="opts">
+        <button data-c="0">已自動被絕罰，須立即請求赦免</button>
+        <button data-c="1">不算正式附和裂教，沒有被絕罰</button>
+        <button data-c="0">會被禁止領聖體一年</button>
+      </div>
+      <div class="exp">聖座修和文件明確指出：偶爾參與而無裂教意圖，「不足以構成正式附和」。觸犯絕罰需要明知而自願地認同其脫離教宗的立場。有疑慮，與神師談談即可。</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider">✠</div>
+
+<!-- ============ 詞彙 ============ -->
+<section id="glossary">
+  <div class="sec-head">
+    <div class="sec-num">附錄一</div>
+    <h2>詞彙表</h2>
+  </div>
+  <dl>
+    <dt>絕罰<span class="latin">excommunicatio</span></dt><dd>教會最重的醫治性懲戒，禁止當事人領受聖事、行使教會職務；不消除洗禮，悔改後可獲解除。</dd>
+    <dt>自科絕罰<span class="latin">latae sententiae</span></dt><dd>行為完成當下自動生效的絕罰，毋須宣判；其後的官方「宣告」是確認既成事實。</dd>
+    <dt>裂教<span class="latin">schisma</span></dt><dd>不願服從教宗，或不願與隸屬教宗的教會成員共融（法典751條）。</dd>
+    <dt>異端<span class="latin">haeresis</span></dt><dd>受洗者固執否認或懷疑某端當信的天主教信理。與裂教不同，裂教否定的是共融而非教義。</dd>
+    <dt>背教<span class="latin">apostasia</span></dt><dd>受洗者完全拋棄基督信仰。</dd>
+    <dt>有效／合法<span class="latin">validum / licitum</span></dt><dd>「有效」指聖事真實成立；「合法」指依教會法規範舉行。一件聖事可以有效而不合法——如SSPX的彌撒。</dd>
+    <dt>宗座任命<span class="latin">mandatum pontificium</span></dt><dd>祝聖主教所必需的教宗任命。無此任命的祝聖有效但嚴重不法，並觸犯自科絕罰（法典1387條）。</dd>
+    <dt>停職<span class="latin">suspensio a divinis</span></dt><dd>針對神職人員的懲戒，禁止行使聖秩職務。勒菲弗1976年受此處分。</dd>
+    <dt>共融<span class="latin">communio</span></dt><dd>教會合一的神學核心：在同一信仰、同一聖事、同一治理（與教宗及主教團合一）內的結合。</dd>
+    <dt>傳統拉丁彌撒<span class="latin">usus antiquior</span></dt><dd>依1962年版《羅馬彌撒經書》舉行的彌撒，又稱脫利騰彌撒。使用此禮儀本身完全正當，教會內有多個合法團體舉行。</dd>
+  </dl>
+</section>
+
+<!-- ============ 來源 ============ -->
+<section id="sources" class="sources">
+  <div class="sec-head">
+    <div class="sec-num">附錄二</div>
+    <h2>資料來源</h2>
+    <p class="lede">正文中的〔數字〕註腳對應以下來源；點擊註腳即可跳至此處。</p>
+  </div>
+  <ol>
+    <li id="src1">梵蒂岡新聞網（繁體中文）：<a href="https://www.vaticannews.va/zht/vatican-city/news/2026-02/holy-see-fernandez-sspx-theological-dialogue-ordinations.html">聖座建議聖庇護十世兄弟會展開神學對話</a>（2026-02-13）——2月會晤、神學對話提議、「決定性破裂（裂教）」警告、SSPX兩位主教與祝聖計劃、1988年事件背景。</li>
+    <li id="src2">National Catholic Reporter：<a href="https://www.ncronline.org/vatican/vatican-news/defying-pope-and-facing-excommunication-sspx-consecrates-bishops-huge-outdoor">Defying pope and facing excommunication, SSPX consecrates bishops at huge outdoor Mass</a>——7月1日典禮現場、約17,000人與70國、教宗6月29日親函、帕利亞拉尼講道回應。</li>
+    <li id="src3">America Magazine：<a href="https://www.americamagazine.org/vatican-dispatch/2026/07/02/vatican-excommunicates-sspx-bishops-priests-and-some-lay-faithful/">Vatican declares excommunicated SSPX bishops, warns priests and lay faithful of schism</a>；<a href="https://www.americamagazine.org/vatican-dispatch/2026/07/01/sspx-ordains-four-new-bishops-in-defiance-of-pope-leo-and-the-vatican/">SSPX ordains four new bishops in defiance of Pope Leo and the Vatican</a>——四位新主教名單、7月2日法令內容、對信友的警告。</li>
+    <li id="src4">The Pillar：<a href="https://www.pillarcatholic.com/p/vatican-offers-reconciliation-process">Vatican offers reconciliation process for priests, laypeople wishing to leave SSPX</a>；<a href="https://www.pillarcatholic.com/p/vatican-confirms-six-sspx-bishops">Vatican confirms six SSPX bishops excommunicated</a>——修和程序細節（司鐸須接受梵二與新禮彌撒正當性、致函教宗）、「偶爾參與不構成正式附和」、法典1387與1364條的引用。</li>
+    <li id="src5">EWTN News：<a href="https://www.ewtnnews.com/vatican/vatican-formally-notifies-sspx-bishops-of-excommunication">Vatican confirms excommunication of SSPX bishops, declares schism</a>——六位主教絕罰的正式通知、約750位司鐸被宣告為裂教者、告解婚配無效。</li>
+    <li id="src6">Catholic Herald：<a href="https://thecatholicherald.com/article/the-holy-see-sets-out-process-of-reconciliation-for-sspx-clergy-and-laity">The Holy See sets out process of "reconciliation" for SSPX clergy and laity</a>——司鐸與平信友修和途徑。</li>
+    <li id="src7">NPR：<a href="https://www.npr.org/2026/07/02/nx-s1-5878916/vatican-society-of-st-pius-x-in-schism">Vatican declares Society of St. Pius X in schism, excommunicates bishops</a>；星島日報：<a href="https://www.singtaousa.com/2026/07/02/news/world/vatican-excommunicates-schismatic-bishops-and-priests-and-warns-their-followers/">梵蒂岡重懲傳統派團體 宣布絕罰分裂主教及神父</a>——裂教宣告的綜合報道。</li>
+    <li id="src8">維基百科：<a href="https://en.wikipedia.org/wiki/2026_%C3%89c%C3%B4ne_consecrations">2026 Écône consecrations</a>；<a href="https://en.wikipedia.org/wiki/Canonical_situation_of_the_Society_of_Saint_Pius_X">Canonical situation of the Society of Saint Pius X</a>——事件時間線與1970–2021年教會法地位沿革。</li>
+    <li id="src9">《天主教法典》：<a href="https://www.vatican.va/archive/cod-iuris-canonici/cic_index_zh.html">梵蒂岡官網中文版</a>，第331、751、1331、1364、1387條（第1387條屬2021年修訂之第六卷，即原第1382條）。</li>
+    <li id="src10">若望保祿二世：<a href="https://www.vatican.va/content/john-paul-ii/en/motu_proprio/documents/hf_jp-ii_motu-proprio_02071988_ecclesia-dei.html">《天主的教會》（Ecclesia Dei）宗座牧函</a>（1988-07-02）——1988年祝聖定性為「裂教行為」、成立宗座委員會。</li>
+    <li id="src11">SSPX官方（本專題呈現其立場所依據的一手來源）：<a href="https://fsspx.news/en/news/general-house-statement-following-episcopal-consecrations-59913">總會7月1日祝聖聲明</a>（「不具治理權的輔理主教」、遺憾與感恩）；<a href="https://sspx.org/en/sspx-announcement-bishops-consecrations-57498">2月2日祝聖公告專頁</a>（必要狀態論據、帕利亞拉尼訪談、美國會區長信函）；<a href="https://sspx.org/en/news/order-and-jurisdiction-futility-schism-accusation-57313">《聖秩與治理權：裂教指控之無據》</a>（其反駁裂教定性的教會法論證）；<a href="https://fsspx.news/en/news/letter-holy-father-regarding-decree-dicastery-doctrine-faith-59956">7月3日致教宗函</a>；<a href="https://sspx.org/en/purpose-society-priesthood-and-all-pertains-it-30878">會章宗旨（「司鐸職以及與之相關的一切」）</a>及其官網「主要關切」各頁。</li>
+  </ol>
+  <p style="font-size:13px;color:var(--ink-soft);font-family:'Noto Sans TC',sans-serif;margin-top:20px">照片來源：厄科納修院（Wikimedia Commons，CC BY-SA 4.0）、勒菲弗總主教肖像（Wikimedia Commons，CC BY 2.0），均經黑白調色處理。</p>
+</section>
+
+</main>
+
+<footer>
+  <div class="cross">✠</div>
+  <p class="disclaim">「願眾人都合而為一。」（若17:21）<br>本專題為信仰培育資料，供教友理解事件脈絡之用，不能取代教會官方文件與牧職判斷。涉及個人聖事處境——尤其婚姻——請諮詢堂區司鐸或教區法庭。</p>
+  <p class="fine">資料截至2026年7月5日 · 事件仍在發展中，請以聖座及主教團正式公告為準 · 本網頁僅供堂區教育使用</p>
+</footer>
+
+<script>
+(function(){
+  /* 捲動漸現 */
+  var els = document.querySelectorAll('main section > *, main .divider');
+  if('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    els.forEach(function(el){ el.classList.add('rv'); });
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('vis'); io.unobserve(e.target); }
+      });
+    },{rootMargin:'0px 0px -8% 0px',threshold:0.05});
+    els.forEach(function(el){ io.observe(el); });
+  }
+  /* 隨堂測驗 */
+  document.querySelectorAll('.qq').forEach(function(q){
+    q.querySelectorAll('button').forEach(function(btn){
+      btn.addEventListener('click',function(){
+        if(q.classList.contains('done')) return;
+        q.classList.add('done');
+        if(btn.dataset.c==='1'){ btn.classList.add('right'); }
+        else{
+          btn.classList.add('wrong');
+          var r=q.querySelector('button[data-c="1"]'); if(r) r.classList.add('right');
+        }
+      });
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
