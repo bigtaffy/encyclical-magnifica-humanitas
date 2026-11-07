@@ -1,0 +1,1 @@
+import{i as e}from"./refs.DhJJULGI.js";var t=Number(new URLSearchParams(location.search).get(`p`));if(t>=1&&t<=144){let n=document.getElementById(`p-note`);n.hidden=!1,n.innerHTML=`你要找的是第 ${t} 段。中文全譯文尚未上線，<a href="${e(t)}">直接開啟英文原文 §${t} →</a>`}

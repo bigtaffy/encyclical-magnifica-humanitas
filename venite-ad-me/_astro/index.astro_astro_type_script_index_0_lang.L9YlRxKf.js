@@ -1,0 +1,1 @@
+import{a as e}from"./selfcheck.CVW8C44A.js";var t=e();for(let e of document.querySelectorAll(`[data-saved]`)){let n=t[e.dataset.saved];n&&(e.hidden=!1,e.textContent=e.dataset.saved===`parish`?`✓ 你在 ${n.savedAt} 填過，總平均 ${n.overall} 分`:`✓ 你在 ${n.savedAt} 填過`)}
