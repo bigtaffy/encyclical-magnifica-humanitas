@@ -289,7 +289,10 @@ figure{margin:0}
 .unit-wrap{display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:18px;align-items:center}
 @media (max-width:720px){.unit-wrap{grid-template-columns:minmax(0,1fr)}}
 #dv-unit{max-width:430px;margin-inline:auto}
-#dv-unit .cell .bg{transition:fill .25s linear}
+#dv-unit .cell .bg{fill:color-mix(in srgb,var(--gold) 55%,var(--card));transition:fill .25s linear}
+#dv-unit .cell.u .bg{fill:var(--pacific)}
+#dv-unit.nd .cell .bg{fill:var(--nodata)}
+#dv-unit.nd .cell .rur,#dv-unit.nd .cell .urb{opacity:0}
 #dv-unit .cell .rur,#dv-unit .cell .urb{transition:opacity .25s linear}
 #dv-unit .cell.u .rur{opacity:0}
 #dv-unit .cell:not(.u) .urb{opacity:0}
@@ -302,6 +305,7 @@ figure{margin:0}
 .spk svg{width:100%;height:30px;display:block;overflow:visible}
 .spk b{font-family:var(--f-latin);font-weight:600;text-align:right;font-variant-numeric:tabular-nums}
 @media (prefers-reduced-motion: reduce){#dv-unit .cell *{transition:none}}
+.dv.playing .ct,.dv.playing .dot,.dv.playing #dv-unit .cell *{transition:none}
 
 /* ---------- 終幕 ---------- */
 .finale{background:#1E4D6B;color:#F6F0DC;padding-block:clamp(64px,10vw,120px);text-align:center}
@@ -1058,8 +1062,8 @@ footer{border-top:1px solid var(--line);padding-block:28px 48px;font-size:.85rem
     $('dv-mark').style.left='calc(13px + (100% - 26px) * '+((1961-Y0)/(YL-Y0))+' - 1px)';
     function schedule(){ if(!raf) raf=requestAnimationFrame(function(){ raf=0; draw(); }); }
     function setYear(y){ y=Math.max(Y0,Math.min(YL,Math.round(y))); if(y===st.year) return; st.year=y; yr.value=y; schedule(); }
-    function stop(){ if(timer){ clearInterval(timer); timer=null; } play.textContent='▶'; play.setAttribute('aria-label','播放'); }
-    function start(){ if(st.year>=YL) setYear(Y0); play.textContent='❚❚'; play.setAttribute('aria-label','暫停');
+    function stop(){ if(timer){ clearInterval(timer); timer=null; } root.classList.remove('playing'); play.textContent='▶'; play.setAttribute('aria-label','播放'); }
+    function start(){ if(st.year>=YL) setYear(Y0); root.classList.add('playing'); play.textContent='❚❚'; play.setAttribute('aria-label','暫停');
       timer=setInterval(function(){ if(document.hidden) return; if(st.year>=YL){ stop(); return; } setYear(st.year+1); },130); }
     play.addEventListener('click',function(){ timer?stop():start(); });
     yr.addEventListener('input',function(){ stop(); setYear(+yr.value); });
@@ -1170,7 +1174,7 @@ footer{border-top:1px solid var(--line);padding-block:28px 48px;font-size:.85rem
 
     // ---- 百人圖：鄉村與城市 ----
     var unit=(function(){
-      var svg=d3.select('#dv-unit'), tabsBox=$('dv-utabs'), spk=$('dv-spk'), grp='w';
+      var svg=d3.select('#dv-unit'), tabsBox=$('dv-utabs'), spk=$('dv-spk'), grp='w', lastR=-1;
       var defs=svg.append('defs');
       defs.append('symbol').attr('id','u-wheat').attr('viewBox','0 0 20 20').html('<path d="M10 19V6" stroke="#8A5A0B" stroke-width="1.4" stroke-linecap="round"/><g fill="#8A5A0B"><ellipse cx="7.6" cy="10" rx="2" ry="3.2" transform="rotate(-20 7.6 10)"/><ellipse cx="12.4" cy="8.5" rx="2" ry="3.2" transform="rotate(20 12.4 8.5)"/><ellipse cx="7.8" cy="5.6" rx="1.8" ry="2.9" transform="rotate(-20 7.8 5.6)"/><ellipse cx="12.2" cy="4.2" rx="1.8" ry="2.9" transform="rotate(20 12.2 4.2)"/><ellipse cx="10" cy="1.9" rx="1.6" ry="2.4"/></g>');
       defs.append('symbol').attr('id','u-house').attr('viewBox','0 0 20 20').html('<rect x="3" y="7" width="6" height="12" fill="#F6F0DC"/><rect x="10" y="3" width="7" height="16" fill="#F6F0DC"/><g fill="#1E4D6B"><rect x="4.5" y="9" width="1.5" height="1.5"/><rect x="6.5" y="9" width="1.5" height="1.5"/><rect x="4.5" y="12" width="1.5" height="1.5"/><rect x="6.5" y="12" width="1.5" height="1.5"/><rect x="11.5" y="5" width="1.6" height="1.6"/><rect x="14" y="5" width="1.6" height="1.6"/><rect x="11.5" y="8.5" width="1.6" height="1.6"/><rect x="14" y="8.5" width="1.6" height="1.6"/><rect x="11.5" y="12" width="1.6" height="1.6"/><rect x="14" y="12" width="1.6" height="1.6"/></g>');
@@ -1202,8 +1206,7 @@ footer{border-top:1px solid var(--line);padding-block:28px 48px;font-size:.85rem
       }
       function upd(){
         var s=share(), u=s[1], rural=u==null?null:Math.round(100-u);
-        cells.classed('u',function(i){ return rural!=null && i>=rural; })
-          .select('.bg').style('fill',function(i){ return rural==null?'var(--nodata)':(i<rural?'color-mix(in srgb, var(--gold) 55%, var(--card))':'var(--pacific)'); });
+        if(rural!==lastR){ lastR=rural; svg.classed('nd',rural==null); if(rural!=null) cells.classed('u',function(i){ return i>=rural; }); }
         $('dv-unum').textContent=rural==null?'—':rural;
         $('dv-ut').textContent=st.year+' 年，'+s[0]+'每 100 人裡，住在鄉村的人數';
         [].forEach.call(tabsBox.children,function(b){ b.setAttribute('aria-pressed',b.getAttribute('data-g')===grp?'true':'false'); });
