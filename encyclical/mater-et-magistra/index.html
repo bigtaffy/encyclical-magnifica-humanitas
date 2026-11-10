@@ -281,6 +281,28 @@ figure{margin:0}
 @media (prefers-reduced-motion: reduce){.dv .ct,.dv .dot{transition:none}}
 @media (max-width:520px){.dv-time{padding:8px 10px;gap:6px 10px}.dv-time .yr{font-size:1.6rem}}
 
+.unit-top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:10px}
+.unit-big{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.unit-big .num{font-family:var(--f-latin);font-weight:600;font-size:3.2rem;line-height:1;color:var(--gold-tx);font-variant-numeric:tabular-nums}
+.unit-big .t{font-size:.95rem;color:var(--earth)}
+.unit-tabs{display:flex;flex-wrap:wrap;gap:6px}
+.unit-wrap{display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:18px;align-items:center}
+@media (max-width:720px){.unit-wrap{grid-template-columns:minmax(0,1fr)}}
+#dv-unit{max-width:430px;margin-inline:auto}
+#dv-unit .cell .bg{transition:fill .25s linear}
+#dv-unit .cell .rur,#dv-unit .cell .urb{transition:opacity .25s linear}
+#dv-unit .cell.u .rur{opacity:0}
+#dv-unit .cell:not(.u) .urb{opacity:0}
+.unit-key{display:flex;gap:14px;font-size:.85rem;color:var(--earth);flex-wrap:wrap}
+.unit-key span{display:inline-flex;align-items:center;gap:6px}
+.unit-key i{width:14px;height:14px;border-radius:3px;display:inline-block}
+.sparks{display:flex;flex-direction:column;gap:6px}
+.spk{display:grid;grid-template-columns:4.6em minmax(0,1fr) 3.2em;align-items:center;gap:8px;font-size:.82rem;cursor:pointer;border-radius:3px;padding:2px 4px}
+.spk[aria-pressed="true"]{background:color-mix(in srgb,var(--gold) 22%,transparent)}
+.spk svg{width:100%;height:30px;display:block;overflow:visible}
+.spk b{font-family:var(--f-latin);font-weight:600;text-align:right;font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion: reduce){#dv-unit .cell *{transition:none}}
+
 /* ---------- 終幕 ---------- */
 .finale{background:#1E4D6B;color:#F6F0DC;padding-block:clamp(64px,10vw,120px);text-align:center}
 .finale .wrap{display:flex;flex-direction:column;align-items:center;gap:22px}
@@ -541,7 +563,22 @@ footer{border-top:1px solid var(--line);padding-block:28px 48px;font-size:.85rem
           <svg id="dv-scat" role="img" aria-label="散點圖：各國人均所得與平均壽命，隨年份變化"></svg>
           <div class="chips" id="dv-reg"></div>
         </section>
-        <p class="dv-note"><b>資料與限制。</b>平均壽命：聯合國人口司 WPP（2024）、人類死亡率資料庫等；人均所得：Maddison Project Database 2023（2011 年物價的國際元）；皆經 Our World in Data 整理。所得分組採世界銀行現行分類，套用到歷史年份。早年的數字多為估計，誤差較大。2023 年所得尚未公布，散點圖以 2022 年計。地圖只畫出較大的國家與地區，小國不顯示，但仍在選單與散點圖裡。</p>
+        <section class="dv-card paper" aria-labelledby="dv-h4">
+          <h4 id="dv-h4">離開鄉村的人</h4>
+          <figure class="qt"><blockquote data-q="124">不少農民離棄了生於斯長於斯的鄉村，而投入商賈雲集的市鎮，或工業薈萃的都會</blockquote><figcaption><a href="fulltext.html#p124">第 124 段</a></figcaption></figure>
+          <p class="sub">把一群人縮成 100 個人來看：麥穗是住在鄉村的人，房子是住在城市的人。按上方的播放鍵，看麥田怎麼一格一格變成城市。</p>
+          <div class="unit-top">
+            <div class="unit-big"><span class="num" id="dv-unum">65</span><span class="t" id="dv-ut">每 100 人裡，住在鄉村的人數</span></div>
+            <div class="unit-tabs" role="group" aria-label="選擇分組" id="dv-utabs"></div>
+          </div>
+          <div class="unit-wrap">
+            <svg id="dv-unit" viewBox="0 0 300 300" role="img" aria-label="百人圖：每 100 人中住在鄉村與城市的人數"></svg>
+            <div class="sparks" id="dv-spk" aria-label="各所得組住在鄉村的比例，1950–2023"></div>
+          </div>
+          <div class="unit-key"><span><i style="background:var(--gold)"></i>住在鄉村</span><span><i style="background:var(--pacific)"></i>住在城市</span></div>
+          <p class="dv-note" id="dv-unote"></p>
+        </section>
+        <p class="dv-note"><b>資料與限制。</b>平均壽命：聯合國人口司 WPP（2024）、人類死亡率資料庫等；人均所得：Maddison Project Database 2023（2011 年物價的國際元）；城鄉人口：聯合國人口司（2025）；皆經 Our World in Data 整理。各國對「城市」的定義不同，跨國比較只能看大方向。所得分組採世界銀行現行分類，套用到歷史年份。早年的數字多為估計，誤差較大。2023 年所得尚未公布，散點圖以 2022 年計。地圖只畫出較大的國家與地區，小國不顯示，但仍在選單與散點圖裡。</p>
         <noscript><p class="dv-note">互動圖表需要 JavaScript。主要數字：1961 年高所得國家平均壽命 68.6 歲，低所得國家 40.8 歲；2023 年分別是 81.4 歲與 64.9 歲。</p></noscript>
       </div>
 
@@ -1131,10 +1168,59 @@ footer{border-top:1px solid var(--line);padding-block:28px 48px;font-size:.85rem
       return { build:build, update:update };
     })();
 
+    // ---- 百人圖：鄉村與城市 ----
+    var unit=(function(){
+      var svg=d3.select('#dv-unit'), tabsBox=$('dv-utabs'), spk=$('dv-spk'), grp='w';
+      var defs=svg.append('defs');
+      defs.append('symbol').attr('id','u-wheat').attr('viewBox','0 0 20 20').html('<path d="M10 19V6" stroke="#8A5A0B" stroke-width="1.4" stroke-linecap="round"/><g fill="#8A5A0B"><ellipse cx="7.6" cy="10" rx="2" ry="3.2" transform="rotate(-20 7.6 10)"/><ellipse cx="12.4" cy="8.5" rx="2" ry="3.2" transform="rotate(20 12.4 8.5)"/><ellipse cx="7.8" cy="5.6" rx="1.8" ry="2.9" transform="rotate(-20 7.8 5.6)"/><ellipse cx="12.2" cy="4.2" rx="1.8" ry="2.9" transform="rotate(20 12.2 4.2)"/><ellipse cx="10" cy="1.9" rx="1.6" ry="2.4"/></g>');
+      defs.append('symbol').attr('id','u-house').attr('viewBox','0 0 20 20').html('<rect x="3" y="7" width="6" height="12" fill="#F6F0DC"/><rect x="10" y="3" width="7" height="16" fill="#F6F0DC"/><g fill="#1E4D6B"><rect x="4.5" y="9" width="1.5" height="1.5"/><rect x="6.5" y="9" width="1.5" height="1.5"/><rect x="4.5" y="12" width="1.5" height="1.5"/><rect x="6.5" y="12" width="1.5" height="1.5"/><rect x="11.5" y="5" width="1.6" height="1.6"/><rect x="14" y="5" width="1.6" height="1.6"/><rect x="11.5" y="8.5" width="1.6" height="1.6"/><rect x="14" y="8.5" width="1.6" height="1.6"/><rect x="11.5" y="12" width="1.6" height="1.6"/><rect x="14" y="12" width="1.6" height="1.6"/></g>');
+      var cells=svg.append('g').selectAll('g').data(d3.range(100)).join('g').attr('class','cell')
+        .attr('transform',function(i){ return 'translate('+((i%10)*30)+','+(Math.floor(i/10)*30)+')'; });
+      cells.append('rect').attr('class','bg').attr('x',1).attr('y',1).attr('width',28).attr('height',28).attr('rx',4);
+      cells.append('use').attr('class','rur').attr('href','#u-wheat').attr('x',5).attr('y',5).attr('width',20).attr('height',20);
+      cells.append('use').attr('class','urb').attr('href','#u-house').attr('x',5).attr('y',5).attr('width',20).attr('height',20);
+      var opts=[['w','全球'],['hi','高所得'],['um','中高所得'],['lm','中低所得'],['li','低所得'],['sel','已選國家']];
+      opts.forEach(function(o){ var b=document.createElement('button'); b.type='button'; b.className='pre'; b.setAttribute('data-g',o[0]); b.textContent=o[1];
+        b.addEventListener('click',function(){ grp=o[0]; upd(); }); tabsBox.appendChild(b); });
+      // 小折線：各組鄉村比例
+      var SP=[['hi','高所得','var(--c-hi)'],['um','中高所得','var(--c-um)'],['lm','中低所得','var(--c-lm)'],['li','低所得','var(--c-li)'],['w','全球','var(--ink)']], sx=d3.scaleLinear().domain([Y0,YL]).range([2,198]), sy=d3.scaleLinear().domain([0,100]).range([28,2]), rows={};
+      SP.forEach(function(g){
+        var row=document.createElement('div'); row.className='spk'; row.setAttribute('role','button'); row.setAttribute('tabindex','0'); row.setAttribute('data-g',g[0]);
+        var lab=document.createElement('span'); lab.textContent=g[1]; row.appendChild(lab);
+        var sv=d3.select(row).append('svg').attr('viewBox','0 0 200 30').attr('preserveAspectRatio','none');
+        var rural=G[g[0]].u.map(function(v){ return v==null?null:100-v; });
+        sv.append('path').attr('d',d3.line().defined(function(d){return d!=null;}).x(function(d,i){return sx(Y0+i);}).y(function(d){return sy(d);})(rural)).attr('fill','none').attr('stroke',g[2]).attr('stroke-width',2).attr('vector-effect','non-scaling-stroke');
+        var dot=sv.append('circle').attr('r',3).attr('fill',g[2]);
+        var val=document.createElement('b'); row.appendChild(val);
+        function pick(){ grp=g[0]; upd(); }
+        row.addEventListener('click',pick); row.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); pick(); } });
+        rows[g[0]]={dot:dot,val:val,rural:rural,row:row}; spk.appendChild(row);
+      });
+      function share(){ // 回傳 [名稱, 都市比例]
+        if(grp==='sel'){ var c=C[st.sel]; return [c?c.n:'—', c&&c.u?c.u[yi(st.year)]:null]; }
+        return [G[grp].n, G[grp].u[yi(st.year)]];
+      }
+      function upd(){
+        var s=share(), u=s[1], rural=u==null?null:Math.round(100-u);
+        cells.classed('u',function(i){ return rural!=null && i>=rural; })
+          .select('.bg').style('fill',function(i){ return rural==null?'var(--nodata)':(i<rural?'color-mix(in srgb, var(--gold) 55%, var(--card))':'var(--pacific)'); });
+        $('dv-unum').textContent=rural==null?'—':rural;
+        $('dv-ut').textContent=st.year+' 年，'+s[0]+'每 100 人裡，住在鄉村的人數';
+        [].forEach.call(tabsBox.children,function(b){ b.setAttribute('aria-pressed',b.getAttribute('data-g')===grp?'true':'false'); });
+        if(grp==='sel'&&C[st.sel]) tabsBox.lastChild.textContent='已選：'+C[st.sel].n; else tabsBox.lastChild.textContent='已選國家';
+        Object.keys(rows).forEach(function(k){ var r=rows[k], v=r.rural[yi(st.year)]; r.dot.attr('cx',sx(st.year)).attr('cy',sy(v)); r.val.textContent=Math.round(v)+'%'; r.row.setAttribute('aria-pressed',k===grp?'true':'false'); });
+        svg.attr('aria-label',st.year+' 年，'+s[0]+'每 100 人有 '+(rural==null?'—':rural)+' 人住在鄉村');
+      }
+      (function(){ var w=G.w.u, a=Math.round(100-w[yi(1961)]), b=Math.round(100-w[yi(YL)]), li=G.li.u;
+        var lr=100-li[yi(YL)], wr=100-w[yi(1961)], cmp=Math.abs(lr-wr)<2?'和 1961 年的全球平均差不多':(lr>wr?'比 1961 年的全球平均還高':'比 1961 年的全球平均略低');
+        $('dv-unote').textContent='1961 年，全球每 100 人有 '+a+' 人住在鄉村；到了 '+YL+' 年只剩 '+b+' 人。低所得國家至今仍有 '+Math.round(lr)+'% 的人住在鄉村，'+cmp+'。教宗當年看見的離鄉潮，六十多年來沒有停過。'; })();
+      return { update:upd };
+    })();
+
     function draw(){
       yout.textContent=st.year; yr.setAttribute('aria-valuetext',st.year+' 年');
       [].forEach.call(root.querySelectorAll('.pre[data-y]'),function(b){ b.setAttribute('aria-pressed',(+b.getAttribute('data-y')===st.year)?'true':'false'); });
-      map.update(); lines.update(); scat.update(); kpis();
+      map.update(); lines.update(); scat.update(); unit.update(); kpis();
     }
     lines.build(); scat.build(); draw();
     var rt=0; window.addEventListener('resize',function(){ clearTimeout(rt); rt=setTimeout(function(){ lines.build(); scat.build(); draw(); },200); });
