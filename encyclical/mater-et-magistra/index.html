@@ -840,7 +840,7 @@ footer .maili{display:block;width:28px;margin:0 auto 10px}footer .maili img{disp
 
     var renderer=new THREE.WebGLRenderer({canvas:canvas,antialias:false,alpha:true,premultipliedAlpha:true,powerPreference:tier==='desktop'?'high-performance':'low-power'});
     renderer.setClearColor(0x000000,0);
-    var maxDpr=tier==='desktop'?2:1.5, dpr=1, FIELD_END=46;
+    var maxDpr=tier==='desktop'?2:1.25, dpr=1, FIELD_END=46, MOB=tier!=='desktop', FPS_MAX=MOB?30:1000;
     var scene=new THREE.Scene(); scene.fog=new THREE.Fog(lin('#F2BE3C'),12,72);
     var cam=new THREE.PerspectiveCamera(36,innerWidth/H(),0.05,400), sunDir=new V3(-0.25,0.25,-1).normalize();
     scene.add(new THREE.HemisphereLight(lin('#FFF1CC'),lin('#8A5A1E'),1.0));
@@ -880,7 +880,7 @@ footer .maili{display:block;width:28px;margin:0 auto 10px}footer .maili img{disp
 
     var portraitNow=H()>innerWidth, asp=(innerWidth||16)/(H()||9), vf=(portraitNow?56:36)*Math.PI/180;
     var camZ0=0.2, kx=Math.max(0.32,Math.tan(vf/2)*(portraitNow?asp:Math.max(asp,16/9)))*1.25;
-    var dens=tier==='desktop'?[230,50,8]:[130,26,5], nearCut=tier==='desktop'?6:4;
+    var dens=tier==='desktop'?[230,50,8]:[100,20,4], nearCut=tier==='desktop'?6:4;
     var near=[], far=[];
     [[0.55,3,dens[0]],[3,10,dens[1]],[10,FIELD_END+1.5,dens[2]]].forEach(function(bd){ var d0=bd[0],d1=bd[1],n=Math.round(kx*(d1*d1-d0*d0)*bd[2]);
       for(var i=0;i<n;i++){ var d=Math.sqrt(d0*d0+rnd()*(d1*d1-d0*d0)), x=(rnd()*2-1)*(d*kx+0.2); (d<nearCut?near:far).push([x,camZ0-d]); } });
@@ -917,25 +917,28 @@ footer .maili{display:block;width:28px;margin:0 auto 10px}footer .maili img{disp
       var nd=new V3(L.sx/innerWidth*2-1,1-L.sy/H()*2,0.5).unproject(cam).sub(cam.position).normalize(); sunDir.copy(nd); sun.position.copy(nd).multiplyScalar(20);
     }
     function resize(){
-      var w=innerWidth,h=H(), target=Math.min(window.devicePixelRatio||1,maxDpr), budget=tier==='desktop'?3.0e6:1.5e6;
+      var w=innerWidth,h=H(), target=Math.min(window.devicePixelRatio||1,maxDpr), budget=tier==='desktop'?3.0e6:0.8e6;
       if(w*h*target*target>budget) target=Math.sqrt(budget/(w*h));
       dpr=Math.max(0.75,target); renderer.setPixelRatio(dpr); renderer.setSize(w,h,false);
       if(rt) rt.dispose(); rt=makeRT(); post.uniforms.tDiffuse.value=rt.texture; post.uniforms.uDpr.value=dpr;
       hz0=null; placeCamera(); dirty=true;
     }
     addEventListener('resize',resize);
-    addEventListener('scroll',function(){ var p=heroP(); if(p!==scrollP){ scrollP=p; if(visible){ placeCamera(); dirty=true; kick(); } } },{passive:true});
+    addEventListener('scroll',function(){ var p=heroP(); if(p!==scrollP){ scrollP=p; lastAct=performance.now(); if(visible){ placeCamera(); dirty=true; kick(); } } },{passive:true});
+    ['pointerdown','touchstart'].forEach(function(t){ stage.addEventListener(t,function(){ lastAct=performance.now(); kick(); },{passive:true}); });
     stage.addEventListener('pointermove',function(ev){
       mx=(ev.clientX/innerWidth)*2-1; my=(ev.clientY/H())*2-1;
       var a=mx*1.1; U.uWind.value.set(Math.cos(a)*0.9,Math.sin(a)*0.5-0.2); U.uAmp.value=reduce?0:0.05+Math.abs(mx)*0.05; placeCamera(); dirty=true; kick();
     },{passive:true});
 
     // 只在首屏看得到時才畫；門檻跟螢幕上限走，降級沒變快就退回
-    var running=false, dirty=true, visible=true, t0=performance.now(), frames=0, fpsT=performance.now(), fps=0;
+    var running=false, dirty=true, visible=true, t0=performance.now(), frames=0, fpsT=performance.now(), fps=0, lastDraw=0, lastAct=performance.now(), IDLE=15000;
     var judged=false, level=0, first=true, stopped=false, capFps=60, capped=false, fpsBefore=0, judgeAt=0, lowCount=0, ready=false;
     var baseDpr=maxDpr, FACT=[1,0.5,0.25], DPRS=[baseDpr,Math.min(baseDpr,1.25),1];
     new IntersectionObserver(function(es){ visible=es[0].isIntersecting; if(visible){ dirty=true; kick(); } },{rootMargin:'0px 0px -5% 0px'}).observe(stage);
-    function want(){ return visible&&!document.hidden&&(!reduce||dirty); }
+    // 手機：最多每秒 30 張；15 秒沒捲動、沒觸碰就停在當下那一格
+    function idleNow(){ return MOB&&!dirty&&performance.now()-lastAct>IDLE; }
+    function want(){ return visible&&!document.hidden&&(!reduce||dirty)&&!idleNow(); }
     function kick(){ if(!running&&want()&&!stopped&&ready){ running=true; requestAnimationFrame(loop); } }
     document.addEventListener('visibilitychange',kick);
     function applyLevel(l){ level=l; meshes.forEach(function(m){ if(m.userData.full) m.count=Math.max(1,Math.floor(m.userData.full*FACT[l])); }); maxDpr=DPRS[l]; resize(); }
@@ -950,20 +953,21 @@ footer .maili{display:block;width:28px;margin:0 auto 10px}footer .maili img{disp
     }
     function loop(now){
       if(stopped) return;
-      if(!want()){ running=false; judgeAt=Math.max(judgeAt,performance.now()+1500); return; }
-      U.uTime.value=(now-t0)/1000;
+      if(!want()){ running=false; judgeAt=Math.max(judgeAt,performance.now()+1500); if(showHud&&idleNow()) hud.textContent+='｜閒置暫停'; return; }
+      if(now-lastDraw<1000/(dirty?Math.max(FPS_MAX,60):FPS_MAX)-4){ requestAnimationFrame(loop); return; }
+      lastDraw=now; U.uTime.value=(now-t0)/1000;
       renderer.setRenderTarget(rt); renderer.clear(); renderer.render(scene,cam);
       renderer.setRenderTarget(null); renderer.clear(); renderer.render(postScene,postCam); dirty=false;
       if(first){ first=false; stage.classList.add('live'); }
       frames++;
-      if(now-fpsT>=1000){ fps=frames*1000/(now-fpsT); frames=0; fpsT=now; if(fps>capFps*1.15) capFps=Math.min(144,fps);
+      if(now-fpsT>=1000){ fps=frames*1000/(now-fpsT); frames=0; fpsT=now; if(fps>capFps*1.15) capFps=Math.min(144,FPS_MAX,fps);
         if(showHud){ var st=countStats(); hud.textContent=(tier==='desktop'?'電腦級':'手機級')+(level?'（降 '+level+'）':'')+'｜'+st[0].toLocaleString()+' 株｜'+(st[1]/1e6).toFixed(2)+'M｜'+Math.round(fps)+'/'+Math.round(capFps)+' fps'+(capped?'｜鎖幀':''); }
         judge(now); }
       if(reduce&&!dirty){ running=false; return; }
       requestAnimationFrame(loop);
     }
     (function measure(){ var last=0, gaps=[]; function f(t){ if(last) gaps.push(t-last); last=t;
-      if(gaps.length<30) requestAnimationFrame(f); else { gaps.sort(function(x,y){return x-y;}); capFps=Math.min(144,1000/gaps[Math.floor(gaps.length/2)]); ready=true; t0=performance.now(); fpsT=t0; judgeAt=t0+4000; kick(); } }
+      if(gaps.length<30) requestAnimationFrame(f); else { gaps.sort(function(x,y){return x-y;}); capFps=Math.min(144,FPS_MAX,1000/gaps[Math.floor(gaps.length/2)]); ready=true; t0=performance.now(); fpsT=t0; judgeAt=t0+4000; kick(); } }
       requestAnimationFrame(f); })();
     resize();
   }
