@@ -13,7 +13,7 @@ events.mai-li.app/encyclical/magnifica-humanitas
 ```
 encyclical/magnifica-humanitas/
 ├── index.html                  專題網站（沉浸式捲動專題）
-├── og-image.png                社群分享主視覺圖（1200×630）
+├── og-image.jpg                社群分享主視覺圖（1200×630）
 ├── 偉大的人類-通諭全文.pdf      通諭全文 PDF（A4 · 93 頁 · 現代簡約風排版）
 ├── full-text/
 │   └── index.html              通諭中文全文（245 段，含 224 條註釋）
