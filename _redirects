@@ -1,0 +1,6 @@
+# Cloudflare Pages 轉址規則
+# 根目錄沒有首頁：先導回麥力官網（302，之後若做專題總覽頁可直接拿掉這行）
+/  https://mai-li.app/  302
+# 外部分享時網址在連字號處被截斷，Search Console 回報 404：導回完整網址
+/encyclical/magnifica-  /encyclical/magnifica-humanitas/  301
+/venite-ad-  /venite-ad-me/  301
