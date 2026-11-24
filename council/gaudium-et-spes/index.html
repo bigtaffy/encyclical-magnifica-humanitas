@@ -258,15 +258,15 @@ h2{font-family:var(--f-display);font-weight:900;font-size:clamp(1.7rem,4.6vw,2.5
 .rgq.js .qt{display:none}.rgq.js .qt.on{display:block}
 /* 十個關鍵詞 */
 .kw{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
-.k{position:relative;min-height:168px;padding:0;border:0;background:none;font:inherit;color:var(--milk);text-align:left;cursor:pointer;perspective:800px}
-.k .f,.k .bk{position:absolute;inset:0;border:3px solid #000;border-top:10px solid var(--amber);padding:12px 14px;display:flex;flex-direction:column;gap:8px;backface-visibility:hidden;-webkit-backface-visibility:hidden;transition:transform .45s}
-.k .f{background:var(--card)}.k .bk{background:#2E2410;transform:rotateY(180deg)}
-.k[aria-pressed="true"] .f{transform:rotateY(180deg)}.k[aria-pressed="true"] .bk{transform:rotateY(360deg)}
-.k b{font-family:var(--f-display);font-weight:900;font-size:1.2rem;line-height:1.3}
-.k .g{font-size:.92rem;line-height:1.6;color:var(--dust)}
-.k .bq{font-family:var(--f-display);font-weight:500;font-size:.98rem;line-height:1.65}
-.k .n{font-size:.8rem;color:var(--amber);margin-top:auto}
-@media (prefers-reduced-motion:reduce){.k .f,.k .bk{transition:none}}
+.kw>.k{position:relative;min-height:168px;padding:0;border:0;background:none;font:inherit;color:var(--milk);text-align:left;cursor:pointer;perspective:800px}
+.kw>.k .f,.kw>.k .bk{position:absolute;inset:0;border:3px solid #000;border-top:10px solid var(--amber);padding:12px 14px;display:flex;flex-direction:column;gap:8px;backface-visibility:hidden;-webkit-backface-visibility:hidden;transition:transform .45s}
+.kw>.k .f{background:var(--card)}.kw>.k .bk{background:#2E2410;transform:rotateY(180deg)}
+.kw>.k[aria-pressed="true"] .f{transform:rotateY(180deg)}.kw>.k[aria-pressed="true"] .bk{transform:rotateY(360deg)}
+.kw>.k b{font-family:var(--f-display);font-weight:900;font-size:1.2rem;line-height:1.3}
+.kw>.k .g{font-size:.92rem;line-height:1.6;color:var(--dust)}
+.kw>.k .bq{font-family:var(--f-display);font-weight:500;font-size:.98rem;line-height:1.65}
+.kw>.k .n{font-size:.8rem;color:var(--amber);margin-top:auto}
+@media (prefers-reduced-motion:reduce){.kw>.k .f,.kw>.k .bk{transition:none}}
 
 /* 結論：一圈一圈往外 */
 .rings{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px;max-width:40em}
