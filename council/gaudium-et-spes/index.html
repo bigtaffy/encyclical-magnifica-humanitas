@@ -1,0 +1,881 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>《論教會在現代世界牧職憲章》· 喜樂與期望 — 梵蒂岡第二屆大公會議（1965）</title>
+<meta name="description" content="梵蒂岡第二屆大公會議《論教會在現代世界牧職憲章》（Gaudium et Spes，1965）導讀：打開一扇窗，看見人類大家庭。四個關於人的問題，加上家庭、文化、經濟、政治、和平五個迫切的問題，每段都標明原文節數。">
+<meta name="author" content="麥力">
+<meta name="theme-color" content="#12100E">
+<link rel="canonical" href="https://events.mai-li.app/council/gaudium-et-spes/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="喜樂與期望｜《論教會在現代世界牧職憲章》導讀">
+<meta property="og:description" content="打開一扇窗，看見人類大家庭。梵二《牧職憲章》（1965）沉浸式導讀。">
+<meta property="og:url" content="https://events.mai-li.app/council/gaudium-et-spes/">
+<meta property="og:image" content="https://events.mai-li.app/council/gaudium-et-spes/og-image.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;900&family=Noto+Sans+TC:wght@400;500&family=Cormorant+Garamond:ital,wght@1,500&display=swap">
+<style>
+/* 版面：暗牆上的彩色玻璃。首屏一扇窗打開；後面每一段是一格玻璃，粗黑鉛條分隔，顏色各管一個主題。 */
+:root{
+  color-scheme:dark;
+  --lead:#12100E; --stone:#1C1815; --card:#241F1A; --mortar:#3A322B; --milk:#EFE7D2; --dust:#B8AD98; --amber:#F0B52E;
+  --ruby:#D8452F; --violet:#9274CF; --cobalt:#4C82D9; --emerald:#3FA583; --sky:#2FA3D6;
+  --f-display:"Noto Serif TC","Songti TC",serif; --f-body:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif; --f-latin:"Cormorant Garamond","Times New Roman",serif;
+  --gut-l:max(18px,env(safe-area-inset-left,0px)); --gut-r:max(18px,env(safe-area-inset-right,0px));
+  --arch:polygon(0 100%,0 20.4%,1.2% 18%,4% 15.3%,7.5% 12%,12% 9.1%,17.5% 6.6%,25% 4.5%,34% 2.4%,43% .84%,50% 0,57% .84%,66% 2.4%,75% 4.5%,82.5% 6.6%,88% 9.1%,92.5% 12%,96% 15.3%,98.8% 18%,100% 20.4%,100% 100%);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--lead);color:var(--milk);font-family:var(--f-body);font-size:17px;line-height:1.85;-webkit-text-size-adjust:100%}
+a{color:var(--amber)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+img{max-width:100%}
+.draft{background:#7A2A1C;color:#fff;text-align:center;font-size:.85rem;padding:6px var(--gut-r) 6px var(--gut-l)}
+
+/* ---------- 首屏 ---------- */
+.hero{position:relative;height:360svh}
+.stage{position:sticky;top:0;height:100lvh;overflow:hidden;background:var(--lead)}
+.stage>*{position:absolute}
+.world{inset:0;margin:0}
+.world img{width:100%;height:100%;object-fit:cover;object-position:50% 62%;display:block;transform:scale(var(--ws,1.06));transform-origin:50% 60%}
+.wall{inset:0;background:radial-gradient(60vmax 60vmax at var(--gx,66%) var(--gy,50%),#2B231B 0,#191512 45%,var(--lead) 100%)}
+.hole{left:0;top:0;transform-origin:0 0;perspective:900px;will-change:transform}
+.sash{position:absolute;top:0;bottom:0;width:50%;background-image:url(assets/glass-560.webp);background-image:image-set(url(assets/glass-560.webp) 1x,url(assets/glass-1120.webp) 2x);background-size:200% 100%;backface-visibility:hidden;will-change:transform}
+.sash.l{left:0;background-position:0 0;transform-origin:0 50%;transform:rotateY(var(--th,0deg))}
+.sash.r{right:0;background-position:100% 0;transform-origin:100% 50%;transform:rotateY(calc(var(--th,0deg) * -1))}
+.sash::after{content:"";position:absolute;inset:0;background:#000;opacity:var(--shade,0)}
+.glow{position:absolute;inset:-20% -60%;background:linear-gradient(105deg,transparent 35%,rgba(255,236,190,.22) 50%,transparent 65%);mix-blend-mode:screen;animation:drift 9s ease-in-out infinite alternate;pointer-events:none}
+@keyframes drift{from{transform:translateX(-22%)}to{transform:translateX(22%)}}
+.pool{left:0;top:0;transform-origin:50% 0;background:url(assets/pool.webp) 50% 0/100% 100%;-webkit-mask-image:radial-gradient(50% 100% at 50% 0,#000 0,transparent 100%);mask-image:radial-gradient(50% 100% at 50% 0,#000 0,transparent 100%);mix-blend-mode:screen;pointer-events:none}
+.pool::after{content:"";position:absolute;inset:0;background:radial-gradient(50% 100% at 50% 0,rgba(255,226,150,.95),rgba(240,181,46,.35) 55%,transparent);opacity:var(--open,0)}
+.title{display:flex;flex-direction:column;gap:.5rem;text-shadow:0 2px 18px rgba(0,0,0,.6)}
+.title .latin{font-family:var(--f-latin);font-style:italic;font-size:clamp(1.05rem,2.2vw,1.4rem);color:var(--amber);letter-spacing:.05em}
+.title h1{font-family:var(--f-display);font-weight:900;font-size:clamp(2.5rem,7.2vw,5.4rem);line-height:1.12;margin:0;letter-spacing:.04em}
+.title .sub{font-family:var(--f-display);font-weight:500;font-size:clamp(1.02rem,2.1vw,1.45rem);letter-spacing:.14em}
+.title .meta{font-size:.86rem;color:var(--dust);margin-top:.4rem}
+.land{left:var(--gut-l);right:var(--gut-r);bottom:calc(max(24px,env(safe-area-inset-bottom,0px)) + 6lvh);display:flex;justify-content:center;pointer-events:none}
+.land figure{margin:0;max-width:34em;background:rgba(18,16,14,.9);border-left:6px solid var(--amber);padding:18px 20px 16px}
+.land blockquote{margin:0;font-family:var(--f-display);font-weight:500;font-size:clamp(1.02rem,2.4vw,1.3rem);line-height:1.75}
+.land figcaption{font-size:.85rem;color:var(--dust);margin-top:8px}
+.hint{left:0;right:0;bottom:calc(max(18px,env(safe-area-inset-bottom,0px)) + 2lvh);text-align:center;font-size:.85rem;letter-spacing:.2em;color:var(--dust)}
+.hint::after{content:"";display:block;width:1px;height:26px;margin:8px auto 0;background:var(--dust)}
+
+/* ---------- 導覽列 ---------- */
+.secnav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(18,16,14,.94);border-bottom:1px solid var(--mortar)}
+.secnav .in{max-width:1080px;margin:0 auto;display:flex;align-items:center;gap:4px;overflow-x:auto;scrollbar-width:none;padding:8px var(--gut-r) 8px var(--gut-l)}
+.secnav .in::-webkit-scrollbar{display:none}
+.secnav .maili{flex:none;display:block;line-height:0;margin-right:10px}
+.secnav .maili img{display:block;width:22px;height:22px}
+.secnav .brand{font-family:var(--f-display);font-weight:900;white-space:nowrap;margin-right:auto;padding-right:12px;color:var(--milk);text-decoration:none}
+.secnav a.s{white-space:nowrap;text-decoration:none;color:var(--dust);font-size:.92rem;padding:5px 11px;border-radius:999px}
+.secnav a.s b{font-family:var(--f-display);color:var(--milk);margin-right:3px}
+.secnav a.s[aria-current="true"]{background:var(--amber);color:var(--lead)}
+.secnav a.s[aria-current="true"] b{color:var(--lead)}
+@media (max-width:640px){.secnav .brand{display:none}.secnav a.s{padding:5px 9px}}
+
+/* ---------- 段落共用 ---------- */
+.sec{padding-block:72px 80px;border-top:10px solid #000;scroll-margin-top:48px}
+.sec.alt{background:var(--stone)}
+.sec>.in{max-width:1080px;margin:0 auto;padding-left:var(--gut-l);padding-right:var(--gut-r);display:grid;grid-template-columns:200px minmax(0,1fr);gap:28px 40px}
+.label{display:flex;flex-direction:column;gap:4px;align-self:start;position:sticky;top:76px}
+.label .glyph{font-family:var(--f-display);font-weight:900;font-size:5rem;line-height:1;color:var(--amber)}
+.label .range{font-size:.82rem;letter-spacing:.1em;color:var(--dust)}
+.body{display:flex;flex-direction:column;gap:22px;min-width:0}
+.body>p{margin:0;max-width:36em}
+h2{font-family:var(--f-display);font-weight:900;font-size:clamp(1.7rem,4.6vw,2.5rem);line-height:1.3;margin:0;text-wrap:balance}
+.lede{font-size:1.1rem}
+@media (max-width:820px){.sec{padding-block:52px 60px}.sec>.in{grid-template-columns:minmax(0,1fr);gap:18px}.label{position:static;flex-direction:row;align-items:baseline;gap:14px}.label .glyph{font-size:3.4rem}}
+.qt{margin:0;border-left:6px solid var(--c,var(--amber));padding:4px 0 4px 18px;max-width:36em}
+.qt blockquote{margin:0;font-family:var(--f-display);font-weight:500;font-size:1.12rem;line-height:1.8}
+.qt.big blockquote{font-weight:900;font-size:clamp(1.25rem,3.4vw,1.7rem);line-height:1.6}
+.qt figcaption{font-size:.84rem;margin-top:6px;color:var(--dust)}
+.qt figcaption a{color:var(--c,var(--amber));text-decoration:none}
+.qt figcaption a:hover{text-decoration:underline}
+.aside{background:var(--card);border:1px solid var(--mortar);padding:14px 16px;font-size:.95rem;max-width:36em}
+
+/* 序：三組矛盾 */
+.pairs{list-style:none;margin:0;padding:0;display:grid;gap:10px;max-width:40em}
+.pairs li{display:grid;grid-template-columns:minmax(0,1fr) 34px minmax(0,1fr);align-items:stretch;border:3px solid #000;background:#000}
+.pairs span{padding:12px 14px;font-size:.98rem;line-height:1.6}
+.pairs .a{background:#3B2F12;color:#FBE7B0}
+.pairs .b{background:#16263F;color:#CFE0F7}
+.pairs i{display:flex;align-items:center;justify-content:center;font-style:normal;font-family:var(--f-display);font-weight:900;color:var(--dust);background:var(--lead)}
+
+/* 第一部份：四個問題 */
+.four{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:700px){.four{grid-template-columns:minmax(0,1fr)}}
+.q4{background:var(--card);border:3px solid #000;display:flex;flex-direction:column}
+.q4 .band{height:16px;border-bottom:3px solid #000;background:linear-gradient(100deg,var(--c) 0 17%,#000 17% 18.3%,var(--c2) 18.3% 39%,#000 39% 40.3%,var(--c) 40.3% 52%,#000 52% 53.3%,var(--c3) 53.3% 78%,#000 78% 79.3%,var(--c2) 79.3% 100%)}
+.q4 .tx{padding:16px 18px 20px;display:flex;flex-direction:column;gap:12px}
+.q4 .no{font-size:.8rem;letter-spacing:.12em;color:var(--dust)}
+.q4 h3{font-family:var(--f-display);font-weight:900;font-size:1.4rem;line-height:1.35;margin:0}
+.q4 p{margin:0;font-size:.98rem}
+.q4 .qt blockquote{font-size:1.02rem}
+
+/* 第二部份：五格玻璃 */
+.panels{display:flex;flex-direction:column;gap:56px}
+.panel{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:32px;align-items:start;scroll-margin-top:64px}
+.panel:nth-child(even){grid-template-columns:minmax(0,1fr) minmax(0,300px)}
+.panel:nth-child(even) .pic{order:2}
+@media (max-width:700px){.panel,.panel:nth-child(even){grid-template-columns:minmax(0,1fr);gap:18px}.panel:nth-child(even) .pic{order:0}.pic{max-width:260px}}
+.pic{position:relative;margin:0;perspective:700px}
+.pic::before{content:"";position:absolute;inset:-14% -18%;background:radial-gradient(closest-side,var(--c),transparent 72%);opacity:.32;pointer-events:none}
+.pic .fr{position:relative;display:block;clip-path:var(--arch);background:#000;transition:transform .25s ease-out;transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg))}
+.pic img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
+.pic .fr::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 30%,rgba(255,240,200,.28) 48%,transparent 62%);transform:translateX(var(--sx,-80%));transition:transform .9s ease-out;pointer-events:none}
+.pic.in .fr::after{--sx:80%}
+.ptx{display:flex;flex-direction:column;gap:14px;min-width:0}
+.ptx .no{font-size:.82rem;letter-spacing:.12em;color:var(--c)}
+.ptx h3{font-family:var(--f-display);font-weight:900;font-size:clamp(1.6rem,4.4vw,2.2rem);line-height:1.25;margin:0}
+.ptx p{margin:0;max-width:34em}
+.tmp{font-size:.78rem;color:var(--dust);margin-top:8px}
+
+/* 小標、出處 */
+.sub3{font-family:var(--f-display);font-weight:900;font-size:1.3rem;line-height:1.4;margin:18px 0 0}
+.src{font-size:.82rem;color:var(--dust);margin:0;max-width:40em}
+.note{font-size:.92rem;color:var(--dust);margin:0;max-width:40em}
+/* 時間軸 */
+.tlf{display:flex;gap:6px;flex-wrap:wrap}
+.tlf button,.quiz button{font:inherit;color:var(--milk);background:var(--card);border:3px solid #000;padding:6px 14px;cursor:pointer}
+.tlf button.on{background:var(--amber);color:var(--lead)}
+.tl{display:flex;flex-direction:column;gap:6px;max-width:40em;border-left:4px solid var(--mortar);padding-left:14px}
+.tl details{background:var(--card);border:3px solid #000;border-left:8px solid var(--k)}
+.tl details.c{--k:var(--amber)}.tl details.w{--k:var(--cobalt)}
+.tl details[hidden]{display:none}
+.tl summary{cursor:pointer;list-style:none;display:grid;grid-template-columns:6.2em minmax(0,1fr) 1.2em;gap:8px;align-items:baseline;padding:10px 12px}
+.tl summary::-webkit-details-marker{display:none}
+.tl summary::after{content:"＋";color:var(--dust);text-align:right}
+.tl details[open] summary::after{content:"－"}
+.tl .d{font-variant-numeric:tabular-nums;font-size:.86rem;color:var(--k)}
+.tl .t{font-family:var(--f-display);font-weight:900}
+.tl details p{margin:0;padding:0 12px 10px;font-size:.96rem}
+.tl details p.src{padding-bottom:12px}
+/* 五格選單 */
+.pick{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;max-width:520px}
+.pick a{display:flex;flex-direction:column;align-items:center;gap:4px;text-decoration:none;color:var(--milk);font-size:.88rem;border-bottom:4px solid transparent;padding-bottom:4px}
+.pick a:hover,.pick a[aria-current="true"]{border-bottom-color:var(--c)}
+.pick img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;clip-path:var(--arch)}
+/* 延伸思考 */
+.think{background:var(--card);border:3px solid #000;padding:6px 18px 20px;display:flex;flex-direction:column;gap:12px;max-width:42em}
+.think p{margin:0}
+/* 數據 */
+.tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+@media (max-width:600px){.tiles{grid-template-columns:minmax(0,1fr)}}
+.tile{background:var(--card);border:3px solid #000;border-top:10px solid var(--amber);padding:12px 14px 14px;display:flex;flex-direction:column;gap:2px}
+.tile .k{font-size:.84rem;color:var(--dust)}
+.tile b{font-family:var(--f-display);font-weight:900;font-size:1.7rem;line-height:1.25;font-variant-numeric:tabular-nums}
+.tile .to{font-size:1.05rem;color:var(--amber);font-variant-numeric:tabular-nums}
+.tile .y{font-size:.78rem;color:var(--dust)}
+.dv{background:var(--card);border:3px solid #000;padding:14px 14px 12px;display:flex;flex-direction:column;gap:8px}
+.dvh{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:baseline;justify-content:space-between}
+.dvh .sub3{margin:0;font-size:1.1rem}
+.read{font-size:.88rem;color:var(--amber);font-variant-numeric:tabular-nums}
+.dvc{width:100%;aspect-ratio:16/9;min-height:220px;touch-action:pan-y}
+.dvc svg{display:block;width:100%;height:100%}
+.dvc text{fill:var(--dust);font-size:11px;font-family:var(--f-body)}
+.dvc .mk text{fill:var(--milk)}
+.dvl{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:.84rem;color:var(--dust)}
+.dvl span::before{content:"";display:inline-block;width:12px;height:12px;background:var(--c);margin-right:6px;vertical-align:-1px;border:1px solid #000}
+/* 測驗 */
+.quiz{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px;max-width:40em;counter-reset:q}
+.quiz li{counter-increment:q;background:var(--card);border:3px solid #000;padding:14px 16px;display:flex;flex-direction:column;gap:10px}
+.quiz .qq{margin:0;font-family:var(--f-display);font-weight:900;font-size:1.08rem}
+.quiz .qq::before{content:counter(q) "　";color:var(--amber)}
+.quiz .opts{display:flex;flex-direction:column;gap:6px}
+.quiz button{text-align:left;line-height:1.6}
+.quiz button.ok{background:#1F4A3A;border-color:var(--emerald)}
+.quiz button.no{background:#4A1F18;border-color:var(--ruby)}
+.quiz button:disabled{cursor:default;opacity:1;color:var(--milk)}
+.quiz .fb{margin:0;font-size:.92rem;color:var(--dust)}
+.score{font-family:var(--f-display);font-weight:900;font-size:1.2rem;color:var(--amber);margin:0}
+
+/* 讀：三分鐘版、三張小卡、地圖 */
+.tldr{margin:0;padding-left:1.4em;display:flex;flex-direction:column;gap:8px;max-width:38em;font-size:1.05rem}
+.tldr li::marker{font-family:var(--f-display);font-weight:900;color:var(--amber)}
+.tldr a{font-size:.88rem;white-space:nowrap}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:820px){.facts{grid-template-columns:minmax(0,1fr)}}
+.fact{background:var(--card);border:3px solid #000;padding:14px 16px 16px;display:flex;flex-direction:column;gap:10px}
+.fact h3{font-family:var(--f-display);font-weight:900;font-size:1.1rem;margin:0;color:var(--amber)}
+.fact .qt blockquote{font-size:1rem}
+.map{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:flex-end}
+.map .grp{display:flex;flex-direction:column;gap:4px}
+.map .grp>span{font-size:.72rem;color:var(--dust);white-space:nowrap}
+.map .row{display:flex;flex-wrap:wrap;gap:3px;max-width:100%}
+.map button{width:20px;height:27px;padding:0;border:0;background:var(--c);clip-path:var(--arch);opacity:.38;cursor:pointer}
+.map button.q{opacity:1}
+.map button[aria-pressed="true"]{opacity:1;outline:0;background:var(--milk)}
+.map button:focus-visible{outline:0;background:var(--milk)}
+.mapread{margin:0;font-family:var(--f-display);font-weight:900;min-height:1.9em}
+.mapread a{font-family:var(--f-body);font-weight:400;font-size:.88rem;white-space:nowrap}
+/* 它引用了誰 */
+.cite{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;max-width:40em}
+.cite li{display:grid;grid-template-columns:minmax(0,11.5em) minmax(0,1fr) 2em;gap:10px;align-items:center}
+.cite .nm{font-family:var(--f-display);font-weight:900;line-height:1.35}
+.cite .nm a{color:var(--milk)}
+.cite small{display:block;font-family:var(--f-body);font-weight:400;font-size:.76rem;color:var(--dust)}
+.cite .bar{height:18px;background:var(--lead);border:2px solid #000}
+.cite .bar i{display:block;height:100%;width:var(--w);background:var(--amber)}
+.cite b{font-variant-numeric:tabular-nums;text-align:right;color:var(--amber)}
+@media (max-width:480px){.cite li{grid-template-columns:minmax(0,8.2em) minmax(0,1fr) 1.8em;gap:8px}}
+/* 猜年份 */
+.guess{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px}
+.gq{margin:0;background:var(--card);border:3px solid #000;padding:14px 16px;display:flex;flex-direction:column;gap:10px}
+.gq blockquote{margin:0;font-family:var(--f-display);font-weight:500;line-height:1.75}
+.gq .opts{display:flex;gap:6px;margin-top:auto}
+.gq button{font:inherit;color:var(--milk);background:var(--lead);border:3px solid #000;padding:5px 12px;cursor:pointer;flex:1}
+.gq button.ok{background:#1F4A3A;border-color:var(--emerald)}
+.gq button.no{background:#4A1F18;border-color:var(--ruby)}
+.gq button:disabled{cursor:default;color:var(--milk)}
+.gq figcaption{font-size:.88rem;color:var(--dust)}
+/* 四個問題的圖、各章大綱 */
+.q4 .im{float:right;width:104px;height:auto;margin:0 0 6px 14px;clip-path:var(--arch);aspect-ratio:4/5;object-fit:cover}
+.q4 .tx{display:block}
+.q4 .tx>*{margin-top:12px}.q4 .tx>*:first-child,.q4 .tx>.no{margin-top:0}
+.q4 .qt,.q4 .ol{clear:both}
+.ol{border:3px solid #000;background:var(--lead);max-width:36em}
+.ol summary{cursor:pointer;padding:8px 12px;font-size:.92rem;color:var(--c,var(--amber));list-style:none}
+.ol summary::-webkit-details-marker{display:none}
+.ol summary::before{content:"＋ "}.ol[open] summary::before{content:"－ "}
+.ol ol{list-style:none;margin:0;padding:0 12px 10px;display:flex;flex-direction:column;gap:2px}
+.ol li a{display:grid;grid-template-columns:2.2em minmax(0,1fr);gap:6px;text-decoration:none;color:var(--milk);font-size:.92rem;padding:3px 0}
+.ol li a span{color:var(--dust);font-variant-numeric:tabular-nums}
+.ol li a:hover{color:var(--amber)}
+.ol li.q a span{color:var(--amber);font-weight:500}
+/* 交談的圈 */
+.rg{position:relative;width:100%;max-width:400px;aspect-ratio:1}
+.rg .r{position:absolute;border-radius:50%;border:3px solid #000;cursor:pointer;font:inherit;color:var(--milk);padding:0;display:flex;justify-content:center;align-items:flex-start}
+.rg .r span{font-size:.8rem;line-height:1;margin-top:6.5%;white-space:nowrap}
+.rg .r4{inset:0;background:#33264F}.rg .r3{inset:10%;background:#1B2D4A}.rg .r2{inset:20%;background:#1F3A30}.rg .r1{inset:30%;background:#3F2A14}
+.rg .r0{inset:40%;background:#6A5212;align-items:center}.rg .r0 span{margin-top:0}
+.rg .r1 span{margin-top:8%}.rg .r2 span{margin-top:7%}
+.rg .r[aria-pressed="true"]{border-color:var(--amber);color:var(--amber)}
+.rgq{max-width:36em;min-height:6.5em;display:flex;flex-direction:column;gap:14px}
+.rgq.js .qt{display:none}.rgq.js .qt.on{display:block}
+/* 十個關鍵詞 */
+.kw{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
+.k{position:relative;min-height:168px;padding:0;border:0;background:none;font:inherit;color:var(--milk);text-align:left;cursor:pointer;perspective:800px}
+.k .f,.k .bk{position:absolute;inset:0;border:3px solid #000;border-top:10px solid var(--amber);padding:12px 14px;display:flex;flex-direction:column;gap:8px;backface-visibility:hidden;-webkit-backface-visibility:hidden;transition:transform .45s}
+.k .f{background:var(--card)}.k .bk{background:#2E2410;transform:rotateY(180deg)}
+.k[aria-pressed="true"] .f{transform:rotateY(180deg)}.k[aria-pressed="true"] .bk{transform:rotateY(360deg)}
+.k b{font-family:var(--f-display);font-weight:900;font-size:1.2rem;line-height:1.3}
+.k .g{font-size:.92rem;line-height:1.6;color:var(--dust)}
+.k .bq{font-family:var(--f-display);font-weight:500;font-size:.98rem;line-height:1.65}
+.k .n{font-size:.8rem;color:var(--amber);margin-top:auto}
+@media (prefers-reduced-motion:reduce){.k .f,.k .bk{transition:none}}
+
+/* 結論：一圈一圈往外 */
+.rings{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px;max-width:40em}
+.rings li{border:3px solid #000;padding:8px 14px;font-size:.95rem;background:var(--card)}
+.rings li:nth-child(1){background:#4A3A10}.rings li:nth-child(2){background:#3F2A14}.rings li:nth-child(3){background:#1F3A30}.rings li:nth-child(4){background:#1B2D4A}.rings li:nth-child(5){background:#33264F}
+
+/* 金句牆 */
+.wallq{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.wq{margin:0;background:var(--card);border:3px solid #000;border-top:10px solid var(--c,var(--amber));padding:16px 16px 14px;display:flex;flex-direction:column;gap:10px}
+.wq blockquote{margin:0;font-family:var(--f-display);font-weight:500;font-size:1.05rem;line-height:1.75}
+.wq figcaption{font-size:.82rem;color:var(--dust);margin-top:auto}
+.wq figcaption a{color:var(--c,var(--amber));text-decoration:none}
+
+.asks{counter-reset:a;list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;max-width:38em}
+.asks li{counter-increment:a;display:grid;grid-template-columns:2.2em minmax(0,1fr);gap:8px;font-size:1.05rem}
+.asks li::before{content:counter(a);font-family:var(--f-display);font-weight:900;color:var(--amber)}
+.more{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.more a{display:flex;flex-direction:column;gap:2px;background:var(--card);border:3px solid #000;padding:14px 16px;text-decoration:none;color:var(--milk)}
+.more a span{font-size:.82rem;color:var(--dust)}
+.more a b{font-family:var(--f-display);font-weight:900;font-size:1.1rem}
+.more a:hover{border-color:var(--amber)}
+footer{border-top:10px solid #000;padding:28px var(--gut-r) calc(48px + env(safe-area-inset-bottom,0px)) var(--gut-l);font-size:.85rem;color:var(--dust);text-align:center}
+footer .maili{display:block;width:28px;margin:0 auto 10px}
+footer .maili img{display:block}
+
+/* 閱讀進度：一扇慢慢打開的小窗 */
+.prog{position:fixed;right:max(12px,env(safe-area-inset-right,0px));bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:15;width:34px;height:56px;clip-path:var(--arch);background:radial-gradient(circle at 50% 70%,#FFE9A8,#F0B52E);perspective:120px;opacity:0;transition:opacity .3s;pointer-events:none}
+.prog.on{opacity:1}
+.prog i{position:absolute;top:0;bottom:0;width:50%;background:linear-gradient(160deg,var(--cobalt) 0 30%,#000 30% 34%,var(--ruby) 34% 62%,#000 62% 66%,var(--emerald) 66%)}
+.prog i:first-child{left:0;transform-origin:0 50%;transform:rotateY(var(--pt,0deg));border-right:1px solid #000}
+.prog i:last-child{right:0;transform-origin:100% 50%;transform:rotateY(calc(var(--pt,0deg) * -1));border-left:1px solid #000}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.glow{animation:none}.pic .fr,.pic .fr::after{transition:none}}
+</style>
+</head>
+<body>
+<header class="hero" id="top">
+  <div class="stage" id="stage">
+    <picture class="world">
+      <source media="(orientation: portrait)" srcset="assets/world-tall-640.webp 640w, assets/world-tall-1024.webp 1024w" sizes="100vw">
+      <img src="assets/world-wide-960.webp" srcset="assets/world-wide-960.webp 960w, assets/world-wide-1536.webp 1536w" sizes="100vw" width="1536" height="1024" alt="窗外的世界：紅瓦屋頂、擠滿人的市集街道、學校操場、有吊車的港口、田野和遠山，天邊一輪金色的太陽" decoding="async">
+    </picture>
+    <div class="wall" id="wall"></div>
+    <div class="pool" id="pool"></div>
+    <div class="hole" id="hole" role="img" aria-label="一扇彩色玻璃拱窗：藍、紅、金的色塊之間有一道光，窗底是一排站著的人">
+      <div class="sash l"></div><div class="sash r"></div><div class="glow"></div>
+    </div>
+    <div class="title" id="title">
+      <span class="latin">Gaudium et Spes · 1965</span>
+      <h1>喜樂與期望</h1>
+      <span class="sub">論教會在現代世界牧職憲章</span>
+      <span class="meta">梵蒂岡第二屆大公會議　1965 年 12 月 7 日頒布</span>
+    </div>
+    <div class="land" id="land"><figure>
+      <blockquote data-q="1">我們這時代的人們，尤其貧困者和遭受折磨者，所有喜樂與期望、愁苦與焦慮，亦是基督信徒的喜樂與期望、愁苦和焦慮。</blockquote>
+      <figcaption>第 1 節</figcaption>
+    </figure></div>
+    <div class="hint" id="hint">往下捲，把窗打開</div>
+  </div>
+</header>
+
+<nav class="secnav" aria-label="專題段落">
+  <div class="in">
+    <a class="maili" href="https://mai-li.app" target="_blank" rel="noopener" aria-label="麥力（開啟 mai-li.app）"><img src="assets/mai-li-96.webp" width="22" height="22" alt=""></a>
+    <a class="brand" href="#top">喜樂與期望</a>
+    <a class="s" href="#what"><b>讀</b>三分鐘版</a>
+    <a class="s" href="#signs"><b>看</b>時代</a>
+    <a class="s" href="#person"><b>人</b>四個問題</a>
+    <a class="s" href="#panels"><b>窗</b>五格玻璃</a>
+    <a class="s" href="#numbers"><b>數</b>1965 與今天</a>
+    <a class="s" href="#dialogue"><b>談</b>交談</a>
+    <a class="s" href="#words"><b>詞</b>關鍵詞</a>
+    <a class="s" href="#wall-q"><b>句</b>金句</a>
+    <a class="s" href="fulltext.html"><b>文</b>全文</a>
+  </div>
+</nav>
+
+<main>
+<section class="sec alt" id="what">
+  <div class="in">
+    <div class="label"><span class="glyph">讀</span><span class="range">先知道這幾件事</span></div>
+    <div class="body">
+      <h2>這是一份什麼文件</h2>
+      <h3 class="sub3">只有三分鐘的話</h3>
+      <ol class="tldr">
+        <li>這是梵二最後一天公開會議上公佈的憲章，說話的對象不只是信友，而是所有的人。</li>
+        <li>它先看世界，再開口：1965 年的世界進步很快，卻充滿矛盾。<a href="#signs">看這一段</a></li>
+        <li>第一部份回答「人是誰」：人有尊嚴，人需要彼此，人做的事有意義，教會和世界互相幫助。<a href="#person">看這一段</a></li>
+        <li>第二部份談五件急事：家庭、文化、經濟、政治、和平。<a href="#panels">看這一段</a></li>
+        <li>結論是：不拒絕與任何人交談，而且要動手去做。<a href="#dialogue">看這一段</a></li>
+      </ol>
+      <div class="facts">
+        <article class="fact"><h3>對誰說</h3><figure class="qt"><blockquote data-q="2">不獨向教會子女及信仰基督者致辭，而且亦毫不猶豫地向整個人類講話</blockquote><figcaption><a href="fulltext.html#p2">第 2 節</a></figcaption></figure></article>
+        <article class="fact"><h3>用什麼態度</h3><figure class="qt"><blockquote data-q="3">是為拯救人類，而不是為審判人類；是為服務人類，而不是為受人服務。</blockquote><figcaption><a href="fulltext.html#p3">第 3 節</a></figcaption></figure></article>
+        <article class="fact"><h3>為什麼叫「牧職憲章」</h3><figure class="qt"><blockquote data-note="緒言">這憲章雖分兩部份，卻構成一個體系。其所以名為牧職憲章者，是因為這憲章的主旨，在於根據教會理論，闡明教會對現代人類的關係。</blockquote><figcaption>憲章標題的附注</figcaption></figure></article>
+      </div>
+      <p class="aside">「喜樂與期望」譯自拉丁文版開頭的 Gaudium et spes。教會的文件習慣用開頭的幾個字當名稱。<a href="https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19651207_gaudium-et-spes_lt.html" target="_blank" rel="noopener">看拉丁文版</a></p>
+      <h3 class="sub3">它引用了誰</h3>
+      <p>憲章全篇有 <span data-notes-total="169">169</span> 條附注。下面是幾份文件在附注裡被點名的次數，寫「同上」的不算。被點名最多的一道通諭，是四年前的《慈母與導師》。</p>
+      <ul class="cite">
+        <li data-cite="慈母與導師" data-n="15" style="--w:100%"><span class="nm"><a href="/encyclical/mater-et-magistra/">《慈母與導師》</a><small>1961，若望廿三世</small></span><span class="bar"><i></i></span><b>15</b></li>
+        <li data-cite="《教會》教義憲章" data-n="13" style="--w:87%"><span class="nm">《教會》教義憲章<small>梵二的另一份憲章</small></span><span class="bar"><i></i></span><b>13</b></li>
+        <li data-cite="和平於世" data-n="11" style="--w:73%"><span class="nm">《和平於世》<small>1963，若望廿三世</small></span><span class="bar"><i></i></span><b>11</b></li>
+        <li data-cite="四十年" data-n="9" style="--w:60%"><span class="nm">《四十年》<small>1931，庇護十一世</small></span><span class="bar"><i></i></span><b>9</b></li>
+        <li data-cite="《新事》" data-n="3" style="--w:20%"><span class="nm"><a href="/encyclical/rerum-novarum/">《新事》</a><small>1891，良十三世</small></span><span class="bar"><i></i></span><b>3</b></li>
+      </ul>
+      <p class="src">數法：在梵蒂岡中文版 PDF 的附注裡搜尋文件名稱。</p>
+      <h3 class="sub3">整份文件的地圖</h3>
+      <p>全文共 93 節，一片玻璃代表一節，顏色代表所屬的章。亮的是這一頁引用過的節。點一片，看它的標題。</p>
+      <div class="map" id="map">
+        <div class="grp" style="--c:var(--dust)"><span>緒言</span><div class="row"><button type="button" class="q" data-n="1" data-t="教會與人類大家庭的密切聯繫" aria-label="第 1 節 教會與人類大家庭的密切聯繫" aria-pressed="false"></button><button type="button" class="q" data-n="2" data-t="大公會議向誰致辭" aria-label="第 2 節 大公會議向誰致辭" aria-pressed="false"></button><button type="button" class="q" data-n="3" data-t="服務人類" aria-label="第 3 節 服務人類" aria-pressed="false"></button></div></div>
+        <div class="grp" style="--c:var(--dust)"><span>引言</span><div class="row"><button type="button" class="q" data-n="4" data-t="人類的期望和焦慮" aria-label="第 4 節 人類的期望和焦慮" aria-pressed="false"></button><button type="button" class="q" data-n="5" data-t="現代局勢的深刻演變" aria-label="第 5 節 現代局勢的深刻演變" aria-pressed="false"></button><button type="button" class="q" data-n="6" data-t="社會生活的演變" aria-label="第 6 節 社會生活的演變" aria-pressed="false"></button><button type="button" class="q" data-n="7" data-t="心理、道德及宗教演變" aria-label="第 7 節 心理、道德及宗教演變" aria-pressed="false"></button><button type="button" data-n="8" data-t="現代世界的不平衡" aria-label="第 8 節 現代世界的不平衡" aria-pressed="false"></button><button type="button" class="q" data-n="9" data-t="人類的普遍願望" aria-label="第 9 節 人類的普遍願望" aria-pressed="false"></button><button type="button" class="q" data-n="10" data-t="人類最深奧的疑難" aria-label="第 10 節 人類最深奧的疑難" aria-pressed="false"></button></div></div>
+        <div class="grp" style="--c:var(--dust)"><span>第一部份</span><div class="row"><button type="button" data-n="11" data-t="必須響應聖神的默感" aria-label="第 11 節 必須響應聖神的默感" aria-pressed="false"></button></div></div>
+        <div class="grp" style="--c:var(--ruby)"><span>一・人格尊嚴</span><div class="row"><button type="button" class="q" data-n="12" data-t="人是天主的肖像" aria-label="第 12 節 人是天主的肖像" aria-pressed="false"></button><button type="button" data-n="13" data-t="罪惡" aria-label="第 13 節 罪惡" aria-pressed="false"></button><button type="button" data-n="14" data-t="人的構造" aria-label="第 14 節 人的構造" aria-pressed="false"></button><button type="button" data-n="15" data-t="理智的尊嚴、真理與智慧" aria-label="第 15 節 理智的尊嚴、真理與智慧" aria-pressed="false"></button><button type="button" class="q" data-n="16" data-t="良心的尊嚴" aria-label="第 16 節 良心的尊嚴" aria-pressed="false"></button><button type="button" data-n="17" data-t="自由的卓越" aria-label="第 17 節 自由的卓越" aria-pressed="false"></button><button type="button" data-n="18" data-t="死亡的奧蹟" aria-label="第 18 節 死亡的奧蹟" aria-pressed="false"></button><button type="button" data-n="19" data-t="無神論的形式及根由" aria-label="第 19 節 無神論的形式及根由" aria-pressed="false"></button><button type="button" data-n="20" data-t="有系統的無神論" aria-label="第 20 節 有系統的無神論" aria-pressed="false"></button><button type="button" data-n="21" data-t="教會對無神論的態度" aria-label="第 21 節 教會對無神論的態度" aria-pressed="false"></button><button type="button" class="q" data-n="22" data-t="新人基督" aria-label="第 22 節 新人基督" aria-pressed="false"></button></div></div>
+        <div class="grp" style="--c:var(--emerald)"><span>一・人類的團體生活</span><div class="row"><button type="button" data-n="23" data-t="大公會議的目標" aria-label="第 23 節 大公會議的目標" aria-pressed="false"></button><button type="button" class="q" data-n="24" data-t="由天主的計劃來看人類使命的社會性" aria-label="第 24 節 由天主的計劃來看人類使命的社會性" aria-pressed="false"></button><button type="button" data-n="25" data-t="人與人及社會間的互屬關係" aria-label="第 25 節 人與人及社會間的互屬關係" aria-pressed="false"></button><button type="button" class="q" data-n="26" data-t="促進公益" aria-label="第 26 節 促進公益" aria-pressed="false"></button><button type="button" class="q" data-n="27" data-t="尊重人格" aria-label="第 27 節 尊重人格" aria-pressed="false"></button><button type="button" data-n="28" data-t="愛仇及敬仇" aria-label="第 28 節 愛仇及敬仇" aria-pressed="false"></button><button type="button" class="q" data-n="29" data-t="人人平等與社會正義" aria-label="第 29 節 人人平等與社會正義" aria-pressed="false"></button><button type="button" data-n="30" data-t="倫理應跨出個人範圍" aria-label="第 30 節 倫理應跨出個人範圍" aria-pressed="false"></button><button type="button" data-n="31" data-t="責任感與參加社會工作" aria-label="第 31 節 責任感與參加社會工作" aria-pressed="false"></button><button type="button" data-n="32" data-t="聖言降生成人與人類休戚相關" aria-label="第 32 節 聖言降生成人與人類休戚相關" aria-pressed="false"></button></div></div>
+        <div class="grp" style="--c:var(--amber)"><span>一・人在世間的活動</span><div class="row"><button type="button" data-n="33" data-t="題旨" aria-label="第 33 節 題旨" aria-pressed="false"></button><button type="button" data-n="34" data-t="人類活動的價值" aria-label="第 34 節 人類活動的價值" aria-pressed="false"></button><button type="button" class="q" data-n="35" data-t="人類活動應有的秩序" aria-label="第 35 節 人類活動應有的秩序" aria-pressed="false"></button><button type="button" class="q" data-n="36" data-t="現世事物應有的獨立" aria-label="第 36 節 現世事物應有的獨立" aria-pressed="false"></button><button type="button" data-n="37" data-t="為罪惡所腐化的人類活動" aria-label="第 37 節 為罪惡所腐化的人類活動" aria-pressed="false"></button><button type="button" data-n="38" data-t="人類活動應在復活奧蹟內臻於至善" aria-label="第 38 節 人類活動應在復活奧蹟內臻於至善" aria-pressed="false"></button><button type="button" data-n="39" data-t="新天新地" aria-label="第 39 節 新天新地" aria-pressed="false"></button></div></div>
+        <div class="grp" style="--c:var(--cobalt)"><span>一・教會在現代世界內的任務</span><div class="row"><button type="button" data-n="40" data-t="教會和世界的關係" aria-label="第 40 節 教會和世界的關係" aria-pressed="false"></button><button type="button" data-n="41" data-t="教會如何幫助每一個人" aria-label="第 41 節 教會如何幫助每一個人" aria-pressed="false"></button><button type="button" data-n="42" data-t="教會如何幫助社會" aria-label="第 42 節 教會如何幫助社會" aria-pressed="false"></button><button type="button" class="q" data-n="43" data-t="教會如何透過其子女對人類活動有所補助" aria-label="第 43 節 教會如何透過其子女對人類活動有所補助" aria-pressed="false"></button><button type="button" class="q" data-n="44" data-t="現代世界如何幫助教會" aria-label="第 44 節 現代世界如何幫助教會" aria-pressed="false"></button><button type="button" data-n="45" data-t="基督是原始與終點" aria-label="第 45 節 基督是原始與終點" aria-pressed="false"></button></div></div>
+        <div class="grp" style="--c:var(--dust)"><span>第二部份</span><div class="row"><button type="button" data-n="46" data-t="第二部份" aria-label="第 46 節 第二部份" aria-pressed="false"></button></div></div>
+        <div class="grp" style="--c:var(--ruby)"><span>二・維護婚姻與家庭尊嚴</span><div class="row"><button type="button" data-n="47" data-t="現代婚姻與家庭" aria-label="第 47 節 現代婚姻與家庭" aria-pressed="false"></button><button type="button" data-n="48" data-t="婚姻與家庭的神聖" aria-label="第 48 節 婚姻與家庭的神聖" aria-pressed="false"></button><button type="button" data-n="49" data-t="夫妻之愛" aria-label="第 49 節 夫妻之愛" aria-pressed="false"></button><button type="button" class="q" data-n="50" data-t="婚姻的繁殖力" aria-label="第 50 節 婚姻的繁殖力" aria-pressed="false"></button><button type="button" class="q" data-n="51" data-t="如何使夫妻之愛和尊重生命不相衝突" aria-label="第 51 節 如何使夫妻之愛和尊重生命不相衝突" aria-pressed="false"></button><button type="button" class="q" data-n="52" data-t="大家共同維護婚姻及家庭" aria-label="第 52 節 大家共同維護婚姻及家庭" aria-pressed="false"></button></div></div>
+        <div class="grp" style="--c:var(--violet)"><span>二・推動文化進展的適當措施</span><div class="row"><button type="button" class="q" data-n="53" data-t="引言" aria-label="第 53 節 引言" aria-pressed="false"></button><button type="button" data-n="54" data-t="新的生活方式" aria-label="第 54 節 新的生活方式" aria-pressed="false"></button><button type="button" data-n="55" data-t="人是文化的創造者" aria-label="第 55 節 人是文化的創造者" aria-pressed="false"></button><button type="button" data-n="56" data-t="困難與任務" aria-label="第 56 節 困難與任務" aria-pressed="false"></button><button type="button" data-n="57" data-t="信德與文化" aria-label="第 57 節 信德與文化" aria-pressed="false"></button><button type="button" data-n="58" data-t="基督福音與人類文化間的各種聯繫" aria-label="第 58 節 基督福音與人類文化間的各種聯繫" aria-pressed="false"></button><button type="button" data-n="59" data-t="調和人類不同文化的適當辦法" aria-label="第 59 節 調和人類不同文化的適當辦法" aria-pressed="false"></button><button type="button" class="q" data-n="60" data-t="應承認人人有權利享受文化恩澤並應予以實現" aria-label="第 60 節 應承認人人有權利享受文化恩澤並應予以實現" aria-pressed="false"></button><button type="button" data-n="61" data-t="完整的文化教育" aria-label="第 61 節 完整的文化教育" aria-pressed="false"></button><button type="button" data-n="62" data-t="文化與公教教育的和諧" aria-label="第 62 節 文化與公教教育的和諧" aria-pressed="false"></button></div></div>
+        <div class="grp" style="--c:var(--amber)"><span>二・社會與經濟生活</span><div class="row"><button type="button" class="q" data-n="63" data-t="對經濟生活的若干觀點" aria-label="第 63 節 對經濟生活的若干觀點" aria-pressed="false"></button><button type="button" class="q" data-n="64" data-t="為人服務乃經濟進展的宗旨" aria-label="第 64 節 為人服務乃經濟進展的宗旨" aria-pressed="false"></button><button type="button" data-n="65" data-t="經濟應在人類控制下進展" aria-label="第 65 節 經濟應在人類控制下進展" aria-pressed="false"></button><button type="button" data-n="66" data-t="應消除社經方面太過的懸殊" aria-label="第 66 節 應消除社經方面太過的懸殊" aria-pressed="false"></button><button type="button" class="q" data-n="67" data-t="勞動及其條件與休息" aria-label="第 67 節 勞動及其條件與休息" aria-pressed="false"></button><button type="button" data-n="68" data-t="工人應參加企業、經濟的管理以及勞工糾紛的解決" aria-label="第 68 節 工人應參加企業、經濟的管理以及勞工糾紛的解決" aria-pressed="false"></button><button type="button" class="q" data-n="69" data-t="現世財富是供人人享用的" aria-label="第 69 節 現世財富是供人人享用的" aria-pressed="false"></button><button type="button" data-n="70" data-t="關於投資及幣制問題" aria-label="第 70 節 關於投資及幣制問題" aria-pressed="false"></button><button type="button" data-n="71" data-t="所有權、私產權及大地主" aria-label="第 71 節 所有權、私產權及大地主" aria-pressed="false"></button><button type="button" data-n="72" data-t="社經生活與基督神國" aria-label="第 72 節 社經生活與基督神國" aria-pressed="false"></button></div></div>
+        <div class="grp" style="--c:var(--cobalt)"><span>二・政治團體的生活</span><div class="row"><button type="button" data-n="73" data-t="現代政治生活" aria-label="第 73 節 現代政治生活" aria-pressed="false"></button><button type="button" class="q" data-n="74" data-t="國家的性質與宗旨" aria-label="第 74 節 國家的性質與宗旨" aria-pressed="false"></button><button type="button" class="q" data-n="75" data-t="人人應參與政治生活" aria-label="第 75 節 人人應參與政治生活" aria-pressed="false"></button><button type="button" class="q" data-n="76" data-t="政府與教會" aria-label="第 76 節 政府與教會" aria-pressed="false"></button></div></div>
+        <div class="grp" style="--c:var(--emerald)"><span>二・維護和平及推動國際團體</span><div class="row"><button type="button" data-n="77" data-t="引言" aria-label="第 77 節 引言" aria-pressed="false"></button><button type="button" class="q" data-n="78" data-t="和平的性質" aria-label="第 78 節 和平的性質" aria-pressed="false"></button><button type="button" class="q" data-n="79" data-t="應遏止戰爭的殘酷" aria-label="第 79 節 應遏止戰爭的殘酷" aria-pressed="false"></button><button type="button" class="q" data-n="80" data-t="全面戰爭" aria-label="第 80 節 全面戰爭" aria-pressed="false"></button><button type="button" class="q" data-n="81" data-t="軍備競賽" aria-label="第 81 節 軍備競賽" aria-pressed="false"></button><button type="button" data-n="82" data-t="禁絕戰爭與國際避戰行動" aria-label="第 82 節 禁絕戰爭與國際避戰行動" aria-pressed="false"></button><button type="button" data-n="83" data-t="紛爭的原因及其補救的方法" aria-label="第 83 節 紛爭的原因及其補救的方法" aria-pressed="false"></button><button type="button" data-n="84" data-t="由各國組織成的團體及國際機構" aria-label="第 84 節 由各國組織成的團體及國際機構" aria-pressed="false"></button><button type="button" data-n="85" data-t="國際經濟合作" aria-label="第 85 節 國際經濟合作" aria-pressed="false"></button><button type="button" data-n="86" data-t="幾項適用的規則" aria-label="第 86 節 幾項適用的規則" aria-pressed="false"></button><button type="button" data-n="87" data-t="對解決人口問題應有的國際合作" aria-label="第 87 節 對解決人口問題應有的國際合作" aria-pressed="false"></button><button type="button" data-n="88" data-t="信友救助他人的任務" aria-label="第 88 節 信友救助他人的任務" aria-pressed="false"></button><button type="button" data-n="89" data-t="教會置身於國際團體" aria-label="第 89 節 教會置身於國際團體" aria-pressed="false"></button><button type="button" data-n="90" data-t="信友在國際機構中的責任" aria-label="第 90 節 信友在國際機構中的責任" aria-pressed="false"></button></div></div>
+        <div class="grp" style="--c:var(--dust)"><span>結論</span><div class="row"><button type="button" data-n="91" data-t="每位信友及局部教會的任務" aria-label="第 91 節 每位信友及局部教會的任務" aria-pressed="false"></button><button type="button" class="q" data-n="92" data-t="應與所有的人坦誠交談" aria-label="第 92 節 應與所有的人坦誠交談" aria-pressed="false"></button><button type="button" class="q" data-n="93" data-t="應達成建立較好世界的目標" aria-label="第 93 節 應達成建立較好世界的目標" aria-pressed="false"></button></div></div>
+      </div>
+      <p class="mapread" id="mapread" aria-live="polite">第 1 節　教會與人類大家庭的密切聯繫　<a href="fulltext.html#p1">讀這一節</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="signs">
+  <div class="in">
+    <div class="label"><span class="glyph">看</span><span class="range">引言 · 第 4–10 節</span></div>
+    <div class="body">
+      <h2>先看清楚世界，再開口</h2>
+      <p class="lede">憲章沒有從教義講起。它先用七節的篇幅描寫 1965 年的世界：科技進步、社會劇變、貧富懸殊，還有人心裡的不安。看清楚了，才開始說話。</p>
+      <figure class="qt big"><blockquote data-q="4">教會歷來執行其使命的作風，是一面檢討時代局勢，一面在福音神光下，替人類解釋真理</blockquote><figcaption><a href="fulltext.html#p4">第 4 節</a></figcaption></figure>
+      <p class="aside">「檢討時代局勢」這幾個字，梵蒂岡的英文版寫作 scrutinizing the signs of the times，中文也常說成「時代的徵兆」。這裡引用的台灣譯本沒有用這個詞。<a href="https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19651207_gaudium-et-spes_en.html" target="_blank" rel="noopener">對照英文版第 4 節</a></p>
+      <figure class="qt"><blockquote data-q="4">必須認明並了解我們生活於其內的世界，以及這世界所有的期望、理想及其戲劇性的特質。</blockquote><figcaption><a href="fulltext.html#p4">第 4 節</a></figcaption></figure>
+      <p>它看到的世界充滿矛盾。第 4 節一口氣列了好幾組，這裡舉三組：</p>
+      <ul class="pairs" aria-label="第 4 節列出的矛盾">
+        <li><span class="a">人的技術能力變大了</span><i>卻</i><span class="b">不一定用來為人服務</span></li>
+        <li><span class="a">財富和經濟力量前所未有</span><i>卻</i><span class="b">仍有許多人挨餓、不識字</span></li>
+        <li><span class="a">人對自由的感受從未這麼敏銳</span><i>卻</i><span class="b">出現了新的奴役</span></li>
+      </ul>
+      <p>這些矛盾，最後都回到幾個老問題上：</p>
+      <figure class="qt"><blockquote data-q="10">人究竟是什麼？痛苦、罪惡及死亡的意義何在？</blockquote><figcaption><a href="fulltext.html#p10">第 10 節</a></figcaption></figure>
+      <p class="aside">四年前，若望廿三世在《慈母與導師》通諭裡把這個做法叫作「觀察、判斷、行動」。<a href="/encyclical/mater-et-magistra/">看《慈母與導師》專題</a></p>
+      <h3 class="sub3">猜猜看：這句話是哪一年寫的？</h3>
+      <p>下面五句話，各選一個答案。</p>
+      <div class="guess" id="guess">
+        <figure class="gq"><blockquote data-q="7">思想及社會體系的演變，多次令人對過去接受的種種，感到懷疑，尤其青年人是如此。</blockquote><div class="opts"><button type="button">1965 年</button><button type="button">最近十年</button></div><figcaption hidden>1965 年。出自<a href="fulltext.html#p7">第 7 節</a>。</figcaption></figure>
+        <figure class="gq"><blockquote data-q="6">交通及通訊的新式工具，頗有助於迅速而廣闊地傳播新聞、思想及情緒，並連帶激起許多反應。</blockquote><div class="opts"><button type="button">1965 年</button><button type="button">最近十年</button></div><figcaption hidden>1965 年。出自<a href="fulltext.html#p6">第 6 節</a>。</figcaption></figure>
+        <figure class="gq"><blockquote data-q="5">人類歷史飛速進行，使人無從趕上。</blockquote><div class="opts"><button type="button">1965 年</button><button type="button">最近十年</button></div><figcaption hidden>1965 年。出自<a href="fulltext.html#p5">第 5 節</a>。</figcaption></figure>
+        <figure class="gq"><blockquote data-q="4">人類對自由的體會，從未有如今日之銳敏，但又出現了新式奴役</blockquote><div class="opts"><button type="button">1965 年</button><button type="button">最近十年</button></div><figcaption hidden>1965 年。出自<a href="fulltext.html#p4">第 4 節</a>。</figcaption></figure>
+        <figure class="gq"><blockquote data-q="9">現代世界好似大有作為，又好似柔弱無能</blockquote><div class="opts"><button type="button">1965 年</button><button type="button">最近十年</button></div><figcaption hidden>1965 年。出自<a href="fulltext.html#p9">第 9 節</a>。</figcaption></figure>
+      </div>
+      <p class="score" id="gscore" aria-live="polite" hidden>五句都是 1965 年寫的，全部出自憲章的引言。</p>
+      <h3 class="sub3">1960–1965：憲章寫成的那幾年</h3>
+      <p>下面每一筆都附出處，點開可以看。金色是大公會議，藍色是世界大事。</p>
+      <div class="tlf" role="group" aria-label="篩選時間軸"><button type="button" class="on" data-f="all">全部</button><button type="button" data-f="c">大公會議</button><button type="button" data-f="w">世界</button></div>
+      <div class="tl" id="tl">
+        <details class="w" name="tl"><summary><span class="d">1960</span><span class="t">十七個新國家加入聯合國</span></summary><p>除了賽普勒斯，其餘十六個都在非洲。聯合國會員國從 1958 年的 82 個增加到 99 個，到 1965 年是 117 個。</p><p class="src">出處：<a href="https://www.un.org/en/about-us/growth-in-un-membership" target="_blank" rel="noopener">聯合國：會員國成長</a></p></details>
+        <details class="c" name="tl" open><summary><span class="d">1962.10.11</span><span class="t">梵蒂岡第二屆大公會議開幕</span></summary><p>若望廿三世主持開幕禮並致詞。</p><p class="src">出處：<a href="https://www.vatican.va/content/john-xxiii/it/speeches/1962/documents/hf_j-xxiii_spe_19621011_opening-council.html" target="_blank" rel="noopener">梵蒂岡：開幕致詞（義大利文）</a></p></details>
+        <details class="w" name="tl"><summary><span class="d">1962.10.22</span><span class="t">古巴飛彈危機</span></summary><p>開幕後第十一天，美國宣布對古巴實施海上「隔離」。10 月 28 日，蘇聯宣布拆除並撤走飛彈。</p><p class="src">出處：<a href="https://history.state.gov/milestones/1961-1968/cuban-missile-crisis" target="_blank" rel="noopener">美國國務院歷史文獻辦公室</a></p></details>
+        <details class="c" name="tl"><summary><span class="d">1963.4.11</span><span class="t">《和平於世》通諭</span></summary><p>若望廿三世在聖週四簽署。《牧職憲章》的附注引用這道通諭十一次，其中三次在談和平的那一章。</p><p class="src">出處：<a href="https://www.vatican.va/content/john-xxiii/en/encyclicals/documents/hf_j-xxiii_enc_11041963_pacem.html" target="_blank" rel="noopener">梵蒂岡：通諭英文版</a></p></details>
+        <details class="c" name="tl"><summary><span class="d">1963.6.3</span><span class="t">若望廿三世逝世</span></summary><p>大公會議由繼任的保祿六世接續，直到閉幕。</p><p class="src">出處：<a href="https://www.vatican.va/content/john-xxiii/en/biography/documents/hf_j-xxiii_bio_20190722_biografia.html" target="_blank" rel="noopener">梵蒂岡：若望廿三世生平</a></p></details>
+        <details class="w" name="tl"><summary><span class="d">1963</span><span class="t">《部分禁止核試驗條約》</span></summary><p>美國、蘇聯、英國簽署，禁止在大氣層、太空和水下進行核試爆。</p><p class="src">出處：<a href="https://history.state.gov/milestones/1961-1968/limited-ban" target="_blank" rel="noopener">美國國務院歷史文獻辦公室</a></p></details>
+        <details class="w" name="tl"><summary><span class="d">1964.8.7</span><span class="t">越戰升高</span></summary><p>美國國會通過「東京灣決議案」，授權總統在中南半島動武。1965 年，美軍開始持續轟炸北越，並派出地面戰鬥部隊。</p><p class="src">出處：<a href="https://history.state.gov/milestones/1961-1968/gulf-of-tonkin" target="_blank" rel="noopener">美國國務院歷史文獻辦公室</a></p></details>
+        <details class="c" name="tl"><summary><span class="d">1965.10.4</span><span class="t">保祿六世在聯合國演講</span></summary><p>他在大會上說：never again war, never again war（不要再有戰爭）。《牧職憲章》談和平的那一章，附注引用了這篇講詞。</p><p class="src">出處：<a href="https://www.vatican.va/content/paul-vi/en/speeches/1965/documents/hf_p-vi_spe_19651004_united-nations.html" target="_blank" rel="noopener">梵蒂岡：講詞英文版</a></p></details>
+        <details class="c" name="tl"><summary><span class="d">1965.12.7</span><span class="t">《牧職憲章》公佈</span></summary><p>在大公會議最後一次公開會議上，由保祿六世公佈。</p><p class="src">出處：<a href="https://www.vatican.va/content/paul-vi/en/speeches/1965/documents/hf_p-vi_spe_19651207_epilogo-concilio.html" target="_blank" rel="noopener">梵蒂岡：保祿六世當天的講詞</a></p></details>
+        <details class="c" name="tl"><summary><span class="d">1965.12.8</span><span class="t">大公會議閉幕</span></summary><p>保祿六世主持閉幕禮並講道。</p><p class="src">出處：<a href="https://www.vatican.va/content/paul-vi/en/homilies/1965/documents/hf_p-vi_hom_19651208_epilogo-concilio-immacolata.html" target="_blank" rel="noopener">梵蒂岡：閉幕講道</a></p></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec alt" id="person">
+  <div class="in">
+    <div class="label"><span class="glyph">人</span><span class="range">第一部份 · 第 11–45 節</span></div>
+    <div class="body">
+      <h2>窗外的人是誰</h2>
+      <p class="lede">第一部份分四章，回答四個問題。先談人，再談人和人，再談人做的事，最後才談教會自己。</p>
+      <div class="four">
+        <article class="q4" style="--c:var(--ruby);--c2:var(--amber);--c3:#7A1E14">
+          <div class="band"></div>
+          <div class="tx">
+            <img class="im" src="assets/q-person-360.webp" width="360" height="450" loading="lazy" decoding="async" alt="彩色玻璃：一個頭上有光環的人張開雙手站著，胸口有一團火光，光從上方照下來"><span class="no">第一章 人格尊嚴 · 第 12–22 節</span>
+            <h3>人是什麼？</h3>
+            <p>人是照天主的肖像造的，有理智、良心和自由；人也會犯罪，也會死。憲章用三節認真談無神論（第 19–21 節），最後說：要懂人，得看基督。</p>
+            <figure class="qt"><blockquote data-q="16">良心是人最秘密的核心和聖所。在這聖所內，人獨自與天主會晤。</blockquote><figcaption><a href="fulltext.html#p16">第 16 節</a></figcaption></figure>
+            <figure class="qt"><blockquote data-q="22">基督，在揭示聖父及其聖愛的奧蹟時，亦替人類展示了人之為物和人的崇高使命。</blockquote><figcaption><a href="fulltext.html#p22">第 22 節</a></figcaption></figure>
+            <details class="ol"><summary>這一章的 11 節，還談了什麼（金色節號是這頁引用過的）</summary><ol><li class="q"><a href="fulltext.html#p12"><span>12</span>人是天主的肖像</a></li><li><a href="fulltext.html#p13"><span>13</span>罪惡</a></li><li><a href="fulltext.html#p14"><span>14</span>人的構造</a></li><li><a href="fulltext.html#p15"><span>15</span>理智的尊嚴、真理與智慧</a></li><li class="q"><a href="fulltext.html#p16"><span>16</span>良心的尊嚴</a></li><li><a href="fulltext.html#p17"><span>17</span>自由的卓越</a></li><li><a href="fulltext.html#p18"><span>18</span>死亡的奧蹟</a></li><li><a href="fulltext.html#p19"><span>19</span>無神論的形式及根由</a></li><li><a href="fulltext.html#p20"><span>20</span>有系統的無神論</a></li><li><a href="fulltext.html#p21"><span>21</span>教會對無神論的態度</a></li><li class="q"><a href="fulltext.html#p22"><span>22</span>新人基督</a></li></ol></details>
+          </div>
+        </article>
+        <article class="q4" style="--c:var(--emerald);--c2:var(--sky);--c3:#1F5C48">
+          <div class="band"></div>
+          <div class="tx">
+            <img class="im" src="assets/q-together-360.webp" width="360" height="450" loading="lazy" decoding="async" alt="彩色玻璃：一個人扶起跌倒的人，旁邊的人伸手幫忙"><span class="no">第二章 人類的團體生活 · 第 23–32 節</span>
+            <h3>人怎麼一起生活？</h3>
+            <p>人天生需要別人。公益、人人平等、對身邊每個人的責任，都從這裡來。第 27 節還點名了一長串侵犯人的事：</p>
+            <figure class="qt"><blockquote data-q="27">各種殺人罪、屠城滅種、墮胎、用藥物催人安死及惡意自殺等危害生命的惡行……任意拘留及放逐、奴役、娼淫、婦女及幼童買賣等貶抑人格尊嚴的惡行；將工人只視作賺取利潤的工具……這一切及其它類似的種種都是可恥的、有辱文明的罪孽。</blockquote><figcaption><a href="fulltext.html#p27">第 27 節</a></figcaption></figure>
+            <figure class="qt"><blockquote data-q="26">事物應隸屬於人，而人不應隸屬於物。</blockquote><figcaption><a href="fulltext.html#p26">第 26 節</a></figcaption></figure>
+            <figure class="qt"><blockquote data-q="29">基本上，人人一律平等。</blockquote><figcaption><a href="fulltext.html#p29">第 29 節</a></figcaption></figure>
+            <details class="ol"><summary>這一章的 10 節，還談了什麼（金色節號是這頁引用過的）</summary><ol><li><a href="fulltext.html#p23"><span>23</span>大公會議的目標</a></li><li class="q"><a href="fulltext.html#p24"><span>24</span>由天主的計劃來看人類使命的社會性</a></li><li><a href="fulltext.html#p25"><span>25</span>人與人及社會間的互屬關係</a></li><li class="q"><a href="fulltext.html#p26"><span>26</span>促進公益</a></li><li class="q"><a href="fulltext.html#p27"><span>27</span>尊重人格</a></li><li><a href="fulltext.html#p28"><span>28</span>愛仇及敬仇</a></li><li class="q"><a href="fulltext.html#p29"><span>29</span>人人平等與社會正義</a></li><li><a href="fulltext.html#p30"><span>30</span>倫理應跨出個人範圍</a></li><li><a href="fulltext.html#p31"><span>31</span>責任感與參加社會工作</a></li><li><a href="fulltext.html#p32"><span>32</span>聖言降生成人與人類休戚相關</a></li></ol></details>
+          </div>
+        </article>
+        <article class="q4" style="--c:var(--amber);--c2:#C9781C;--c3:var(--ruby)">
+          <div class="band"></div>
+          <div class="tx">
+            <img class="im" src="assets/q-work-360.webp" width="360" height="450" loading="lazy" decoding="async" alt="彩色玻璃：播種的人、砌磚的人和看顯微鏡的人，背後是升起的太陽"><span class="no">第三章 人在世間的活動 · 第 33–39 節</span>
+            <h3>人做的事有什麼意義？</h3>
+            <p>人努力改善生活，這件事本身就合乎天主的旨意。科學和社會有自己的規律，這份獨立是對的；但如果因此把天主整個忘掉，就不對了。</p>
+            <figure class="qt"><blockquote data-q="35">人之所是，遠超出人之所有</blockquote><figcaption><a href="fulltext.html#p35">第 35 節</a></figcaption></figure>
+            <figure class="qt"><blockquote data-q="36">人世間的一切和屬於信仰的種種，都發源於同一天主。</blockquote><figcaption><a href="fulltext.html#p36">第 36 節</a></figcaption></figure>
+            <details class="ol"><summary>這一章的 7 節，還談了什麼（金色節號是這頁引用過的）</summary><ol><li><a href="fulltext.html#p33"><span>33</span>題旨</a></li><li><a href="fulltext.html#p34"><span>34</span>人類活動的價值</a></li><li class="q"><a href="fulltext.html#p35"><span>35</span>人類活動應有的秩序</a></li><li class="q"><a href="fulltext.html#p36"><span>36</span>現世事物應有的獨立</a></li><li><a href="fulltext.html#p37"><span>37</span>為罪惡所腐化的人類活動</a></li><li><a href="fulltext.html#p38"><span>38</span>人類活動應在復活奧蹟內臻於至善</a></li><li><a href="fulltext.html#p39"><span>39</span>新天新地</a></li></ol></details>
+          </div>
+        </article>
+        <article class="q4" style="--c:var(--cobalt);--c2:var(--violet);--c3:#1D3F7A">
+          <div class="band"></div>
+          <div class="tx">
+            <img class="im" src="assets/q-church-360.webp" width="360" height="450" loading="lazy" decoding="async" alt="彩色玻璃：城市房屋和工廠之間一座開著門的教堂，光從門口照到街上，人們提著燈和麵包進出"><span class="no">第四章 教會在現代世界內的任務 · 第 40–45 節</span>
+            <h3>教會在這裡做什麼？</h3>
+            <p>教會幫助世界，世界也幫助教會。憲章對信友說得很直接：信仰不能只留在聖堂裡。</p>
+            <figure class="qt"><blockquote data-q="43">許多人的信仰和日常生活分割，要算我們這時代嚴重錯誤之一。</blockquote><figcaption><a href="fulltext.html#p43">第 43 節</a></figcaption></figure>
+            <figure class="qt"><blockquote data-q="44">歷代的經驗、科學的進步、潛在於各式文化內的寶藏……這一切亦有裨益於教會。</blockquote><figcaption><a href="fulltext.html#p44">第 44 節</a></figcaption></figure>
+            <details class="ol"><summary>這一章的 6 節，還談了什麼（金色節號是這頁引用過的）</summary><ol><li><a href="fulltext.html#p40"><span>40</span>教會和世界的關係</a></li><li><a href="fulltext.html#p41"><span>41</span>教會如何幫助每一個人</a></li><li><a href="fulltext.html#p42"><span>42</span>教會如何幫助社會</a></li><li class="q"><a href="fulltext.html#p43"><span>43</span>教會如何透過其子女對人類活動有所補助</a></li><li class="q"><a href="fulltext.html#p44"><span>44</span>現代世界如何幫助教會</a></li><li><a href="fulltext.html#p45"><span>45</span>基督是原始與終點</a></li></ol></details>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="panels">
+  <div class="in">
+    <div class="label"><span class="glyph">窗</span><span class="range">第二部份 · 第 46–90 節</span></div>
+    <div class="body">
+      <h2>五格玻璃，五個迫切的問題</h2>
+      <p class="lede">第二部份挑了五件當時最急的事。憲章自己在註裡提醒：這一部份有些內容會隨時代變動，讀的時候要留意。</p>
+      <nav class="pick" aria-label="五格玻璃">
+        <a href="#family" style="--c:var(--ruby)"><img src="assets/p-family-480.webp" width="96" height="120" loading="lazy" decoding="async" alt=""><span>家庭</span></a>
+        <a href="#culture" style="--c:var(--violet)"><img src="assets/p-culture-480.webp" width="96" height="120" loading="lazy" decoding="async" alt=""><span>文化</span></a>
+        <a href="#economy" style="--c:var(--amber)"><img src="assets/p-economy-480.webp" width="96" height="120" loading="lazy" decoding="async" alt=""><span>經濟</span></a>
+        <a href="#politics" style="--c:var(--cobalt)"><img src="assets/p-politics-480.webp" width="96" height="120" loading="lazy" decoding="async" alt=""><span>政治</span></a>
+        <a href="#peace" style="--c:var(--emerald)"><img src="assets/p-peace-480.webp" width="96" height="120" loading="lazy" decoding="async" alt=""><span>和平</span></a>
+      </nav>
+      <div class="panels">
+        <article class="panel" id="family" style="--c:var(--ruby)">
+          <figure class="pic"><span class="fr"><img src="assets/p-family-480.webp" srcset="assets/p-family-480.webp 480w, assets/p-family-960.webp 960w" sizes="(max-width: 700px) 260px, 300px" width="960" height="1200" loading="lazy" decoding="async" alt="彩色玻璃：一家人圍著桌子，頭上一盞吊燈"></span></figure>
+          <div class="ptx">
+            <span class="no">第一章 · 第 47–52 節</span>
+            <h3>家庭</h3>
+            <p>婚姻和家庭健不健全，關係到個人、社會和教會的幸福。憲章把夫妻之間的忠信，比作天主和祂子民之間的盟約（第 48 節）。</p>
+            <p>要生養幾個孩子，由夫妻兩人考慮自己、孩子、時代環境和社會的情況後，一起判斷，並依從良心和教會的訓導（第 50 節）。憲章也說，生命從懷孕之初就要保護（第 51 節）。</p>
+            <figure class="qt"><blockquote data-q="50">這一判斷最後應由夫妻本人在天主面前做出。</blockquote><figcaption><a href="fulltext.html#p50">第 50 節</a></figcaption></figure>
+            <figure class="qt"><blockquote data-q="51">由妊娠之初，生命即應受到極其謹慎的保護。</blockquote><figcaption><a href="fulltext.html#p51">第 51 節</a></figcaption></figure>
+            <figure class="qt"><blockquote data-q="52">家庭是一種培育豐富人性的學校。</blockquote><figcaption><a href="fulltext.html#p52">第 52 節</a></figcaption></figure>
+            <details class="ol"><summary>這一章的 6 節，還談了什麼（金色節號是這頁引用過的）</summary><ol><li><a href="fulltext.html#p47"><span>47</span>現代婚姻與家庭</a></li><li><a href="fulltext.html#p48"><span>48</span>婚姻與家庭的神聖</a></li><li><a href="fulltext.html#p49"><span>49</span>夫妻之愛</a></li><li class="q"><a href="fulltext.html#p50"><span>50</span>婚姻的繁殖力</a></li><li class="q"><a href="fulltext.html#p51"><span>51</span>如何使夫妻之愛和尊重生命不相衝突</a></li><li class="q"><a href="fulltext.html#p52"><span>52</span>大家共同維護婚姻及家庭</a></li></ol></details>
+          </div>
+        </article>
+        <article class="panel" id="culture" style="--c:var(--violet)">
+          <figure class="pic"><span class="fr"><img src="assets/p-culture-480.webp" srcset="assets/p-culture-480.webp 480w, assets/p-culture-960.webp 960w" sizes="(max-width: 700px) 260px, 300px" width="960" height="1200" loading="lazy" decoding="async" alt="彩色玻璃：中間一本攤開的書，周圍有小提琴、調色盤和望遠鏡，幾個人坐著讀書"></span></figure>
+          <div class="ptx">
+            <span class="no">第二章 · 第 53–62 節</span>
+            <h3>文化</h3>
+            <p>人要通過文化，才能成為完整的人。所以人人都有權利受教育、享有文化。文化也需要自由，不該被拿去為政治或經濟的權力服務。</p>
+            <figure class="qt"><blockquote data-q="53">人只有通過文化，始能成為完美而真正的人</blockquote><figcaption><a href="fulltext.html#p53">第 53 節</a></figcaption></figure>
+            <figure class="qt"><blockquote data-q="60">必須替每人提供足用的，尤其是基本的文化</blockquote><figcaption><a href="fulltext.html#p60">第 60 節</a></figcaption></figure>
+            <details class="ol"><summary>這一章的 10 節，還談了什麼（金色節號是這頁引用過的）</summary><ol><li class="q"><a href="fulltext.html#p53"><span>53</span>引言</a></li><li><a href="fulltext.html#p54"><span>54</span>新的生活方式</a></li><li><a href="fulltext.html#p55"><span>55</span>人是文化的創造者</a></li><li><a href="fulltext.html#p56"><span>56</span>困難與任務</a></li><li><a href="fulltext.html#p57"><span>57</span>信德與文化</a></li><li><a href="fulltext.html#p58"><span>58</span>基督福音與人類文化間的各種聯繫</a></li><li><a href="fulltext.html#p59"><span>59</span>調和人類不同文化的適當辦法</a></li><li class="q"><a href="fulltext.html#p60"><span>60</span>應承認人人有權利享受文化恩澤並應予以實現</a></li><li><a href="fulltext.html#p61"><span>61</span>完整的文化教育</a></li><li><a href="fulltext.html#p62"><span>62</span>文化與公教教育的和諧</a></li></ol></details>
+          </div>
+        </article>
+        <article class="panel" id="economy" style="--c:var(--amber)">
+          <figure class="pic"><span class="fr"><img src="assets/p-economy-480.webp" srcset="assets/p-economy-480.webp 480w, assets/p-economy-960.webp 960w" sizes="(max-width: 700px) 260px, 300px" width="960" height="1200" loading="lazy" decoding="async" alt="彩色玻璃：城市和工廠煙囪，窗底是一排人的剪影"></span></figure>
+          <div class="ptx">
+            <span class="no">第三章 · 第 63–72 節</span>
+            <h3>經濟</h3>
+            <p>經濟是為人服務的，不是反過來。人的勞動比其他生產因素都重要。大地的財富本來是給所有人用的，所以私有財產也要顧到別人。</p>
+            <figure class="qt"><blockquote data-q="63">人是整個社經生活的創造者、中心與宗旨。</blockquote><figcaption><a href="fulltext.html#p63">第 63 節</a></figcaption></figure>
+            <figure class="qt"><blockquote data-q="69">天主曾經欽定，大地及其所有是供人人使用的。</blockquote><figcaption><a href="fulltext.html#p69">第 69 節</a></figcaption></figure>
+            <figure class="qt"><blockquote data-q="67">人人有忠實勞動的義務和勞動的權利。</blockquote><figcaption><a href="fulltext.html#p67">第 67 節</a></figcaption></figure>
+            <details class="ol"><summary>這一章的 10 節，還談了什麼（金色節號是這頁引用過的）</summary><ol><li class="q"><a href="fulltext.html#p63"><span>63</span>對經濟生活的若干觀點</a></li><li class="q"><a href="fulltext.html#p64"><span>64</span>為人服務乃經濟進展的宗旨</a></li><li><a href="fulltext.html#p65"><span>65</span>經濟應在人類控制下進展</a></li><li><a href="fulltext.html#p66"><span>66</span>應消除社經方面太過的懸殊</a></li><li class="q"><a href="fulltext.html#p67"><span>67</span>勞動及其條件與休息</a></li><li><a href="fulltext.html#p68"><span>68</span>工人應參加企業、經濟的管理以及勞工糾紛的解決</a></li><li class="q"><a href="fulltext.html#p69"><span>69</span>現世財富是供人人享用的</a></li><li><a href="fulltext.html#p70"><span>70</span>關於投資及幣制問題</a></li><li><a href="fulltext.html#p71"><span>71</span>所有權、私產權及大地主</a></li><li><a href="fulltext.html#p72"><span>72</span>社經生活與基督神國</a></li></ol></details>
+          </div>
+        </article>
+        <article class="panel" id="politics" style="--c:var(--cobalt)">
+          <figure class="pic"><span class="fr"><img src="assets/p-politics-480.webp" srcset="assets/p-politics-480.webp 480w, assets/p-politics-960.webp 960w" sizes="(max-width: 700px) 260px, 300px" width="960" height="1200" loading="lazy" decoding="async" alt="彩色玻璃：明亮的大廳裡站著一整排人"></span></figure>
+          <div class="ptx">
+            <span class="no">第四章 · 第 73–76 節</span>
+            <h3>政治</h3>
+            <p>政府是為了公共福利而存在的。國民有參與和投票的權利，也有這個義務。教會和政府各自獨立，但服務的是同一群人。</p>
+            <figure class="qt"><blockquote data-q="74">政府是為了公共福利而存在的</blockquote><figcaption><a href="fulltext.html#p74">第 74 節</a></figcaption></figure>
+            <figure class="qt"><blockquote data-q="75">每位國民不得忘懷他們具有為促進公共福利，而運用其自由投票的權利和義務。</blockquote><figcaption><a href="fulltext.html#p75">第 75 節</a></figcaption></figure>
+            <figure class="qt"><blockquote data-q="76">在各自的領域內，政府與教會是各自獨立自主的機構。</blockquote><figcaption><a href="fulltext.html#p76">第 76 節</a></figcaption></figure>
+            <details class="ol"><summary>這一章的 4 節，還談了什麼（金色節號是這頁引用過的）</summary><ol><li><a href="fulltext.html#p73"><span>73</span>現代政治生活</a></li><li class="q"><a href="fulltext.html#p74"><span>74</span>國家的性質與宗旨</a></li><li class="q"><a href="fulltext.html#p75"><span>75</span>人人應參與政治生活</a></li><li class="q"><a href="fulltext.html#p76"><span>76</span>政府與教會</a></li></ol></details>
+          </div>
+        </article>
+        <article class="panel" id="peace" style="--c:var(--emerald)">
+          <figure class="pic"><span class="fr"><img src="assets/p-peace-480.webp" srcset="assets/p-peace-480.webp 480w, assets/p-peace-960.webp 960w" sizes="(max-width: 700px) 260px, 300px" width="960" height="1200" loading="lazy" decoding="async" alt="彩色玻璃：橄欖樹下有人把劍打成犁頭，白鴿在上方飛，一圈人手牽著手"></span></figure>
+          <div class="ptx">
+            <span class="no">第五章 · 第 77–90 節</span>
+            <h3>和平</h3>
+            <p>和平不只是沒有戰爭，要靠正義和愛一直去建立。憲章譴責毀滅整座城市的戰爭，也指出軍備競賽傷害的是窮人。後半章談的是國際合作。</p>
+            <figure class="qt"><blockquote data-q="78">和平決非一勞永逸之事，而應經常由人類去建樹。</blockquote><figcaption><a href="fulltext.html#p78">第 78 節</a></figcaption></figure>
+            <figure class="qt"><blockquote data-q="80">凡志在毫不加辨別地，消滅整個都市或廣闊地區及其居民的戰爭行為，是反對天主及人類的罪行，應堅決而不猶豫地加以譴責。</blockquote><figcaption><a href="fulltext.html#p80">第 80 節</a></figcaption></figure>
+            <figure class="qt"><blockquote data-q="81">軍備競賽是人類的最大創傷，並給予貧困者以忍無可忍的打擊。</blockquote><figcaption><a href="fulltext.html#p81">第 81 節</a></figcaption></figure>
+            <details class="ol"><summary>這一章的 14 節，還談了什麼（金色節號是這頁引用過的）</summary><ol><li><a href="fulltext.html#p77"><span>77</span>引言</a></li><li class="q"><a href="fulltext.html#p78"><span>78</span>和平的性質</a></li><li class="q"><a href="fulltext.html#p79"><span>79</span>應遏止戰爭的殘酷</a></li><li class="q"><a href="fulltext.html#p80"><span>80</span>全面戰爭</a></li><li class="q"><a href="fulltext.html#p81"><span>81</span>軍備競賽</a></li><li><a href="fulltext.html#p82"><span>82</span>禁絕戰爭與國際避戰行動</a></li><li><a href="fulltext.html#p83"><span>83</span>紛爭的原因及其補救的方法</a></li><li><a href="fulltext.html#p84"><span>84</span>由各國組織成的團體及國際機構</a></li><li><a href="fulltext.html#p85"><span>85</span>國際經濟合作</a></li><li><a href="fulltext.html#p86"><span>86</span>幾項適用的規則</a></li><li><a href="fulltext.html#p87"><span>87</span>對解決人口問題應有的國際合作</a></li><li><a href="fulltext.html#p88"><span>88</span>信友救助他人的任務</a></li><li><a href="fulltext.html#p89"><span>89</span>教會置身於國際團體</a></li><li><a href="fulltext.html#p90"><span>90</span>信友在國際機構中的責任</a></li></ol></details>
+          </div>
+        </article>
+      </div>
+      <aside class="think" aria-label="延伸思考">
+        <h3 class="sub3">延伸思考：兩段值得慢慢讀的話</h3>
+        <p>第 69 節，談極端貧困的人：</p>
+        <figure class="qt" style="--c:var(--amber)"><blockquote data-q="69">處於極端貧困中者有權利使用他人財富來籌得生活必需。</blockquote><figcaption><a href="fulltext.html#p69">第 69 節</a></figcaption></figure>
+        <p>第 79 節，談因為良心而不願拿武器的人：</p>
+        <figure class="qt" style="--c:var(--emerald)"><blockquote data-q="79">至於按照良心的指示，有些人不願使用武器，而情願接受其它有益人類社會的服務，似乎應為他們制定適合人道的法律，亦不失公平之道。</blockquote><figcaption><a href="fulltext.html#p79">第 79 節</a></figcaption></figure>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="sec alt" id="numbers">
+  <div class="in">
+    <div class="label"><span class="glyph">數</span><span class="range">1965 與今天</span></div>
+    <div class="body">
+      <h2>數字裡的 1965 與今天</h2>
+      <p class="lede">憲章說軍備競賽是「人類的最大創傷」（第 81 節）。它公佈的那一年，世界上有多少核彈頭？後來呢？下面的數字是公開統計，不是憲章本身的內容。</p>
+      <div class="tiles">
+        <div class="tile"><span class="k">世界人口</span><b>33.3 億</b><span class="to">→ 80.9 億</span><span class="y">1965 → 2023</span></div>
+        <div class="tile"><span class="k">全球平均壽命</span><b>54 歲</b><span class="to">→ 73.2 歲</span><span class="y">1965 → 2023</span></div>
+        <div class="tile"><span class="k">核彈頭庫存</span><b>37,591 枚</b><span class="to">→ 9,745 枚</span><span class="y">1965 → 2026</span></div>
+      </div>
+      <div class="dv" id="dv">
+        <div class="dvh"><h3 class="sub3">各國核彈頭庫存，1945–2026</h3><output class="read" id="dv-read" aria-live="polite">在圖上移動，看每一年的數字</output></div>
+        <div class="dvc" id="dv-chart" role="img" aria-label="面積圖：核彈頭庫存從 1945 年起快速增加，1965 年約 3.8 萬枚，1986 年達到約 6.4 萬枚的高峰，之後下降，2026 年約 9,700 枚。"></div>
+        <div class="dvl"><span style="--c:var(--cobalt)">美國</span><span style="--c:var(--ruby)">蘇聯／俄羅斯</span><span style="--c:var(--amber)">其他七國</span></div>
+        <noscript><p>互動圖表需要 JavaScript。主要數字：1965 年美國 31,139 枚、蘇聯 6,144 枚、其他國家 308 枚；1986 年合計 64,452 枚，是歷來最高；2026 年合計 9,745 枚。</p></noscript>
+      </div>
+      <p class="note">1965 年：美國 31,139 枚、蘇聯 6,144 枚、其他國家 308 枚。1986 年合計 64,452 枚，是歷來最高。這些都是估計值，各國的確實數量是機密；數字只算軍方庫存，不含已退役、等待拆解的彈頭。</p>
+      <p class="src">出處：核彈頭，Federation of American Scientists，經 <a href="https://ourworldindata.org/grapher/nuclear-warhead-stockpiles" target="_blank" rel="noopener">Our World in Data</a> 整理。世界人口，HYDE、Gapminder 與聯合國《世界人口展望》，經 <a href="https://ourworldindata.org/grapher/population" target="_blank" rel="noopener">Our World in Data</a> 整理。平均壽命，聯合國《世界人口展望》，經 <a href="https://ourworldindata.org/grapher/life-expectancy" target="_blank" rel="noopener">Our World in Data</a> 整理。</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="dialogue">
+  <div class="in">
+    <div class="label"><span class="glyph">談</span><span class="range">結論 · 第 91–93 節</span></div>
+    <div class="body">
+      <h2>不拒絕與任何人交談</h2>
+      <p class="lede">結論先承認：上面講的多半只是一般原則，還要各地的教會按實際情況去做（第 91 節）。接著它把交談的對象一圈一圈往外推。點一圈，看憲章怎麼說：</p>
+      <div class="rg" id="rg" role="group" aria-label="第 92 節提到的交談對象，由內到外">
+        <button type="button" class="r r4" data-i="4" aria-pressed="false"><span>反對教會的人</span></button>
+        <button type="button" class="r r3" data-i="3" aria-pressed="false"><span>不信天主的人</span></button>
+        <button type="button" class="r r2" data-i="2" aria-pressed="false"><span>其他宗教的人</span></button>
+        <button type="button" class="r r1" data-i="1" aria-pressed="false"><span>其他基督徒</span></button>
+        <button type="button" class="r r0" data-i="0" aria-pressed="true"><span>教會內部</span></button>
+      </div>
+      <div class="rgq" id="rgq">
+        <figure class="qt" data-i="0"><blockquote data-q="92">互相器重、尊敬及親睦、並承認一切合法的差異</blockquote><figcaption>教會內部　<a href="fulltext.html#p92">第 92 節</a></figcaption></figure>
+        <figure class="qt" data-i="1"><blockquote data-q="92">我們的心神亦懷念着那些尚未與我們完整共融的弟兄及其團體</blockquote><figcaption>其他基督徒　<a href="fulltext.html#p92">第 92 節</a></figcaption></figure>
+        <figure class="qt" data-i="2"><blockquote data-q="92">我們亦念想到認識天主，並在其傳統內保留着寶貴的宗教及人文因素的人士們</blockquote><figcaption>其他宗教的人　<a href="fulltext.html#p92">第 92 節</a></figcaption></figure>
+        <figure class="qt" data-i="3"><blockquote data-q="92">有人擁有卓越的美德，而尚未認識這些美德的創造者天主</blockquote><figcaption>不信天主的人　<a href="fulltext.html#p92">第 92 節</a></figcaption></figure>
+        <figure class="qt" data-i="4"><blockquote data-q="92">有人甚至反對並迫害教會，但我們仍不拒絕與他們交談</blockquote><figcaption>反對教會的人　<a href="fulltext.html#p92">第 92 節</a></figcaption></figure>
+      </div>
+      <figure class="qt big"><blockquote data-q="92">在必要的事上應有統一，在懷疑的事上應有自由，在一切事上應有愛德。</blockquote><figcaption><a href="fulltext.html#p92">第 92 節</a></figcaption></figure>
+      <p>最後一節把話說回行動：</p>
+      <figure class="qt"><blockquote data-q="93">不是凡口稱「主啊，主啊！」的人，將進入天國，而是承行天主旨意，真正着手工作的人才能進入天國。</blockquote><figcaption><a href="fulltext.html#p93">第 93 節</a></figcaption></figure>
+      <h3 class="sub3">憲章之後</h3>
+      <p>憲章公佈後，它提的事有些很快就有了下文。每一筆都附出處。</p>
+      <div class="tl" id="tl2">
+        <details class="c" name="tl2" open><summary><span class="d">1967.1.6</span><span class="t">成立「正義與和平」委員會</span></summary><p>憲章第 90 節建議教會成立一個推動社會正義的世界性機構。保祿六世在這一天成立了它，成立文件裡寫明，這是照憲章第 90 節的願望辦的。</p><p class="src">出處：<a href="https://www.vatican.va/content/paul-vi/la/motu_proprio/documents/hf_p-vi_motu-proprio_19670106_catholicam-christi-ecclesiam.html" target="_blank" rel="noopener">梵蒂岡：成立文件（拉丁文）</a></p></details>
+        <details class="c" name="tl2"><summary><span class="d">1967.3.26</span><span class="t">《民族發展》通諭</span></summary><p>保祿六世談貧窮國家的發展。通諭第 5 節說，成立上面那個委員會，是為了實現大公會議的願望。</p><p class="src">出處：<a href="https://www.vatican.va/content/paul-vi/en/encyclicals/documents/hf_p-vi_enc_26031967_populorum.html" target="_blank" rel="noopener">梵蒂岡：通諭英文版</a></p></details>
+        <details class="c" name="tl2"><summary><span class="d">1968.1.1</span><span class="t">第一個「和平日」</span></summary><p>保祿六世在 1967 年 12 月 8 日發出文告，請全世界在每年的第一天慶祝「和平日」。</p><p class="src">出處：<a href="https://www.vatican.va/content/paul-vi/en/messages/peace/documents/hf_p-vi_mes_19671208_i-world-day-for-peace.html" target="_blank" rel="noopener">梵蒂岡：文告英文版</a></p></details>
+        <details class="c" name="tl2"><summary><span class="d">1968.7.25</span><span class="t">《人類生命》通諭</span></summary><p>憲章第 51 節的附注說，有些問題已交給一個委員會研究，等教宗裁決。這道通諭是保祿六世的答覆，文中多次引用憲章談婚姻與家庭的那一章。</p><p class="src">出處：<a href="https://www.vatican.va/content/paul-vi/en/encyclicals/documents/hf_p-vi_enc_25071968_humanae-vitae.html" target="_blank" rel="noopener">梵蒂岡：通諭英文版</a></p></details>
+        <details class="c" name="tl2"><summary><span class="d">1979.3.4</span><span class="t">《人類救主》通諭</span></summary><p>若望保祿二世在這道通諭裡，引用了憲章第 22 節談基督與人的那段話。</p><p class="src">出處：<a href="https://www.vatican.va/content/john-paul-ii/en/encyclicals/documents/hf_jp-ii_enc_04031979_redemptor-hominis.html" target="_blank" rel="noopener">梵蒂岡：通諭英文版</a></p></details>
+        <details class="c" name="tl2"><summary><span class="d">2016.8.17</span><span class="t">併入「促進人類整體發展部」</span></summary><p>教宗方濟各成立這個新部會。「正義與和平」委員會的職務，從 2017 年 1 月 1 日起併入其中。</p><p class="src">出處：<a href="https://www.vatican.va/content/francesco/en/motu_proprio/documents/papa-francesco-motu-proprio_20160817_humanam-progressionem.html" target="_blank" rel="noopener">梵蒂岡：成立文件英文版</a></p></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec alt" id="words">
+  <div class="in">
+    <div class="label"><span class="glyph">詞</span><span class="range">十個關鍵詞</span></div>
+    <div class="body">
+      <h2>十個關鍵詞</h2>
+      <p>正面是白話的說法。點一下翻到背面，看憲章自己怎麼說。</p>
+      <div class="kw" id="kw">
+        <button type="button" class="k" aria-pressed="false"><span class="f"><b>檢討時代局勢</b><span class="g">先看清楚世界正在發生什麼，再用福音去理解它。常說成「時代的徵兆」。</span></span><span class="bk"><span class="bq" data-q="4">一面檢討時代局勢，一面在福音神光下，替人類解釋真理</span><span class="n">第 4 節</span></span></button>
+        <button type="button" class="k" aria-pressed="false"><span class="f"><b>人格尊嚴</b><span class="g">每個人都有不能被拿走的價值，因為人是照天主的肖像造的。</span></span><span class="bk"><span class="bq" data-q="12">人是「依照天主肖像」而受造的</span><span class="n">第 12 節</span></span></button>
+        <button type="button" class="k" aria-pressed="false"><span class="f"><b>良心</b><span class="g">人心最深處分辨善惡的地方。</span></span><span class="bk"><span class="bq" data-q="16">良心是人最秘密的核心和聖所。</span><span class="n">第 16 節</span></span></button>
+        <button type="button" class="k" aria-pressed="false"><span class="f"><b>公益</b><span class="g">讓每個人、每個團體都能好好生活的那些社會條件。</span></span><span class="bk"><span class="bq" data-q="26">讓私人及團體可以充份而便利地玉成自身的社會生活條件的總和</span><span class="n">第 26 節</span></span></button>
+        <button type="button" class="k" aria-pressed="false"><span class="f"><b>現世事物的獨立</b><span class="g">科學、社會有自己的規律，值得尊重；但這不等於跟天主無關。</span></span><span class="bk"><span class="bq" data-q="36">受造物及人類社會，擁有固有的定律和價值</span><span class="n">第 36 節</span></span></button>
+        <button type="button" class="k" aria-pressed="false"><span class="f"><b>信友的任務</b><span class="g">在工作、家庭、社會裡把信仰活出來，是平信徒自己的責任。</span></span><span class="bk"><span class="bq" data-q="43">從事世俗任務與活動，是普通信友本有的</span><span class="n">第 43 節</span></span></button>
+        <button type="button" class="k" aria-pressed="false"><span class="f"><b>文化</b><span class="g">人用來發展自己、改善共同生活的一切。</span></span><span class="bk"><span class="bq" data-q="53">人類用以玉成並發揮身靈諸多特長的種種</span><span class="n">第 53 節</span></span></button>
+        <button type="button" class="k" aria-pressed="false"><span class="f"><b>財富的公共用途</b><span class="g">大地的資源本來是給所有人的，私有財產也要顧到別人。</span></span><span class="bk"><span class="bq" data-q="69">一切受造之物應在正義及愛德原則下，公平地惠及人人。</span><span class="n">第 69 節</span></span></button>
+        <button type="button" class="k" aria-pressed="false"><span class="f"><b>公共福利</b><span class="g">政府存在的理由。</span></span><span class="bk"><span class="bq" data-q="74">公共福利是政府存在的理由和意義</span><span class="n">第 74 節</span></span></button>
+        <button type="button" class="k" aria-pressed="false"><span class="f"><b>和平</b><span class="g">不只是沒有戰爭，而是正義和愛的成果。</span></span><span class="bk"><span class="bq" data-q="78">和平便是秩序的成果</span><span class="n">第 78 節</span></span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="wall-q">
+  <div class="in">
+    <div class="label"><span class="glyph">句</span><span class="range">金句牆</span></div>
+    <div class="body">
+      <h2>值得記住的句子</h2>
+      <div class="wallq">
+        <figure class="wq"><blockquote data-q="12">人是萬有的中心與極峰。</blockquote><figcaption><a href="fulltext.html#p12">第 12 節</a></figcaption></figure>
+        <figure class="wq" style="--c:var(--ruby)"><blockquote data-q="22">除非在天主聖言降生成人的奧蹟內，人的奧蹟是無從解釋的。</blockquote><figcaption><a href="fulltext.html#p22">第 22 節</a></figcaption></figure>
+        <figure class="wq" style="--c:var(--emerald)"><blockquote data-q="24">人類惟有衷誠地捨己為人，始能達到圓滿。</blockquote><figcaption><a href="fulltext.html#p24">第 24 節</a></figcaption></figure>
+        <figure class="wq" style="--c:var(--amber)"><blockquote data-q="36">人一旦忘掉天主，受造物便晦暗無光。</blockquote><figcaption><a href="fulltext.html#p36">第 36 節</a></figcaption></figure>
+        <figure class="wq" style="--c:var(--cobalt)"><blockquote data-q="43">信友不獨是天國子民，亦是此世的國民。</blockquote><figcaption><a href="fulltext.html#p43">第 43 節</a></figcaption></figure>
+        <figure class="wq" style="--c:var(--ruby)"><blockquote data-q="52">在家庭內，數代同堂，彼此幫忙……家庭便形成社會的基礎。</blockquote><figcaption><a href="fulltext.html#p52">第 52 節</a></figcaption></figure>
+        <figure class="wq" style="--c:var(--amber)"><blockquote data-q="64">增產的基本宗旨，不應祗是增產，亦不應祗是利潤及權力，而應是為人服務</blockquote><figcaption><a href="fulltext.html#p64">第 64 節</a></figcaption></figure>
+        <figure class="wq" style="--c:var(--emerald)"><blockquote data-q="78">和平並不只是不作戰，亦不只是敵對雙方之間建立武力的平衡</blockquote><figcaption><a href="fulltext.html#p78">第 78 節</a></figcaption></figure>
+        <figure class="wq" style="--c:var(--violet)"><blockquote data-q="92">團結信友們的鎖鏈，遠較分裂他們的動機，更為堅強。</blockquote><figcaption><a href="fulltext.html#p92">第 92 節</a></figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec alt" id="act">
+  <div class="in">
+    <div class="label"><span class="glyph">行</span><span class="range">測驗與提問</span></div>
+    <div class="body">
+      <h2>五題小測驗</h2>
+      <p>每題選一個答案，馬上知道對不對。</p>
+      <ol class="quiz" id="quiz">
+        <li><p class="qq">憲章開頭說，誰的喜樂與期望、愁苦與焦慮，也是基督信徒的？</p><div class="opts"><button type="button" data-ok="1">我們這時代的人們，尤其貧困者和遭受折磨者</button><button type="button" data-ok="0">只有領了洗的信友</button><button type="button" data-ok="0">只有神職人員和修會會士</button></div><p class="fb" hidden>答案在<a href="fulltext.html#p1">第 1 節</a>。</p></li>
+        <li><p class="qq">第 16 節怎麼形容良心？</p><div class="opts"><button type="button" data-ok="0">社會習俗的總和</button><button type="button" data-ok="1">人最秘密的核心和聖所</button><button type="button" data-ok="0">一套寫下來的法律條文</button></div><p class="fb" hidden>答案在<a href="fulltext.html#p16">第 16 節</a>。</p></li>
+        <li><p class="qq">第 43 節把哪一件事列為這個時代的嚴重錯誤之一？</p><div class="opts"><button type="button" data-ok="0">科學和技術進步太快</button><button type="button" data-ok="0">信友參與政治</button><button type="button" data-ok="1">許多人的信仰和日常生活分割</button></div><p class="fb" hidden>答案在<a href="fulltext.html#p43">第 43 節</a>。</p></li>
+        <li><p class="qq">第 69 節說，大地及其所有是給誰用的？</p><div class="opts"><button type="button" data-ok="1">供人人使用</button><button type="button" data-ok="0">誰先佔到就是誰的</button><button type="button" data-ok="0">全部屬於國家</button></div><p class="fb" hidden>答案在<a href="fulltext.html#p69">第 69 節</a>。</p></li>
+        <li><p class="qq">第 78 節怎麼說和平？</p><div class="opts"><button type="button" data-ok="0">敵對雙方武力平衡就是和平</button><button type="button" data-ok="0">簽了條約就一勞永逸</button><button type="button" data-ok="1">不只是不作戰，要經常由人類去建樹</button></div><p class="fb" hidden>答案在<a href="fulltext.html#p78">第 78 節</a>。</p></li>
+      </ol>
+      <p class="score" id="score" aria-live="polite" hidden></p>
+      <p class="aside">想跟堂區或朋友一起讀？這裡有一份分成四次聚會的<a href="study.html">讀書會帶讀單</a>，可以列印。</p>
+      <h2 style="margin-top:28px">帶回生活的三個提問</h2>
+      <ol class="asks">
+        <li>我身邊「貧困者和遭受折磨者」是誰？他們的喜樂和焦慮，我知道多少？</li>
+        <li>我的信仰，跟我的工作、消費和投票，是連在一起的，還是分開的？</li>
+        <li>這個月，我能不能跟一位想法不同的人，好好談一次？</li>
+      </ol>
+      <h2 style="margin-top:28px">繼續讀</h2>
+      <div class="more">
+        <a href="fulltext.html"><span>台灣地區主教團秘書處譯本 · 93 節</span><b>《牧職憲章》全文</b><span>每一節都可以直接連結</span></a>
+        <a href="study.html"><span>四次聚會 · 可列印</span><b>讀書會帶讀單</b><span>每次要讀的節、討論題和一個行動</span></a>
+        <a href="/encyclical/mater-et-magistra/"><span>1961 · 若望廿三世</span><b>《慈母與導師》</b><span>同一片天空，同一片麥田</span></a>
+        <a href="/encyclical/rerum-novarum/"><span>1891 · 良十三世</span><b>《新事》</b><span>一個工人的一天</span></a>
+        <a href="/encyclical/magnifica-humanitas/"><span>2026 · 良十四世</span><b>《偉大的人類》</b><span>人工智慧時代的社會通諭</span></a>
+        <a href="https://www.vatican.va/chinese/concilio/vat-ii_gaudium-et-spes_zh-t.pdf" target="_blank" rel="noopener"><span>梵蒂岡網站</span><b>官方中文版 PDF</b><span>含全部附注</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><a class="maili" href="https://mai-li.app" target="_blank" rel="noopener" aria-label="麥力（開啟 mai-li.app）"><img src="assets/mai-li-96.webp" width="28" height="28" alt=""></a>本網頁的內容整理、企劃與程式開發，由 <a href="https://mai-li.app" target="_blank" rel="noopener">麥力</a> 主導完成。<br>憲章中文引文出自台灣地區主教團秘書處譯本，取自梵蒂岡網站。插畫為示意。</footer>
+<div class="prog" id="prog" aria-hidden="true"><i></i><i></i></div>
+
+<script>
+// ================= 首屏：捲動開窗 =================
+(function(){
+  var hero=document.getElementById('top'), stage=document.getElementById('stage'), wall=document.getElementById('wall'), hole=document.getElementById('hole');
+  var pool=document.getElementById('pool'), title=document.getElementById('title'), land=document.getElementById('land'), hint=document.getElementById('hint');
+  var worldImg=stage.querySelector('.world img');
+  // 拱窗輪廓（寬高各為 1 的座標），對著玻璃圖量出來再修成左右對稱
+  var HALF=[[0,1],[0,.34],[.012,.30],[.04,.255],[.075,.20],[.12,.152],[.175,.11],[.25,.075],[.34,.04],[.43,.014],[.5,0]];
+  var ARCH=HALF.concat(HALF.slice(0,-1).reverse().map(function(p){return [1-p[0],p[1]];})), ASPECT=0.498;
+  hole.style.clipPath='polygon('+ARCH.map(function(p){return (p[0]*100).toFixed(2)+'% '+(p[1]*100).toFixed(2)+'%';}).join(',')+')';
+  var G={}, lastW=0, raf=0, visible=true;
+  function clamp(v){return v<0?0:v>1?1:v;}
+  function ease(t){return t*t*(3-2*t);}
+  function measure(){
+    // 手機網址列收合會改變高度，所以高度只在寬度變動時重量，避免捲到一半版面跳動
+    var vw=stage.clientWidth, probe=document.createElement('div'); probe.style.cssText='position:fixed;top:0;height:100svh;width:0'; document.body.appendChild(probe);
+    var vh=probe.offsetHeight||innerHeight; probe.remove();
+    var full=stage.clientHeight, portrait=vh>vw*1.05;
+    var h=portrait?vh*0.56:vh*0.78, w=h*ASPECT; if(w>vw*0.78){ w=vw*0.78; h=w/ASPECT; }
+    var cx=portrait?vw/2:vw*0.68, top=portrait?vh*0.07:(vh-h)/2;
+    G={vw:vw,vh:vh,full:full,portrait:portrait,w:w,h:h,left:cx-w/2,top:top,fx:cx,fy:top+h*0.66};
+    G.Z=Math.max(1.08*vw/w, full/(0.6*h));
+    hole.style.width=w+'px'; hole.style.height=h+'px';
+    pool.style.width=(w*1.9)+'px'; pool.style.height=(h*0.42)+'px';
+    wall.style.setProperty('--gx',cx+'px'); wall.style.setProperty('--gy',(top+h*0.55)+'px');
+    if(portrait){ title.style.cssText='left:var(--gut-l);right:var(--gut-r);top:'+(top+h+vh*0.035)+'px;text-align:center;align-items:center'; }
+    else { title.style.cssText='left:max(5vw,var(--gut-l));width:'+(cx-w/2-vw*0.09)+'px;top:50%;margin-top:-'+(Math.min(vh*0.2,150))+'px'; }
+    lastW=vw;
+  }
+  function frame(){
+    raf=0;
+    var r=hero.getBoundingClientRect(), p=clamp(-r.top/Math.max(1,hero.offsetHeight-G.full));
+    var open=ease(clamp((p-0.06)/0.40)), push=clamp((p-0.40)/0.46), pe=push*push*(3-2*push), z=1+(G.Z-1)*Math.pow(pe,1.5);
+    var fx=G.fx+(G.vw/2-G.fx)*pe, fy=G.fy+(G.full/2-G.fy)*pe;
+    var left=fx-(G.fx-G.left)*z, top=fy-(G.fy-G.top)*z, w=G.w*z, h=G.h*z;
+    hole.style.transform='translate3d('+left.toFixed(1)+'px,'+top.toFixed(1)+'px,0) scale('+z.toFixed(4)+')';
+    hole.style.setProperty('--th',(open*103).toFixed(1)+'deg'); hole.style.setProperty('--shade',(open*0.45).toFixed(2));
+    hole.style.visibility=open>0.985&&pe>0.02?'hidden':'visible';
+    if(pe>=1){ wall.style.visibility='hidden'; }
+    else { wall.style.visibility='visible';
+      var pts=ARCH.map(function(q){return (left+q[0]*w).toFixed(1)+'px '+(top+q[1]*h).toFixed(1)+'px';});
+      wall.style.clipPath='polygon(evenodd,0 0,100% 0,100% 100%,0 100%,0 0,'+pts.join(',')+','+pts[0]+')'; }
+    pool.style.transform='translate3d('+(left+w/2-G.w*0.95).toFixed(1)+'px,'+(top+h).toFixed(1)+'px,0) scale('+z.toFixed(3)+')';
+    pool.style.opacity=(0.75*(1-pe)).toFixed(2); pool.style.setProperty('--open',open.toFixed(2));
+    worldImg.style.setProperty('--ws',(1.06+0.08*pe).toFixed(3));
+    var t=1-clamp((p-0.03)/0.14); title.style.opacity=t.toFixed(2); title.style.visibility=t>0?'visible':'hidden'; hint.style.opacity=(1-clamp(p/0.05)).toFixed(2);
+    var l=clamp((p-0.88)/0.09); land.style.opacity=l.toFixed(2); land.style.transform='translateY('+((1-l)*18).toFixed(1)+'px)';
+  }
+  function kick(){ if(visible&&!raf) raf=requestAnimationFrame(frame); }
+  measure(); frame();
+  // 首屏離開畫面後就不再計算
+  if('IntersectionObserver' in window) new IntersectionObserver(function(es){ visible=es[0].isIntersecting; stage.querySelector('.glow').style.animationPlayState=visible?'running':'paused'; kick(); }).observe(hero);
+  addEventListener('scroll',kick,{passive:true});
+  addEventListener('resize',function(){ if(Math.abs(stage.clientWidth-lastW)>1){ measure(); } kick(); });
+})();
+
+// ================= 段落導覽、閱讀進度小窗、玻璃的光 =================
+(function(){
+  var links=[].slice.call(document.querySelectorAll('.secnav a.s[href^="#"]')), prog=document.getElementById('prog'), hero=document.getElementById('top');
+  if(!('IntersectionObserver' in window)) return;
+  var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting) links.forEach(function(a){ a.setAttribute('aria-current', a.getAttribute('href')==='#'+e.target.id?'true':'false'); }); }); },{rootMargin:'-45% 0px -50% 0px'});
+  [].forEach.call(document.querySelectorAll('main .sec'),function(s){ io.observe(s); });  // 沒有對應導覽項的段落會把標示清掉
+  new IntersectionObserver(function(es){ prog.classList.toggle('on',!es[0].isIntersecting); }).observe(hero);
+  var raf=0;
+  addEventListener('scroll',function(){ if(raf) return; raf=requestAnimationFrame(function(){ raf=0;
+    var start=hero.offsetHeight, total=document.documentElement.scrollHeight-innerHeight-start, t=Math.min(1,Math.max(0,(scrollY-start)/Math.max(1,total)));
+    prog.style.setProperty('--pt',(t*100).toFixed(1)+'deg'); }); },{passive:true});
+  // 每格玻璃進到畫面時掃過一道光；電腦上跟著游標微微轉動
+  var pio=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); pio.unobserve(e.target); } }); },{threshold:.5});
+  [].forEach.call(document.querySelectorAll('.pic'),function(p){ pio.observe(p);
+    if(!matchMedia('(hover: hover) and (pointer: fine)').matches||matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var fr=p.querySelector('.fr');
+    p.addEventListener('pointermove',function(ev){ var r=p.getBoundingClientRect(); fr.style.setProperty('--ry',(((ev.clientX-r.left)/r.width-.5)*14).toFixed(1)+'deg'); fr.style.setProperty('--rx',((.5-(ev.clientY-r.top)/r.height)*10).toFixed(1)+'deg'); });
+    p.addEventListener('pointerleave',function(){ fr.style.setProperty('--ry','0deg'); fr.style.setProperty('--rx','0deg'); });
+  });
+})();
+// ================= 時間軸篩選、五格選單、小測驗 =================
+(function(){
+  var tl=document.getElementById('tl'), fb=[].slice.call(document.querySelectorAll('.tlf button'));
+  fb.forEach(function(b){ b.addEventListener('click',function(){ var f=b.getAttribute('data-f');
+    fb.forEach(function(x){ x.classList.toggle('on',x===b); x.setAttribute('aria-pressed',x===b?'true':'false'); });
+    [].forEach.call(tl.children,function(d){ d.hidden=!(f==='all'||d.classList.contains(f)); }); }); });
+  if('IntersectionObserver' in window){
+    var picks=[].slice.call(document.querySelectorAll('.pick a'));
+    var po=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting) picks.forEach(function(a){ a.setAttribute('aria-current',a.getAttribute('href')==='#'+e.target.id?'true':'false'); }); }); },{rootMargin:'-40% 0px -50% 0px'});
+    [].forEach.call(document.querySelectorAll('.panel'),function(x){ po.observe(x); });
+  }
+  var quiz=document.getElementById('quiz'), score=document.getElementById('score'), done=0, right=0, total=quiz.children.length;
+  quiz.addEventListener('click',function(ev){ var b=ev.target.closest('button'); if(!b||b.disabled) return;
+    var li=b.closest('li'), ok=b.getAttribute('data-ok')==='1', fbk=li.querySelector('.fb');
+    [].forEach.call(li.querySelectorAll('button'),function(x){ x.disabled=true; if(x.getAttribute('data-ok')==='1') x.classList.add('ok'); });
+    if(!ok) b.classList.add('no'); else right++;
+    fbk.hidden=false; fbk.insertBefore(document.createTextNode(ok?'答對了。':'不是這個。'),fbk.firstChild);
+    if(++done===total){ score.hidden=false; score.textContent=total+' 題答對 '+right+' 題。'; } });
+})();
+
+// ================= 核彈頭庫存圖：捲到附近才載入 D3 =================
+(function(){
+  var box=document.getElementById('dv-chart'), read=document.getElementById('dv-read'); if(!box||!('IntersectionObserver' in window)) return;
+  function load(src){ return new Promise(function(ok,bad){ var el=document.createElement('script'); el.src=src; el.onload=ok; el.onerror=bad; document.head.appendChild(el); }); }
+  var io=new IntersectionObserver(function(es){ if(!es[0].isIntersecting) return; io.disconnect();
+    Promise.all([load('https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js'), fetch('assets/gs-data.json').then(function(r){ return r.json(); })])
+      .then(function(a){ start(a[1]); }).catch(function(){ read.textContent='圖表載入失敗，主要數字見下方說明。'; }); },{rootMargin:'700px 0px'});
+  io.observe(box);
+  function start(D){
+    var n=D.us.length, y0=D.y0, yl=y0+n-1, f=d3.format(','), rows=d3.range(n).map(function(i){ return {y:y0+i,us:D.us[i],ru:D.ru[i],ot:D.ot[i]}; });
+    var series=d3.stack().keys(['us','ru','ot'])(rows), COL={us:'var(--cobalt)',ru:'var(--ruby)',ot:'var(--amber)'}, lastW=0, x, rule;
+    function say(yr){ var r=rows[yr-y0]; read.textContent=yr+' 年：美國 '+f(r.us)+'｜'+(yr<1992?'蘇聯':'俄羅斯')+' '+f(r.ru)+'｜其他 '+f(r.ot)+'｜合計 '+f(r.us+r.ru+r.ot); }
+    function draw(){
+      var W=box.clientWidth, H=box.clientHeight; if(!W||Math.abs(W-lastW)<2) return; lastW=W;
+      var narrow=W<560, M={t:narrow?42:26,r:10,b:22,l:W<480?34:44};
+      x=d3.scaleLinear().domain([y0,yl]).range([M.l,W-M.r]);
+      var y=d3.scaleLinear().domain([0,70000]).range([H-M.b,M.t]);
+      d3.select(box).selectAll('svg').remove();
+      var svg=d3.select(box).append('svg').attr('viewBox','0 0 '+W+' '+H).attr('aria-hidden','true');
+      svg.append('g').selectAll('line').data([20000,40000,60000]).join('line').attr('x1',M.l).attr('x2',W-M.r).attr('y1',y).attr('y2',y).attr('stroke','var(--mortar)');
+      svg.append('g').selectAll('text').data([0,20000,40000,60000]).join('text').attr('x',M.l-6).attr('y',function(d){return y(d)+4;}).attr('text-anchor','end').text(function(d){ return d? d/10000+' 萬':'0'; });
+      svg.append('g').selectAll('text').data(W<480?[1950,1970,1990,2010]:[1950,1960,1970,1980,1990,2000,2010,2020]).join('text').attr('x',x).attr('y',H-6).attr('text-anchor','middle').text(String);
+      var area=d3.area().x(function(d){return x(d.data.y);}).y0(function(d){return y(d[0]);}).y1(function(d){return y(d[1]);});
+      svg.append('g').selectAll('path').data(series).join('path').attr('d',area).attr('style',function(d){ return 'fill:'+COL[d.key]; }).attr('stroke','#000').attr('stroke-width',1.2);
+      var mk=svg.append('g').attr('class','mk');
+      [[1962,'1962 古巴危機','end',-5,narrow?12:M.t-8],[1965,'1965 憲章公佈','start',5,narrow?12:M.t-8],[1986,'1986 最高','middle',0,M.t-8]].forEach(function(m){
+        mk.append('line').attr('x1',x(m[0])).attr('x2',x(m[0])).attr('y1',M.t-2).attr('y2',H-M.b).attr('stroke','var(--milk)').attr('stroke-dasharray','3 3').attr('stroke-width',1);
+        mk.append('text').attr('x',x(m[0])+m[3]).attr('y',m[4]).attr('text-anchor',m[2]).text(m[1]); });
+      rule=svg.append('line').attr('y1',M.t).attr('y2',H-M.b).attr('stroke','var(--amber)').attr('stroke-width',2).attr('visibility','hidden');
+    }
+    function move(ev){ if(!x) return; var r=box.getBoundingClientRect(), yr=Math.round(x.invert(ev.clientX-r.left)); yr=Math.max(y0,Math.min(yl,yr));
+      rule.attr('x1',x(yr)).attr('x2',x(yr)).attr('visibility','visible'); say(yr); }
+    box.addEventListener('pointermove',move,{passive:true}); box.addEventListener('pointerdown',move,{passive:true});
+    var t=0; addEventListener('resize',function(){ clearTimeout(t); t=setTimeout(draw,150); });
+    draw(); say(1965);
+  }
+})();
+// ================= 地圖、猜年份、交談的圈、關鍵詞 =================
+(function(){
+  var map=document.getElementById('map'), read=document.getElementById('mapread'), cur=null;
+  map.addEventListener('click',function(ev){ var b=ev.target.closest('button'); if(!b) return;
+    if(cur) cur.setAttribute('aria-pressed','false'); cur=b; b.setAttribute('aria-pressed','true');
+    var n=b.getAttribute('data-n'); read.textContent='第 '+n+' 節　'+b.getAttribute('data-t')+'　';
+    var a=document.createElement('a'); a.href='fulltext.html#p'+n; a.textContent='讀這一節'; read.appendChild(a); });
+  var guess=document.getElementById('guess'), gs=document.getElementById('gscore'), gd=0, gn=guess.children.length;
+  guess.addEventListener('click',function(ev){ var b=ev.target.closest('button'); if(!b||b.disabled) return;
+    var f=b.closest('figure'), bs=f.querySelectorAll('button'); bs[0].classList.add('ok'); if(b!==bs[0]) b.classList.add('no');
+    bs[0].disabled=bs[1].disabled=true; f.querySelector('figcaption').hidden=false; if(++gd===gn) gs.hidden=false; });
+  var rg=document.getElementById('rg'), rgq=document.getElementById('rgq'); rgq.classList.add('js');
+  function pick(i){ [].forEach.call(rg.children,function(b){ b.setAttribute('aria-pressed',b.getAttribute('data-i')===i?'true':'false'); });
+    [].forEach.call(rgq.children,function(q){ q.classList.toggle('on',q.getAttribute('data-i')===i); }); }
+  rg.addEventListener('click',function(ev){ var b=ev.target.closest('button'); if(b) pick(b.getAttribute('data-i')); }); pick('0');
+  document.getElementById('kw').addEventListener('click',function(ev){ var b=ev.target.closest('button'); if(b) b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')==='true'?'false':'true'); });
+})();
+</script>
+</body>
+</html>
